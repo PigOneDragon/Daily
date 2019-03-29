@@ -1,0 +1,57 @@
+@media only screen and (max-width: 1199px) {
+    .wp {
+        width: 98%;
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 50px;
+        line-height: 50px;
+        width: 100%;
+        background-color: transparent;
+        z-index: 999;
+    }
+
+    .nav,
+    .so {
+        display: none;
+    }
+
+
+    .nav{
+        position: absolute;
+        top: 50px;
+        left: 0;
+    }
+    .nav li {
+        float: left;
+        margin-left: 40px;
+        position: relative;
+    }
+    .nav li.on .item::after{
+        display: none;
+    }
+    .nav .item {
+        display: block;
+        position: relative;
+        font-size: 14px;
+        color: #fff;
+        padding-right: 18px;
+        background: none;
+    }
+
+    .menubtn {
+        display: block;
+    }
+
+    .logo {
+        width: 75px;
+        height: 30px;
+    }
+
+    .so1 {
+        display: block;
+    }
+}

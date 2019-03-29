@@ -39,6 +39,15 @@ button{
     display: inline-block;
     vertical-align: middle;
 }
+.menubtn{
+    display: none;
+    float: left;
+    width: 30px;
+    height: 25px;
+    margin-top: 12px;
+    margin-right: 25px;
+    background: url('../images/menubtn.png') center no-repeat;
+}
 .nav{
     float: left;
     z-index: 5;
@@ -202,6 +211,39 @@ button{
     border: none;
     cursor: pointer;
     background: url(../images/search.png) center no-repeat;
+}
+/* 响应式下搜索 */
+.so1{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.inp1{
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 96%;
+    margin-left: 2%;
+    height: 75px;
+    border: 1px solid #dcdcdc;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 18px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+} 
+.btn1{
+    position: absolute;
+    top: 10px;
+    right: 18px;
+    width: 30px;
+    height: 31px;
+    border: none;
+    cursor: pointer;
+    background: url(../images/so.png) center no-repeat;
 }
 /* banner */
 .banner{
@@ -420,7 +462,7 @@ button{
     font-size: 14px;
     color: #000;
     padding: 0 30px;
-    min-height: 32px;
+    height: 2.29em;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -522,32 +564,39 @@ button{
     background: url('../images/qr_bg.png');
     -webkit-background-size: cover;
     background-size: cover;
-    height: 588px;
+    /* height: 588px; */
 }
-/*   .m-pic{
-    overflow: hidden;   
-    width: 60%;
-    margin: 0 auto;
+.m-pic{ 
+    text-align: center;
+}
+.m-pic ul{
+    display: inline-block;
+    overflow: hidden;  
 }
 .m-pic li{
     float: left;
-    width: 33.33%;
+    margin: 135px 65px;
+    /* text-align: center; */
+    /* width: 33.33%; */
 }
 .m-pic .img{
-    position: relative;
+    /* position: relative;
     padding-top: 99%;
     height: 0;
-    overflow: hidden;
+    overflow: hidden; */
+    display: inline-block;
+    width: 240px;
+    height: 238px;
 } 
 .m-pic .img img{
-    position: absolute;
+/*     position: absolute;
     top: 0;
-    left: 0;
+    left: 0; */
     width: 100%;
     height: 100%;
-}  */
+}
 /* case1 */
-.m-pic{
+/* .m-pic{
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -562,7 +611,7 @@ button{
 }
 .m-pic li:nth-child(2){
     margin: 0 100px;
-}
+} */
 
 .row-5 .g-tit{
     width: 307px;
@@ -667,7 +716,7 @@ button{
 /* 侧边 */
 .snv{
     /* 获取页面高度达到某一值显示 */
-    /* display: none; */
+    display: none;
     position: fixed;
     right: 0;
     bottom: 50px;
@@ -727,5 +776,28 @@ button{
 .item1{
     position: absolute;
     top: 0;
-    left: -80px;
+    left: -150px;
+    display: none;
+    width: 130px;
+    height: 60px;
+    background-color: #ed384e;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    padding-top: 14px;
+    letter-spacing: 3px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.item1::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: -14px;
+    transform: translateY(-50%);
+    border: 7px solid;
+    border-color: transparent transparent transparent #ed384e;
 }
