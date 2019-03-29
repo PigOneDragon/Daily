@@ -1,0 +1,422 @@
+/*Common For Max 960*/
+@media only screen and (max-width: 1199px) {
+    .wp {
+        width: 98%;
+    }
+   
+    /* 蔡飞跃 **************************************************/
+    /* 产品中心 */
+    .m-nav-c,
+    .m-tab-c,
+    .m-col2{
+        display: none;
+    }
+    /* 新闻资讯 */
+
+    .m-col1{
+        float: none;
+        width: auto;
+        border-right: none;
+    }
+    .m-col1 .content{
+        padding: 0 20px;
+        margin-right: 0;
+    }
+    .content .info{
+        text-align: center;
+    }
+    .content .mt{
+        margin-top: 20px;
+    }
+
+    .m-index2{
+        padding: 0 20px;
+    }
+    /* 张燕燕 **************************************************/
+    
+
+    /* 闫娜 **************************************************/
+
+
+    /* 王涛 **************************************************/
+
+
+}
+
+/*Common For Max 768*/
+@media only screen and (max-width: 959px) {
+
+
+    /* 蔡飞跃 **************************************************/
+    .g-tit1-c h4{
+        font-size: 18px;
+    }
+
+    .mb50{
+        margin-bottom: 50px;
+    }
+    .m-link2{
+        display: none;
+    }
+    .m-txt-c .g-tit2-c{
+        width: 50%;
+    }
+    .m-index2 .m-tabitem li{
+        width: 50%;
+    }
+    .m-tabitem .txt{
+        font-size: 12px;
+    }
+    /* 张燕燕 **************************************************/
+    .casebox-1{
+        display: none;
+    }
+    .casebox-2{
+        display:block;
+    }
+    .fa-tit li {
+        width: 25%;
+        margin-bottom: 10px;
+    }
+
+    .fa-tit a {
+        border: #e6e6e6 2px solid;
+    }
+
+    .fa-ul-imgtxt li {
+        width: 100%;
+    }
+
+    .fa-info-mian {
+        padding: 0 30px;
+    }
+
+    .fa-tit a p {
+        font-size: 16px;
+    }
+
+    .fa-ul-imgtxt .txt h4 {
+        font-size: 18px;
+    }
+
+    .fa-ul-imgtxt li .box {
+        margin-bottom: 60px;
+    }
+
+    .fa-int h3 {
+        font-size: 26px
+    }
+
+    .fa-tit-2 h4 {
+        font-size: 20px
+    }
+
+    .fa-g-tit {
+        font-size: 20px
+    }
+
+    .fa-case ul li {
+        width: 100%;
+    }
+
+    .fa-case ul li .txt h4 {
+        font-size: 18px
+    }
+
+    .fa-case ul li .box {
+        margin-bottom: 40px;
+    }
+
+    .fa-case ul li {
+        width: 100%;
+    }
+
+    .caseNav {
+        height: 2em;
+        line-height: 2em;
+        font-size: 30px;
+        font-weight: bold;
+        background: #ff5f01;
+        padding: 0 30px;
+        color: #fff;
+    }
+
+    .caseNav span {
+        width: 27px;
+        height: 23px;
+        float: right;
+        margin-right: 48px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: 18px;
+        background: url('../images/nav-arrow.png') no-repeat;
+    }
+
+    .caseNav-box {
+        background: #f2f2f2;
+        padding: 26px 32px 42px;
+    }
+
+     .caseNav-box ul li:first-child {
+        height: 46px;
+        line-height: 46px;
+        font-size: 24px;
+        color: #323232;
+        font-weight: bold;
+    }
+
+    .caseNav-box ul li {
+        height: 46px;
+        line-height: 46px;
+        font-size: 20px;
+        color: #646464;
+    }
+
+    /* 闫娜 **************************************************/
+
+
+    /* 王涛 **************************************************/
+
+
+}
+
+/*Common For Max 480*/
+@media only screen and (max-width: 767px) {
+
+    /* 蔡飞跃 **************************************************/
+
+
+    /* 张燕燕 **************************************************/
+    .fa-tit a p {
+        font-size: 14px;
+    }
+
+    .fa-ul-imgtxt .txt h4 {
+        font-size: 16px;
+    }
+
+    .fa-ul-imgtxt li .box {
+        margin-bottom: 40px;
+    }
+
+    .fa-int h3 {
+        font-size: 22px
+    }
+
+    .fa-tit-2 h4 {
+        font-size: 18px
+    }
+
+    .fa-g-tit {
+        font-size: 18px
+    }
+
+    .fa-case ul li .txt h4 {
+        font-size: 16px
+    }
+
+    .fa-case ul li .box {
+        margin-bottom: 30px;
+    }
+
+    /* 闫娜 **************************************************/
+
+
+    /* 王涛 **************************************************/
+<<<<<<< .mine
+    .cur span {
+        font-size: 14px;
+        height: 1.5em;
+        line-height: 1.5em;
+||||||| .r1373
+    .cur span{
+        font-size:14px;
+        height: 1.5em;
+        line-height: 1.5em;
+=======
+    .wp{
+        width:100%;
+>>>>>>> .r1378
+    }
+
+    /*网站地图*/
+<<<<<<< .mine
+    .ul-addr:nth-of-type(even),
+    .ul-addr:nth-of-type(odd) {
+||||||| .r1373
+    .ul-addr:nth-of-type(even),.ul-addr:nth-of-type(odd){
+=======
+    .m-webaddr .name{
+        font-size:20px;
+    }
+    .ul-addr:nth-of-type(even),.ul-addr:nth-of-type(odd){
+>>>>>>> .r1378
+        margin-bottom: 0px;
+    }
+
+    .ul-addr .tit {
+        font-size: 16px;
+        height: 1.5em;
+        line-height: 1.5em;
+    }
+
+    .ul-addr a {
+        font-size: 12px;
+        height: 1.5em;
+        line-height: 1.5em;
+    }
+
+    .m-ul .tit1 {
+        font-size: 14px;
+    }
+
+    /*新闻中心*/
+<<<<<<< .mine
+    .name,
+    .m-txt .name,
+    .cur .tit h4 {
+        font-size: 20px;
+        height: 1.5em;
+        line-height: 1.5em;
+    }
+||||||| .r1373
+    .name,.m-txt .name,.cur .tit h4{
+        font-size:20px;
+        height:1.5em;
+        line-height: 1.5em;
+    }
+=======
+>>>>>>> .r1378
+
+    .m-tab {
+        margin-bottom: 18px;
+    }
+<<<<<<< .mine
+
+    .m-tab a {
+        font-size: 14px;
+        height: 1.5em;
+        line-height: 1.5em;
+||||||| .r1373
+    .m-tab a{
+        font-size:14px;
+        height:1.5em;
+        line-height: 1.5em;
+=======
+    .m-tab li{
+        width:25%;
+    }
+    .m-tab a{
+        font-size:24px;
+        height:46px;
+        line-height: 46px;
+        padding:0;
+>>>>>>> .r1378
+    }
+<<<<<<< .mine
+
+    .ul-pro li {
+        width: 100%;
+        margin-bottom: 10px;
+||||||| .r1373
+    .ul-pro li{
+        width:100%;
+        margin-bottom:10px;
+=======
+    .ul-pro li{
+        width:100%;
+        margin-bottom:62px;
+>>>>>>> .r1378
+    }
+
+    .ul-pro a {
+        padding: 20px 31px 0 32px;
+    }
+    .ul-pro .m-txt{
+        padding-bottom: 7px;
+        margin-bottom: 8px;
+    }
+    .ul-pro .m-txt .name{
+        padding-bottom: 2px;
+    }
+    .ul-pro .m-txt .desc{
+        font-size:18px;
+        line-height: 32px;
+        height: 64px;
+        letter-spacing: 0.4px;
+    }
+    .ul-pro .more{
+        font-size:16px;
+        background-position:0 9px;
+    }
+}
+
+/*Common For Max 320*/
+@media only screen and (max-width: 479px) {
+
+
+    /* 蔡飞跃 **************************************************/
+
+
+    /* 张燕燕 **************************************************/
+    .fa-tit a p {
+        font-size: 12px;
+    }
+
+    .fa-ul-imgtxt .txt h4 {
+        font-size: 14px;
+    }
+
+    .fa-ul-imgtxt .txt p {
+        font-size: 12px;
+    }
+
+    .fa-ul-imgtxt a.more {
+        font-size: 12px;
+    }
+
+    .fa-int h3 {
+        font-size: 18px
+    }
+
+    .fa-tit-2 h4 {
+        font-size: 16px
+    }
+
+    .fa-g-tit {
+        font-size: 16px
+    }
+
+    .fa-case ul li .txt h4 {
+        font-size: 14px
+    }
+
+    /* 闫娜 **************************************************/
+
+
+    /* 王涛 **************************************************/
+<<<<<<< .mine
+
+
+||||||| .r1373
+
+    
+=======
+    /*新闻中心*/
+    .m-tab a{
+        font-size:16px;
+    }   
+    .ul-pro li{
+        margin-bottom: 20px;
+    }
+    .ul-pro .m-txt .name{
+        font-size:20px;
+    } 
+    .ul-pro .m-txt .desc{
+        font-size:14px;
+    }
+    .ul-pro .more{
+        font-size:12px;
+    }
+>>>>>>> .r1378
+}

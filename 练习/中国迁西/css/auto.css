@@ -1,0 +1,526 @@
+@media screen and (max-width: 1150px) {
+    .wp {
+        width: 100%;
+    }
+
+    /* 头部top欢迎区域消失 header 轮播区域消失*/
+    .hd-top {
+        display: none;
+    }
+
+    .slide {
+        display: none;
+    }
+
+    /* logo上移  导航条隐藏 */
+    .header {
+        height: 55px;
+        background-color: blue;
+        position: relative;
+        /* overflow: hidden; */
+    }
+
+    .logo {
+        width: 85px;
+        height: auto;
+        line-height: 1em;
+        margin: 7px 0 0 7px;
+
+    }
+
+    .navbar-btn {
+        display: block;
+
+    }
+    /* .menubtn i{
+        display: none;
+    }
+    .menubtn .show{display: block;} */
+    /* 按钮字体库 */
+    /* @font-face {
+        font-family: 'iconfont';
+        src: url('../font/iconfont.eot');
+        src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+            url('../font/iconfont.woff2') format('woff2'),
+            url('../font/iconfont.woff') format('woff'),
+            url('../font/iconfont.ttf') format('truetype'),
+            url('../font/iconfont.svg#iconfont') format('svg');
+    }
+
+    .iconfont {
+        font-family: "iconfont" !important;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: bold;
+        color: #fff;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    @font-face {
+        font-family: 'myfont';
+        src: url('../font1/iconfont.eot');
+        src: url('../font1/iconfont.eot?#iefix') format('embedded-opentype'),
+            url('../font1/iconfont.woff2') format('woff2'),
+            url('../font1/iconfont.woff') format('woff'),
+            url('../font1/iconfont.ttf') format('truetype'),
+            url('../font1/iconfont.svg#iconfont') format('svg');
+    }
+    .myfont {
+        font-family: "myfont" !important;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: bold;
+        color: #fff;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    } */
+
+
+   /*  .navbar-btn{
+            width: 35px;
+            height: 35px;
+            position: relative;
+            background-color: yellow;
+            overflow: hidden;
+            margin:50px; 
+        } */
+        .icon-bar{
+            display: block;
+            width: 85%;
+            height: 2px;
+            border-radius: 8px;
+            margin: 6px auto;
+            background-color: #fff;
+            -webkit-transition: all .5s;
+            -o-transition: all .5s;
+            transition: all .5s;
+            /* position: absolute; */
+        }
+        .act .icon-bar:nth-child(1){
+            position: absolute;
+            transform: rotate(-90deg);
+            top: -100%;
+        }
+        .act .icon-bar:nth-child(2){
+            position:absolute;
+            top:10px;
+            transform:rotate(37deg);
+        }
+        .act .icon-bar:nth-child(3){
+            position:absolute;
+            top:10px;
+            transform:rotate(-37deg);
+        }
+    .nav {
+
+        position: fixed;
+        top: 55px;
+        right: -240px;
+        width: 240px;
+        height: auto;
+        background-color: #fff;
+        -webkit-transition: right .5s;
+        -o-transition: right .5s;
+        transition: right .5s;
+    }
+
+    .nav li {
+        float: none;
+    }
+
+    /* 导航栏侧边效果 */
+    .header .open {
+        display: block;
+        right: 0;
+    }
+
+    .open li {
+        float: none;
+        width: auto;
+    }
+
+    .open li a {
+        color: #333;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+        transition-delay: 0;
+    }
+
+    .nav li a.on,
+    .nav li a:hover {
+        background-color: #fff;
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    .nav li a.on i,
+    .nav li a:hover i {
+        display: none;
+    }
+
+    /* 去除content-box填充 */
+    .content-box {
+        margin: 0;
+        padding: 10px 5px;
+    }
+
+    /* 清除模块浮动 */
+    .col-ll,
+    .col-lr,
+    .col-l,
+    .col-c,
+    .col_c,
+    .m-slide,
+    .col-r {
+        float: none;
+        width: auto;
+        margin: 15px 8px;
+    }
+
+    .m-slide,
+    .row-a1 .col-r,
+    .row-a1 .col_c,
+    .row-a2 .col-l,
+    .row-a2 .col-c,
+    .row-a2 .col-r,
+    .row-a3 .col-l,
+    .row-a10 .col-ll {
+        width: auto;
+    }
+
+    .row-a4,
+    .row-a5,
+    .row-a7,
+    .row-a8,
+    .row-a11 {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    /*  .m-slide{
+        width: auto;
+    } */
+    /* 走进迁西 艺苑大观图片高度auto */
+    .img {
+        height: auto;
+    }
+
+    /* 下载图标 天气 */
+    .m-down {
+        background-color: #fff;
+    }
+
+    .m-down .down {
+        float: none;
+        height: 175px;
+        margin: 0 auto;
+    }
+
+    .down .pic {
+        margin: 0 auto;
+    }
+
+    .down p {
+        width: 100px;
+        top: auto;
+        right: auto;
+        bottom: 20px;
+        left: 50%;
+        margin-left: -50px;
+    }
+
+    .m-weather {
+        background-size: 100%;
+    }
+
+    .m-date {
+        float: right;
+        margin-right: 22px;
+    }
+
+    .weather {
+        width: 30%;
+        margin: 50px auto 0;
+    }
+
+    .inp1 {
+        width: 93%;
+        border-right: 1px solid #ccc;
+    }
+
+    /* 走进迁西 */
+    /* .ul-list {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: space-between;
+    } */
+
+    .ul-list li {
+        /* flex-basis: 16.66%; */
+        width: 16.66%;
+    }
+
+    .ul-list .img{
+        /* width: 100%; */
+        width: auto;
+        /* height: 92%; */
+        height: 0;
+        padding-top: 84%;
+        position: relative;
+    }
+
+  /*   .ul-list li:nth-child(3n) {
+        margin-right: 10px;
+    } */
+    .ul-list .img img{
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .ul-list li:last-child {
+        margin-right: 0;
+    }
+
+    /* 风景名胜 */
+    /* .ul-pic {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .ul-pic li {
+        flex-basis: 16.66%;
+    }
+
+    .ul-pic li:nth-child(3n) {
+        margin-right: 10px;
+    }
+
+    .ul-pic li:last-child {
+        margin-right: 0;
+    }
+
+    .ul-pic li a {
+        width: 100%;
+        height: 100%;
+    } */
+
+    /* 板栗之乡 */
+    .row-a6 .col-c,
+    .row-a6 .col-r {
+        float: left;
+        width: 47%;
+    }
+
+    .row-a6 .col-r {
+        float: right;
+    }
+
+    /* .imgtxt li {
+        width: 33.33%;
+    } */
+
+    /* 艺苑大观 */
+    .row-a9 .col-c,
+    .row-a9 .col-r {
+        float: left;
+        width: 47%;
+    }
+
+    .row-a9 .col-r {
+        float: right;
+    }
+
+    /* 页脚 */
+    .m-local,
+    .qr {
+        float: none;
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .http {
+        display: inline-block;
+    }
+
+    .qr a {
+        display: inline-block;
+        float: none;
+        /* padding-left: 20px; */
+        vertical-align: middle;
+    }
+
+    .qr span {
+        left: 8px;
+    }
+
+    .copy {
+        padding: 0 8px;
+    }
+
+}
+
+@media screen and (max-width: 959px) {
+
+    /* 视频新闻三栏变2栏 */
+    /* .ul-info1 li {
+        flex-basis: 50%;
+    } */
+    .ul-info1 li {
+        width: 50%;
+    }
+
+    /* 有问题，无法两端对齐 */
+    /* .m-time {
+        width: 70%;
+    } */
+
+    /* 专题报道 标题字体变小 3栏变一栏 左边框变底边框 */
+    .row-a7 .dl-info {
+        float: none;
+        width: auto;
+        border-bottom: 1px dotted #ccc;
+        border-right: none;
+        padding: 0;
+    }
+
+
+    .row-a7 .dl-info:last-of-type {
+        border-bottom: none;
+    }
+
+    .row-a7 .dl-info dt a {
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 10px;
+    }
+
+    /* 底部切换 */
+    .ul-tab1 li {
+        width: 33.2%;
+        border-bottom: 1px solid #e1e1e1;
+    }
+
+    .ul-tab1 li:last-child {
+        border-right: 1px solid #e1e1e1;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    /* 天气 标题、时间居中 */
+    .m-weather .tit,
+    .m-date {
+        float: none;
+        display: inline-block;
+    }
+
+    .weather {
+        margin-top: 0;
+    }
+
+    /* 走进迁西变2栏 */
+    /* .ul-list {
+        flex-wrap: wrap;
+    }
+
+    .ul-list li {
+        flex-basis: 49%;
+    } */
+
+    .ul-list li{
+        width: 50%;
+    }
+
+    .ul-list li:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    /* 部门动态 */
+    .ul-txt li{
+        float: none;
+        width: auto;
+
+    }
+
+    .col-lr {
+        height: auto;
+    }
+
+    /* 视频新闻变1行 */
+
+    /* .ul-info1 li {
+        flex-basis: 100%;
+    } */
+    .ul-info1 li{
+        width: 100%;
+    }
+    /* 风景名胜变2栏 ，板栗之乡 招商引资 便民服务 部门导航各单独一行*/
+    /* .ul-pic {
+        flex-wrap: wrap;
+    }
+
+    .ul-pic li {
+        flex-basis: 49%;
+         margin: 0; 
+    } */
+    .row-a6 .ul-list li{
+        width: 50%;
+    }
+
+    .ul-list li:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    /* 板栗之乡 */
+    .row-a6 .col-c,
+    .row-a6 .col-r,
+    /* 便民服务 */
+    .row-a9 .col-c,
+    .row-a9 .col-r {
+        float: none;
+        width: auto;
+    }
+
+    .row-a10 .col-ll {
+        display: none;
+    }
+
+    /* 底部tab单独一行 */
+    .ul-tab1 li {
+        float: none;
+        width: auto;
+    }
+
+    /* 页脚地址隐藏 copy 网站制作居中 */
+    .row-f1 {
+        display: none;
+    }
+
+    .row-f2 {
+        line-height: 24px;
+        padding: 10px 0;
+    }
+
+    .copy {
+        text-align: center;
+    }
+
+    .copy p {
+        float: none;
+        display: inline-block;
+    }
+
+    .copy .support {
+        float: none;
+        display: block;
+    }
+}

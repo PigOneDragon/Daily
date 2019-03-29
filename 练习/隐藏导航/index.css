@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.container {
+    font-family: "微软雅黑";
+    /* margin: 40px 0 90px; */
+}
+
+.wp {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%
+}
+
+/* 设备tab标签 */
+.m-nav-c {
+    /* height: 50px; */
+    overflow: hidden;
+    background-color: #1e1e1e;
+}
+
+.m-nav-c li {
+    float: left;
+}
+
+.m-nav-c .link {
+    display: block;
+    padding: 0 26px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 3.13em;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 2px;
+}
+.m-nav-c .pl55 {
+    padding-left: 55px;
+    padding-right: 35px;
+}
+
+.m-nav-c li:hover .link,
+.m-nav-c li.on .link {
+    background: linear-gradient(90deg, #b91820 0%, #f75804 80%);
+}
+/* 设备分类 */
+.m-tab-c {
+    overflow: hidden;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.m-tab-c li {
+    float: left;
+    font-size: 14px;
+    line-height: 6em;
+
+    font-weight: bold;
+}
+
+.m-tab-c li a {
+    line-height: 2.14em;
+    color: #646464;
+    padding: 5px 15px;
+    margin-right: 15px;
+    text-align: center;
+    /* background-color: red; */
+}
+
+.m-tab-c li:hover a,
+.m-tab-c li.act a {
+    background-color: #ff5f01;
+    color: #fff;
+}
+.test{
+    height: 200px;
+    background-color: green;
+    font-size: 20px;
+}
+/* 隐藏的导航条 */
+.m-menuBtn{
+    display: none;
+    height: 60px;
+    line-height: 60px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 0 30px;
+    background-color: #ff5f01;
+}
+.m-menuBtn .btn-c{
+    display: block;
+    float: right;
+    margin: 15px;
+    width: 30px;
+    height: 30px;
+    background: url('btn.png') no-repeat center;
+    cursor: pointer;
+}
+@media only screen and (max-width: 1198px){
+    .m-menuBtn{
+        display: block;
+    }
+    .m-nav-c,
+    .m-tab-c{
+        display: none;
+    }
+    .m-nav-c li{
+        float: none;
+        width: auto;
+    }
+    .m-nav-c {
+        background-color: #f2f2f2;   
+        padding: 10px 30px 30px;
+    }
+    .m-nav-c .link {
+        padding: 0;
+        font-size: 12px;
+        font-weight: normal;
+        line-height: 3.13em;
+        text-align: left;
+        color: #646464;
+    }
+    .m-nav-c li:hover .link,
+    .m-nav-c li.on .link {
+         background: none;
+    }
+}

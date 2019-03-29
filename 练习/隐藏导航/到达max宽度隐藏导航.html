@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <title>导航隐藏</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="wp">
+            <!-- menuBtn -->
+            <div class="m-menuBtn">
+                全部 (<span>8</span>)
+                <div class="btn-c"></div>
+            </div>
+            <ul class="m-nav-c">
+                <li class="on"><a href="" class="link">淬火设备</a></li>
+                <li><a href="" class="link pl55">钎焊设备</a></li>
+                <li><a href="" class="link">退火设备</a></li>
+                <li><a href="" class="link">熔炼炉</a></li>
+                <li><a href="" class="link">锻造炉</a></li>
+                <li><a href="" class="link">热配合/热成形</a></li>
+                <li><a href="" class="link">订制感应加热线圈</a></li>
+                <li><a href="" class="link">感应加热电源</a></li>
+            </ul>
+            <!-- tab 1、淬火设备-->
+            <div class="tab">
+                <ul class="m-tab-c">
+                    <li><a href="">齿轮淬火机床</a></li>
+                    <li><a href="">轴类淬火机床</a></li>
+                    <li><a href="">导轨淬火机床</a></li>
+                    <li class="act"><a href="">轧辊淬火机床</a></li>
+                    <li><a href="">凸轮淬火机床</a></li>
+                    <li><a href="">曲轴淬火机床</a></li>
+                    <li><a href="">立式淬火机床</a></li>
+                    <li><a href="">卧式淬火机床</a></li>
+                    <li><a href="">淬火机床订制</a></li>
+                </ul>
+            </div>
+            <!-- content -->
+            <div class="test">
+                是否被撑下去
+            </div>
+        </div>
+    </div>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>
+
+    var flag = false;
+    $('.btn-c').click(function(){
+        flag = ! flag;
+        if (flag) {
+            $('.m-nav-c').stop().slideDown();
+        }else{
+            $('.m-nav-c').stop().slideUp();
+        }        
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .img {
+            width: 320px;
+            height: 130px;
+        }
+        .img img{
+            display: block;
+        }
+
+
+        {
+margin:30px;
+background-color:#E9E9E9;
+}
+
+div.polaroid
+{
+width:294px;
+padding:10px 10px 20px 10px;
+border:1px solid #BFBFBF;
+background-color:white;
+/* Add box-shadow */
+box-shadow:2px 2px 3px #aaaaaa;
+}
+
+div.rotate_left
+{
+float:left;
+-ms-transform:rotate(7deg); /* IE 9 */
+-moz-transform:rotate(7deg); /* Firefox */
+-webkit-transform:rotate(7deg); /* Safari and Chrome */
+-o-transform:rotate(7deg); /* Opera */
+transform:rotate(7deg);
+}
+
+div.rotate_right
+{
+float:left;
+-ms-transform:rotate(-8deg); /* IE 9 */
+-moz-transform:rotate(-8deg); /* Firefox */
+-webkit-transform:rotate(-8deg); /* Safari and Chrome */
+-o-transform:rotate(-8deg); /* Opera */
+transform:rotate(-8deg);
+}
+.tr:hover{
+    -webkit-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+    transform: rotate(10deg);
+}
+
+.flex{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    background-color: red;
+}
+.c1{
+    flex-basis: 200px;
+    margin-left: 10px;
+    background-color: blue;
+}
+    </style>
+
+
+</head>
+<body>
+    <iframe scrolling="no" src="https://tianqiapi.com/api.php?style=tg&skin=pitaya" frameborder="0" width="300" height="60" allowtransparency="true" column="2"></iframe>
+
+<br>
+    <iframe allowtransparency="true" scrolling="no" src="https//tianqi.2345.com/plugin/widget/index.htm?s=2&amp;z=3&amp;t=1&amp;v=2&amp;d=1&amp;bd=0&amp;k=&amp;f=&amp;ltf=009944&amp;htf=cc0000&amp;q=1&amp;e=1&amp;a=1&amp;c=54511&amp;w=255&amp;h=65&amp;align=left" width="255" height="65" frameborder="0"></iframe>
+
+
+    <br>
+    <!-- <div class="tr">
+        <div class="img">
+            <img src="images/yiyuan.jpg" alt="">
+        </div>
+    </div>
+ -->
+
+  <!--   <div class="polaroid rotate_left">
+<img src="images/yiyuan.jpg" alt="郁金香" width="284" height="213" />
+<p class="caption">上海鲜花港的郁金香，花名：Ballade Dream。</p>
+</div>
+
+<div class="polaroid rotate_right">
+<img src="images/yiyuan.jpg" alt="世博中国馆" width="284" height="213" />
+<p class="caption">2010年上海世博会，中国馆。</p>
+</div> -->
+
+<div class="flex">
+    <div class="c1">第一块</div>
+    <div class="c2">第二块</div>
+    <div class="c3">第三块</div>
+</div>
+
+<script>
+    function fn(a,b){
+        console.log(a,b);
+    }
+
+    var arr = ['qwe','asd'];
+    var numArr = [5,55,2,22];
+    fn.apply(fn,arr);
+    console.log(Math.min.apply(Math,numArr));
+
+    var pet = {
+        words :"...",
+        speak:function say(words){
+            console.log(words + this.words);
+        }
+    };
+    pet.speak("asdf");
+    var dog = {
+        words :"wang",
+        // speak:function say(words){
+        //     console.log(words + this.words);
+        // }
+        pet.apply(this, arguments); 
+    };
+    pet.speak.call(dog,"dogsay");
+    pet.speak.apply(dog,"dogsay");
+</script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+/*Common For Max 960*/
+@media only screen and (max-width: 1199px) {
+    .wp { width: 98%; }
+    
+
+    /* 蔡飞跃 **************************************************/
+    /* 新闻资讯 */
+    .m-col1,
+    .m-col2{
+        float: none;
+        width: auto;
+        border: none;
+    }
+    .m-col1 .content{
+        margin-right: 0; 
+        padding: 0 20px;
+    }
+    .content .mtb {
+        margin-top: 20px;
+    }
+    .m-col2 .box{
+        /* margin-left: 0;  */
+        display: none;
+    }
+    .m-index2{
+        padding: 0 20px;
+    }
+    .m-col1 .info{
+        text-align: center;
+    }
+    /* 产品中心 */
+    .m-nav-c,
+    .m-tab-c{
+        display: none;
+    }
+    
+    /* 张燕燕 **************************************************/
+
+
+    /* 闫娜 **************************************************/
+
+
+    /* 王涛 **************************************************/
+
+
+}
+
+/*Common For Max 768*/
+@media only screen and (max-width: 959px) {
+
+    /* 蔡飞跃 **************************************************/
+    /* 新闻资讯 */
+    .m-link2{
+        display: none;
+    }
+    .mb50{
+        margin-bottom: 50px;
+    }
+    .m-txt .g-tit2-c {
+        width: 50%;
+    }
+    .m-index2 .m-tabitem{
+        margin-left: -12px;
+        margin-right: -12px;
+    }
+    .g-tit1-c h4{
+        font-size: 18px;
+    }
+    /* 产品中心 */
+    .m-tabitem{
+        margin-left: 18px;
+        margin-right: 18px;
+    }
+    .m-tabitem li{
+        width: 50%;
+    }
+    .m-tabitem li a {
+        margin: 0 12px 20px;
+    }
+    .m-tabitem .txt{
+        font-size: 12px;
+    }
+    .m-paging{
+        margin: 20px auto;
+    }
+    .index-c2{
+        padding: 0 25px;
+    }
+    .index-c2 .col-l,
+    .index-c2 .col-r{
+        float: none;
+        width: auto;
+        padding: 0;
+    }
+    .index-c2 .col-l{
+        margin-bottom: 20px;
+    }
+    .index-c2 .col-r{
+        margin-bottom: 35px;
+    }
+    /* 张燕燕 **************************************************/
+
+
+    /* 闫娜 **************************************************/
+
+
+    /* 王涛 **************************************************/
+
+
+}
+
+/*Common For Max 480*/
+@media only screen and (max-width: 767px) {
+
+    /* 蔡飞跃 **************************************************/
+    /* 新闻资讯 */
+    .m-txt .g-tit2-c {
+        float: none;
+        width: auto;
+    }
+    .m-index2 .m-tabitem li{
+        width: 50%;
+    }
+    /* 产品中心 */
+    .m-tabitem{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .index-c2 .col-r{
+        margin-top: 0;
+    }
+    .index-c2 .g-tit2-c{
+        float: none;
+        width: auto;
+    }
+    .g-tit2-c a{
+        margin-right:0;
+        padding: 10px 0; 
+    }
+    /* 张燕燕 **************************************************/
+
+
+    /* 闫娜 **************************************************/
+
+
+    /* 王涛 **************************************************/
+
+
+}
+
+/*Common For Max 320*/
+@media only screen and (max-width: 479px) {
+    
+
+    /* 蔡飞跃 **************************************************/
+    /* 新闻中心 */
+    .m-index2 .m-tabitem li{
+        float: none;
+        width: auto;
+    }
+    /* 产品中心 */
+    .m-tabitem li{
+        float: none;
+        width: auto;
+    }
+    .index-c2 .m-slide .item {
+        float: none;
+        width: auto;
+    }
+
+    /* 张燕燕 **************************************************/
+
+
+    /* 闫娜 **************************************************/
+
+
+    /* 王涛 **************************************************/
+
+    
+}

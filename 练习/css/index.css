@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+input{
+    outline: 0;
+}
+a{
+    text-decoration: none;
+}
+.main{
+    width: 700px;    
+    margin: 0 auto;
+}
+/* 购物车头部 */
+.top{    
+    height: 50px;   
+    line-height: 50px; 
+    padding: 15px;
+    background-color: #ccc;
+    overflow: hidden;
+    color: #333;
+    font-size: 14px;
+}
+#all{
+    float: left;   
+}
+#all span{
+    display: inline-block;
+    /* margin-left: 8px; */
+    
+}
+.shopname{
+    float: left;
+    margin-left: 10px;
+}
+.price{
+    float: left;
+    margin-left: 200px;
+}
+.uprice,
+.count{
+    float: left;
+    margin-left: 10px;
+}
+.operate{
+    float: right;
+}
+/* 购物车列表 */
+/* .shoplist{
+    
+    overflow: hidden;
+} */
+.item{
+    height: 90px;
+    line-height: 90px;
+    padding: 15px;
+    overflow: hidden;
+    position: relative;
+}
+.go,
+.number,
+.idx,
+.del{
+    float: left;
+}
+.buy{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.text{
+    position: absolute;
+    left: 50px;
+}
+.number{
+    position: absolute;
+    left: 310px;
+    font-size: 14px;
+}
+.idx{
+    position: absolute;
+    left: 400px;
+}
+.idx a{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: rgba(255, 255, 255, .3);
+}
+.idx input{
+    width: 20px;
+    text-align: center;
+}
+
+

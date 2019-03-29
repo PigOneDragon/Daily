@@ -1,0 +1,6 @@
+$(function () {
+    $('.js_demo_module').on('click', function () {
+        alert('我是一个演示！');
+    });
+
+});

@@ -1,0 +1,221 @@
+/*Common For Max 960*/
+@media only screen and (max-width: 1199px) {
+    .wp { width: 98%; }
+    
+
+    /* 蔡飞跃 **************************************************/
+
+
+    /* 张燕燕 **************************************************/
+
+
+    /* 闫娜 **************************************************/
+
+
+    /* 王涛 **************************************************/
+
+
+}
+
+/*Common For Max 768*/
+@media only screen and (max-width: 959px) {
+
+        
+    /* 蔡飞跃 **************************************************/
+
+
+    /* 张燕燕 **************************************************/
+        .fa-tit li{
+            width: 25%;
+            margin-bottom: 10px;
+        }
+        .fa-tit a{
+            border: #e6e6e6 2px solid;
+        }
+     
+        .fa-ul-imgtxt li{
+            width: 100%;
+        }
+        .fa-info-mian{
+            padding: 0 30px;
+        }
+
+         .fa-tit a p{
+        font-size: 16px;
+        }
+        .fa-ul-imgtxt .txt h4{
+            font-size: 18px;
+        }
+        .fa-ul-imgtxt li .box{
+            margin-bottom:60px;
+        }
+        
+        .fa-int h3{
+            font-size:26px 
+        }
+        .fa-tit-2 h4{
+            font-size:20px 
+        }
+        .fa-g-tit{
+             font-size:20px 
+        }
+        .fa-case ul li{
+            width: 100%;
+        }
+        .fa-case ul li .txt h4{
+             font-size:18px 
+        }
+        .fa-case ul li .box{
+            margin-bottom: 40px;
+        }
+        .fa-case ul li{
+            width: 100%;
+        }
+
+        .caseNav{
+            height: 60px;
+            line-height: 60px;
+            font-size: 30px;
+            font-weight: bold;
+            background: #ff5f01;
+            padding: 0 30px;
+            color: #fff;
+        }
+         .caseNav span{
+            width: 27px;
+            height: 23px;
+            float: right;
+            margin-right: 48px;
+            display: inline-block;
+            vertical-align: middle;
+            background: url('../images/nav-arrow.png') no-repeat;
+         }
+    /* 闫娜 **************************************************/
+
+
+    /* 王涛 **************************************************/
+
+
+}
+
+/*Common For Max 480*/
+@media only screen and (max-width: 767px) {
+
+    /* 蔡飞跃 **************************************************/
+
+
+    /* 张燕燕 **************************************************/
+    .fa-tit a p{
+        font-size: 14px;
+    }
+    .fa-ul-imgtxt .txt h4{
+            font-size: 16px;
+        }
+    .fa-ul-imgtxt li .box{
+            margin-bottom:40px;
+        }
+     .fa-int h3{
+            font-size:22px 
+        }
+    .fa-tit-2 h4{
+            font-size:18px 
+        }
+    .fa-g-tit{
+             font-size:18px 
+        }
+        .fa-case ul li .txt h4{
+             font-size:16px 
+        }
+        .fa-case ul li .box{
+            margin-bottom: 30px;
+        }
+    /* 闫娜 **************************************************/
+
+
+    /* 王涛 **************************************************/
+    .cur span{
+        font-size:14px;
+        height: 1.5em;
+        line-height: 1.5em;
+    }
+    /*网站地图*/
+    .ul-addr:nth-of-type(even),.ul-addr:nth-of-type(odd){
+        margin-bottom: 0px;
+    }
+    .ul-addr .tit{
+        font-size:16px;
+        height: 1.5em;
+        line-height: 1.5em;
+    }
+    .ul-addr a{
+        font-size:12px;
+        height: 1.5em;
+        line-height: 1.5em;
+    }
+    .m-ul .tit1{
+        font-size:14px;
+    }
+    /*新闻中心*/
+    .name,.m-txt .name,.cur .tit h4{
+        font-size:20px;
+        height:1.5em;
+        line-height: 1.5em;
+    }
+    .m-tab{
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+    .m-tab a{
+        font-size:14px;
+        height:1.5em;
+        line-height: 1.5em;
+    }
+    .ul-pro li{
+        width:100%;
+        margin-bottom:10px;
+    }
+    .ul-pro a{
+        padding-top: 20px;
+    }
+}
+
+/*Common For Max 320*/
+@media only screen and (max-width: 479px) {
+    
+
+    /* 蔡飞跃 **************************************************/
+
+
+    /* 张燕燕 **************************************************/
+     .fa-tit a p{
+        font-size: 12px;
+    }
+    .fa-ul-imgtxt .txt h4{
+            font-size: 14px;
+        }
+    .fa-ul-imgtxt .txt p{
+        font-size: 12px;
+    }
+    .fa-ul-imgtxt a.more{
+        font-size: 12px;
+    }
+   .fa-int h3{
+            font-size:18px 
+        }
+    .fa-tit-2 h4{
+            font-size:16px 
+        }
+    .fa-g-tit{
+             font-size:16px 
+        }
+    .fa-case ul li .txt h4{
+             font-size:14px 
+        }
+   
+    /* 闫娜 **************************************************/
+
+
+    /* 王涛 **************************************************/
+
+    
+}
