@@ -205,9 +205,25 @@ button{
 }
 /* banner */
 .banner{
-    height: 585px;
+    /* height: 585px; */
     position: relative;
-    z-index: 4;
+    /* z-index: 4; */
+}
+.banner a{
+    display: block;
+}
+.banner .item{
+    position: relative;
+    padding-top: 30%;
+    width: 100%;
+    height: 0;
+}
+.banner .item img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 /* banner下的插件默认样式修改 */
 .banner .slick-dots{
@@ -647,4 +663,69 @@ button{
 .copy p{
     font-size: 18px;
     color: #a3a3a3
+}
+/* 侧边 */
+.snv{
+    /* 获取页面高度达到某一值显示 */
+    /* display: none; */
+    position: fixed;
+    right: 0;
+    bottom: 50px;
+}
+.snv .icon{
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    background-color: #ed384e;
+    margin-bottom: 10px;
+    position: relative;
+    
+    /* overflow-x: visible; */
+}
+.snvLink{
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    display: block;
+
+}
+.icon .item{
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    position: relative;
+} 
+.icon .item .img2,
+.icon .item .txt1{
+    /* float: left; */
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+.icon .item .img2 img{
+    display: inline-block;
+    vertical-align: middle;
+}
+.icon .item .txt1{
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.13em;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    letter-spacing: 3px;
+    padding-top: 13px;
+    text-align: center;
+}
+.icon:hover .snvLink{
+    top: -60px;
+}
+.item1{
+    position: absolute;
+    top: 0;
+    left: -80px;
 }
