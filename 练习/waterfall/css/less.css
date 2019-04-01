@@ -1,0 +1,222 @@
+﻿
+@media only screen and (max-width: 1200px) {
+	.wp{width: 99%;margin: 0 auto;}
+
+	/*导航*/
+	.nav{margin-right: 0;}
+
+	/*底部*/
+	.fnav{width: 30%;}
+
+	/*首页-创意策划*/
+	.i-creative-pic{width: 63%;}
+	.i-brand{width: 35%;}
+	.i-brand-ul .pic{max-width: 80px;margin: 5px auto;}
+
+	/*个人中心-头像上传*/
+	#protraitView .leftView{position: static;width: 100%;height: auto;}
+	#protraitView .leftView .sView{display: none;}
+	#protraitView .rightView{margin-left: 0;}
+	.jcrop-holder #preview-pane{top: -210px;left: 10px;display: none;}
+
+	/*演艺详情页面-01*/
+	.main-cont{width: 68%;}
+	.side-cont{width: 30%;}
+
+
+}
+
+@media only screen and (max-width: 980px) {
+	/*头部*/
+	#hd{padding: 15px 0;}
+
+	/*导航*/
+	.nav{display: none;}
+	.menu-btn{display: inline-block;}
+
+	/*底部*/
+	.fhelp{text-align: center;}
+	.fhelp .wp{display: block;}
+	.fnav{display: block;width: auto;margin-bottom: 10px;}
+	.ftel{display: inline-block;text-align: left;margin-right: 20px;}
+	.fweix{display: inline-block;}
+
+
+	/*首页-活动资讯*/
+	.i-news-ul li{width: 50%;}
+
+	/*首页-创意策划*/
+	.i-creative-pic{width: auto;float: none;margin-bottom: 20px;}
+	.i-brand{width: auto;float: none;}
+
+	.i-creative-ul li{width: 50%;}
+	.i-creative-ul li.s2{width: 100%;}
+
+	/*演艺明星*/
+	.entertain-ul li{width: 33.333%;}
+
+	/*滑动表格*/
+	.form-con{width: 100%;overflow: hidden;-webkit-transform: translateZ(0);}
+	.form-con table{width: 750px;-webkit-overflow-scrolling: touch;}
+	.form-con table:after {display: block;clear: both;height: 0;}
+
+	/*个人中心-基本信息*/
+	.s-dl-basic dt{clear: left;}
+	.s-dl-basic dd{float: none;margin-left: 110px;}
+	.s-dl-basic .last-dd{width: auto;}
+
+	/*品牌*/
+	.brand-ul{margin: 0 -10px;}
+	.brand-ul li{width: 20%;}
+	.brand-ul .pic{padding: 10px;max-width: 300px;}
+}
+
+@media only screen and (max-width: 870px) {
+
+	.s-table-pub input[type="text"],.s-table-pub .file-label input[type="text"]{max-width: 100%;}
+
+	/*演艺详情页面-01*/
+	.spadd{padding: 10px;}
+	.main-cont{width: auto;float: none;margin-bottom: 40px;}
+	.side-cont{width: auto;float: none;}
+	.hot-ul a{margin: 5px auto;}
+
+	/*品牌*/
+	.brand-ul li{width: 25%;}
+}
+
+@media only screen and (max-width: 767px) {
+	
+	#sideKefu{display: none;}
+	.mainBody{margin-right: 0;}
+
+	/*顶部*/
+	#top{line-height: 2;padding: 5px;}
+	
+
+	/*头部*/
+	#hd{padding: 10px 5px;}
+	.hdr{float: none;width: 100%;padding-top: 10px;clear: both;position: relative;text-align: center;}
+	.menu-btn{position: absolute;right: 0;top: -40px;}
+	.soBox,.loginBtn{margin: 0;float: left;}
+	.soBox{width: 65%;}
+	.loginBtn{width: 30%;float: right;}
+	.loginBtn a{width: 48%;text-align: center;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-o-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	/*banner*/
+	#banner .flexslider{margin: 0 -20%;}
+
+	/*底部*/
+	.ftel{margin-right: 0;margin-bottom: 20px;}
+	.fweix{display: block;text-align: center;display: none;}
+
+	/*首页*/
+	.sec-tit .words{margin-left: 10px;}
+
+	/*首页-活动资讯*/
+	.i-news-ul li{width: auto;float: none;}
+
+	/*个人中心-布局*/
+	.main-col{padding: 10px;}
+
+	/*用户中心*/
+	.avatarBox .txt{display: block;margin-left: 0;text-align: center;margin-top: 10px;}
+
+	/*个人中心-相册管理-上传*/
+	#photo-container{margin-right: -10px;}
+	.photo-ul .con{margin-right: 0;}
+
+	/*品牌*/
+	.brand-ul li{width: 33.333%;}
+
+
+}
+
+@media only screen and (max-width: 700px) {
+
+	#bd{margin-bottom: 30px;}
+
+	/*顶部*/
+	.tfocus{float: none;}
+	.tnav{display: none;}
+
+	/*首页*/
+	.sec-tit .words{display: none;}
+
+	/*首页-活动资讯*/
+	.activeMarquee .bd{height: auto;margin-bottom: 20px;}
+
+	.i-active{width: auto;float: none;}
+	.i-active-ul li{height: auto;max-height: 3em;}
+	.i-news{padding-left: 0;}
+	.i-news-ul{height: 600px;}
+
+	/*演艺明星*/
+	.entertain-ul li{width: 50%;}
+	.entertain-ul .title span em{display: none;}
+
+	/*个人中心-布局*/
+	.side-col{float: none;width: 98%;margin: 0 auto 30px;box-shadow: 0 5px 5px #ddd;min-height: 0;}
+	.main-col{margin-left: 0;width: 98%;margin: 0 auto;min-height: 0;}
+
+	/*创意策划*/
+	.creative-ul li{width: 100%;max-width: 600px;float: none;margin: 0 auto;}
+	.creative-ul .txt{padding: 10px;}
+
+	/*活动、资讯*/
+	.active-new-ul li{max-width: 640px;margin: 0 auto;}
+	.active-new-ul .pic{width: 100%;height: 0;padding-top: 34%;position: static;}
+	.active-new-ul .txt{margin-left: 0;padding: 10px;}
+	.active-new-ul h3{max-height: 1.5em;white-space: nowrap;word-wrap: normal;text-overflow: ellipsis;}
+	.active-new-ul .intro{margin-bottom: 10px;}
+
+	/*演艺详情页面-01*/
+	.actorBox .wp{width: 96%;}
+	.actorImg{margin: 0 auto;display: block;}
+	.actorTxt{display: block;text-align: center;}
+
+	.actor-ul .con{}
+
+	.flashBox{padding: 15px;}
+
+	/*品牌*/
+	.brand-ul{margin: 10px -5px;}
+	.brand-ul li{width: 50%;}
+	.brand-ul .pic{padding: 5px;}
+
+}
+
+@media only screen and (max-width: 479px) {
+
+	/*头部*/
+	.soBox{float: none;display: block;width: 98%;margin: 0 auto 10px;}
+	.loginBtn{float: none;display: block;width: 98%;margin: 0 auto;}
+
+	/*banner*/
+	#banner .flexslider{margin: 0 -50%;}
+
+	/*首页-创意策划*/
+	.i-creative-ul .con{height: 0;padding-top: 100%;}
+	.i-creative-ul li.s2 .con{height: 160px;padding-top: 0;}
+
+	/*个人中心-相册管理-上传*/
+
+	/*演艺明星*/
+	/*.entertain-ul li{width: auto;float: none;max-width: 295px;margin: 0 auto;}*/
+
+}
+
+@media only screen and (max-width: 400px) {
+
+	/*个人中心-基本信息*/
+	.s-table-basic th{width: 5em;}
+
+	.s-dl-basic dt{width: 5em;}
+	.s-dl-basic dd{width: auto;margin-left: 6em;}
+
+}

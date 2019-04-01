@@ -1,0 +1,244 @@
+
+/*******************************
+	-------[=个人中心]-------
+********************************/
+
+.st1{font-size: 12px;line-height: 30px;border-bottom: 1px solid #dcdcdc;margin-bottom: 5px;}
+.st1 span{display: inline-block;padding-left: 22px;}
+
+.i-user{background: url(../images/i-user.png) no-repeat left center;}
+.i-set{background: url(../images/i-set.png) no-repeat left center;}
+
+
+/*******************************
+	-------[=用户中心]-------
+********************************/
+.stit1{font-size: 16px;line-height: 50px;padding: 0 20px;
+	border-bottom: 1px solid #dddbdb;margin-bottom: 10px;}
+.stit1 span{display: inline-block;}
+
+.stit1 .i-user2{padding-left: 35px;margin-left: -20px;background: url(../images/i-user2.png) no-repeat left center;}
+.stit1 .sbtn2{position: relative;top: 10px;}
+
+.avatarBox{text-align: center;font-size: 16px;margin: 20px;}
+.avatarBox .avatar{display: inline-block;vertical-align: middle;
+	border-radius: 50%;overflow: hidden;width: 218px;height: 218px;
+	background: url(../images/i-avatar.png) no-repeat left top;}
+.avatarBox .avatar a{display: block;text-align: center;line-height: 218px;font-weight: bold;color: #f7536b;}
+
+.avatarBox .txt{font-size: 12px;line-height: 2;margin-left: 20px;display: inline-block;vertical-align: middle;text-align: left;}
+.avatarBox .txt strong{font-size: 16px;}
+
+.s-table-active{width: 100%;}
+.s-table-active tr{line-height: 49px;border-bottom: 1px solid #dddbdb;}
+.s-table-active td{text-align: right;padding: 0 15px;}
+.s-table-active .title{text-align: left;}
+.s-table-active .datetime{text-align: center;}
+.s-table-active a{color: #0289ff;margin-left: 35px;}
+.s-table-active a:hover{text-decoration: underline;}
+
+/*自定义图片上传样式*/
+.img-file{position: relative;}
+.img-file .file-label{display: block;cursor: pointer;background-position: center center;
+	-webkit-background-size: auto 100%;background-size: auto 100%;}
+.img-file .file-label input{display: none;}
+.img-file .file-label span{color: #f7536b;font-weight: bold;}
+
+
+/*******************************
+	-------[=个人中心-信息发布]-------
+********************************/
+.stt1{margin-left: -5px;padding-left: 5px;font-weight: bold;display: inline-block;line-height: 40px;border-left: 7px solid #f7536b;}
+
+.s-table-pub{font-size: 14px;width: 100%;max-width: 760px;margin: 0 auto 50px;}
+.s-table-pub td,.s-table-pub th{padding: 10px 5px;}
+.s-table-pub th{font-weight: normal;width: 100px;text-align: right;vertical-align: top;line-height: 38px;}
+.s-table-pub td{}
+.s-table-pub input,.s-table-pub textarea{padding: 0 5px;width: 100%;font-size: 14px;color: #bcbcbc;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.s-table-pub input[type="text"]{height: 36px;line-height: 36px \9;max-width: 360px;}
+.s-table-pub .file-label input[type="text"]{max-width: 380px;}
+.s-table-pub textarea{height: 200px;resize:none;padding: 8px 5px;}
+.s-table-pub input[type="submit"]{border: 0;width: 150px;color: #fff;font-weight: bold;cursor: pointer;margin: 0 auto;}
+
+/*自定义文件上传样式*/
+.nice-file{position: relative;}
+.nice-file .file-label{display: block;}
+.nice-file input[type='file']{display: none;}
+
+.activeImg .file-label{max-width: 515px;}
+
+
+/*******************************
+	-------[=个人中心-公司基本信息]-------
+********************************/
+.stt1 b{display: block;line-height: 1.5;}
+.stt1 em{display: block;font-size: 12px;line-height: 1.5;}
+
+/*******************************
+	-------[=个人中心-密码修改]-------
+********************************/
+.s-table-pass{font-size: 14px;width: 100%;margin-bottom: 50px;}
+.s-table-pass caption{font-size: 16px;font-weight: bold;padding-left: 125px;padding-top: 10px;}
+.s-table-pass tr{}
+.s-table-pass th,.s-table-pass td{padding: 10px 5px;}
+.s-table-pass th{width: 110px;text-align: right;}
+.s-table-pass td{}
+.s-table-pass input[type='text']{height: 33px;line-height: 33px \9;border: 1px solid #beb9ba;margin-right: 10px;
+	padding: 0 5px;width: 100%;max-width: 335px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.s-table-pass input[type="submit"]{border: 0;cursor: pointer;}
+
+
+
+/*******************************
+	-------[=个人中心-相册管理]-------
+********************************/
+.stips{width: 100%;max-width: 678px;margin: 40px auto;}
+.stips .con{background-color: #f6f6f6;text-align: center;padding: 15px;margin-bottom: 5px;border: 1px solid #bab4b5;}
+.i-alert{display: block;padding: 20px 0 20px 55px;background: url(../images/i-alert.png) no-repeat left center;}
+
+/*******************************
+	-------[=个人中心-相册管理-上传]-------
+********************************/
+.i-ok{display: inline-block;padding: 20px 80px 20px 0;background: url(../images/i-ok.png) no-repeat right center;}
+
+.photo-ul{overflow: hidden;}
+.photo-ul li{float: left;width: 50%;}
+.photo-ul .con{position: relative;border: 1px solid #ddd;margin-right: 60px;}
+.photo-ul .delBtn{position: absolute;left: 0;bottom: 0;width: 100%;display: none;
+	height: 45px;line-height: 45px;text-align: center;color: #fff;font-size: 16px;
+	background: rgba(0,0,0,0.75);background: #000 \9;}
+.photo-ul .pic{}
+.photo-ul .pic img{display: block;width: 100%;}
+
+#photo-container{position: relative;margin-right: -70px;}
+
+/*******************************
+	-------[=个人中心-基本信息]-------
+********************************/
+.s-table-basic{font-size: 14px;width: 100%;max-width: 650px;margin: 0 auto 50px;}
+.s-table-basic th,.s-table-basic td{padding: 8px 5px;vertical-align: top;line-height: 38px;}
+.s-table-basic th{font-weight: normal;width: 90px;text-align: right;}
+.s-table-basic td{}
+.s-table-basic input,.s-table-basic textarea,.s-table-basic select{
+	width: 100%;border: 1px solid #ddd;margin-right: 5px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.s-table-basic input{height: 36px;line-height: 36px \9;padding: 0 5px;max-width: 220px;}
+.s-table-basic select{height: 38px;max-width: 220px;}
+.s-table-basic textarea{max-width: 440px;padding: 5px;resize:none;height: 120px;}
+.s-table-basic .sbtn3{font-size: 18px;cursor: pointer;margin: 0 auto;}
+
+.s-dl-basic{font-size: 14px;overflow: hidden;width: 100%;max-width: 690px;margin: 0 auto;}
+.s-dl-basic dt,.s-dl-basic dd{padding: 10px 5px;float: left;line-height: 38px;}
+.s-dl-basic dt{width: 100px;text-align: right;}
+.s-dl-basic dd{width: 225px;}
+.s-dl-basic .last-dd{width: 100%;max-width: 570px;}
+.s-dl-basic input,.s-dl-basic textarea,.s-dl-basic select{
+	width: 100%;border: 1px solid #ddd;margin-right: 5px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.s-dl-basic input{height: 36px;line-height: 36px \9;padding: 0 5px;}
+.s-dl-basic select{height: 38px;}
+
+
+/*自定义单选按钮*/
+.label-radio{display: inline-block;padding-right: 20px;margin-right: 20px;
+	background: url(../images/radio-bg.png) no-repeat right 14px;}
+.label-radio input{display: none;}
+.checked{background-position: right -86px;}
+
+/*******************************
+	-------[=个人中心-经纪人基本信息]-------
+********************************/
+
+/*******************************
+	-------[=个人中心-视频添加]-------
+********************************/
+.s-table-video{width: 100%;font-size: 14px;}
+.s-table-video tr{border-bottom: 1px solid #ddd;line-height: 49px;}
+.s-table-video td{padding: 0 15px;}
+
+.videoBox{width: 100%;max-width: 490px;margin: 50px auto;padding-right: 65px;position: relative;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.videoBox input[type="text"]{height: 40px;line-height: 40px \9;border: 1px solid #ddd;
+	padding: 0 10px;width: 100%;display: inline-block;vertical-align: middle;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.videoBox .sbtn2{height: 36px;line-height: 36px;cursor: pointer;font-size: 14px;
+	padding: 0 15px;position: absolute;right: 0;top: 0;}
+
+/*******************************
+	-------[=个人中心-文档上传]-------
+********************************/
+.s-table-word{width: 100%;font-size: 14px;}
+.s-table-word tr{border-bottom: 1px solid #ddd;line-height: 49px;}
+.s-table-word td{padding: 0 15px;}
+.s-table-word .title{color: #08abd4;}
+.s-table-word .title a{color: #08abd4;}
+
+.wordBox{max-width: 520px;margin: 50px auto;}
+.wordBox .file-inp{color: #a7a7a7;}
+.wordBox .sbtn2{font-size: 14px;height: 36px;line-height: 36px;padding: 0 35px 0 65px;margin-bottom: 5px;}
+
+.i-upload{
+	background-image: url(../images/i-upload.png);cursor: pointer;
+	background-repeat: no-repeat;
+	background-position: 30px center;
+}
+
+
+/*******************************
+	-------[=个人中心-头像上传]-------
+********************************/
+.portraitBox{max-width: 160px;margin: 20px auto;}
+.portraitBox .sbtn2{font-size: 14px;height: 36px;line-height: 36px;padding: 0 35px 0 65px;margin-bottom: 5px;}
+
+.i-pic{
+	background-image: url(../images/i-pic.png);cursor: pointer;
+	background-repeat: no-repeat;
+	background-position: 30px center;
+}
+
+.i-back{display: inline-block;padding-left: 25px;margin-right: 30px;line-height: 35px;
+	background: url(../images/i-back.png) no-repeat left center;}
+
+.protraitView{margin: 15px;overflow: hidden;}
+
+#protraitView{position: relative;overflow: hidden;}
+#protraitView .leftView{color: #919191;background: #f6f6f6;position: absolute;left: 0;top: 0;width: 200px;height: 100%;}
+#protraitView .leftView h4{padding: 10px;font-weight: normal;font-size: 12px;}
+#protraitView .leftView .sView{padding: 10px;}
+#protraitView .leftView .sView img{display: block;width: 100px;height:100px;margin: 0 auto;}
+
+#protraitView .rightView{background: #939393;margin-left: 205px;position: relative;}
+.jcrop-holder #preview-pane{display: block;position: absolute;top: 50%;left: -205px;z-index: 2000;}
+#preview-pane .preview-container{width: 200px;height: 200px;overflow: hidden;}
+
+.protraitView .sbtn6{cursor: pointer;}
+
+@media only screen and (max-width: 1200px) {
+	#protraitView .rightView{zoom: 0.5;}
+}

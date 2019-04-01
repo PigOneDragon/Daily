@@ -177,7 +177,7 @@
         line-height: 30px;
         text-align: center;
     }
-
+    /* font-size:0 去除p转换成行内元素时换行符、空白文本的间隙 */
     .icon .item .txt1 {
         padding-top: 0;        
         font-size: 0;

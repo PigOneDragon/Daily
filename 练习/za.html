@@ -12,7 +12,7 @@
         <li>2</li>
         <li>3</li>
         <li>4</li>
-        <li>5</li>
+        <li class="last">5</li>
     </ul>
     <p id="rem">remove ul列表</p>
     <p id="emp">empty ul列表</p>
@@ -32,33 +32,41 @@
             console.log(event.which);
         });
 
-        $('#btn1').click(function(){
+        $('#btn1').click(function() {
             $('#p').append('<span>在#p后面(标签内)添加内容</span>');
         });
-        $('#btn2').click(function(){
+        $('#btn2').click(function() {
             $('<span>把我添加到#pp后面(标签内)</span>').appendTo($('#pp'));
-        });       
+        });
         // prepend() 在元素(标签内)前面添加
         // after  before  标签外的前后添加
-$('#btn3').click(function(){
+        $('#btn3').click(function() {
             $('#p').after('<b>在#p后面(标签外)添加内容</b>');
         });
-$('#btn4').click(function(){
+        $('#btn4').click(function() {
             $('#pp').before('<i>在#pp前面(标签外)添加内容</i>');
         });
     });
-    $('#rem').click(function (){
-       $('#ul').remove(); 
+    $('#rem').click(function() {
+        $('#ul').remove();
     });
-    $('#emp').click(function (){
-       $('#ul').empty(); 
+    $('#emp').click(function() {
+        $('#ul').empty();
     });
-    
+
     console.log($(window).width());
     console.log($('#p').innerWidth());
-    console.log('body.outerWidth()',$('body').outerWidth());
-    console.log('body.outerWidth(true)',$('body').outerWidth(true));
+    console.log('body.outerWidth()', $('body').outerWidth());
+    console.log('body.outerWidth(true)', $('body').outerWidth(true));
 
+    var ubtil = $('#ul li').eq(0).nextUntil(".last");
+    console.log(ubtil);
+
+    function abc() {}
+    console.log(abc instanceof Function);
+
+
+    console.log(Date());
     </script>
 </body>
 
