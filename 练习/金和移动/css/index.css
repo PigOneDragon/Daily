@@ -229,7 +229,7 @@ button{
     margin-left: 2%;
     height: 75px;
     border: 1px solid #dcdcdc;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0,.6);
     border-radius: 18px;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -330,7 +330,7 @@ button{
     margin: 0 auto;
     text-align: center;
     background: url('../images/tit_bg.png') center no-repeat;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .g-tit h5{
     color: #fff;
@@ -355,7 +355,7 @@ button{
 }
 .ul-pic li{
     float: left;
-    width: 33.33%;
+    /* width: 33.33%; */
 }
 .ul-pic .item{
     display: block;
@@ -441,9 +441,9 @@ button{
 .row-2 .g-tit h5{
     color: #000;
 }
-.row-2 .ul-pic li{
+/* .row-2 .ul-pic li{
     width: 25%;
-}
+} */
 .row-2 .ul-pic .pic{
     /* 309/270 */
     padding-top: 114%;
@@ -498,6 +498,9 @@ button{
     overflow: hidden;
     margin-right: 8px;
     margin-bottom: 8px;
+}
+.m-pic2{
+    padding: 0 20px;
 }
 /* .ul-pic1 a img{
     display: block;

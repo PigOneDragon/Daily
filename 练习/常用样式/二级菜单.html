@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .wp{
+            width: 1150px;
+            margin: 500px auto;
+        }
+        .clear{
+            clear: both;
+            zoom: 1;
+        }
+    .ul-tab1 li {
+        position: relative;
+        z-index: 6;
+        float: left;
+        width: 16%;
+        height: 50px;
+        line-height: 50px;
+        border-right: 1px solid #e1e1e1;
+    }
+
+    .ul-tab1 li:last-child {
+        border-right: none;
+    }
+
+    .ul-tab1 li .item {
+        display: block;
+        color: #000;
+        font-size: 14px;
+        padding-left: 30px;
+        margin-right: 10px;
+        background: url('img/down.png') center right no-repeat;
+    }
+
+    /* 底部二级菜单 */
+    .g-dropmenu {
+        position: absolute;
+        width: 100%;
+        bottom: 50px;
+
+        left: 0;
+        z-index: 5;
+        display: none;
+    }
+
+    .g-dropmenu dd {
+        background-color: #fff;
+    }
+
+    .g-dropmenu a {
+        display: block;
+        color: #000;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+        padding: 8px 5px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        border-bottom: 1px solid #e1e1e1;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wp">
+        <div class="row-a11">
+            <ul class="ul-tab1">
+                <li>
+                    <a href="#5" class="item">国家部链接</a>
+                    <dl class="g-dropmenu">
+                        <dd><a href="#4">部门1</a></dd>
+                        <dd><a href="#4">部门1</a></dd>
+                        <dd><a href="#4">部门1</a></dd>
+                        <dd><a href="#4">部门1</a></dd>
+                        <dd><a href="#4">部门1</a></dd>
+                        <dd><a href="#4">部门1</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <a href="#5" class="item">河北省各地市网站</a>
+                    <dl class="g-dropmenu">
+                        <dd><a href="#4">部门1</a></dd>
+                        <dd><a href="#4">部门1</a></dd>
+                        <dd><a href="#4">部门1</a></dd>
+                        <dd><a href="#4">部门1</a></dd>
+                        <dd><a href="#4">部门1</a></dd>
+                        <dd><a href="#4">部门1</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <a href="#5" class="item">唐山市政府</a>
+                    <dl class="g-dropmenu">
+                        <dd><a href="#4">部门1</a></dd>
+                        <dd><a href="#4">部门1</a></dd>
+                        <dd><a href="#4">部门1</a></dd>
+                        <dd><a href="#4">部门1</a></dd>
+                        <dd><a href="#4">部门1</a></dd>
+                        <dd><a href="#4">部门1</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <a href="#5" class="item">迁西县人民政府</a>
+                    <dl class="g-dropmenu">
+                        <dd><a href="#4">部门1</a></dd>
+                        <dd><a href="#4">部门1</a></dd>
+                        <dd><a href="#4">部门1</a></dd>
+                        <dd><a href="#4">部门1</a></dd>
+                        <dd><a href="#4">部门1</a></dd>
+                        <dd><a href="#4">部门1</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <a href="#5" class="item">新闻媒体链接</a>
+                    <dl class="g-dropmenu">
+                        <dd><a href="#4">部门1</a></dd>
+                        <dd><a href="#4">部门1</a></dd>
+                        <dd><a href="#4">部门1</a></dd>
+                        <dd><a href="#4">部门1</a></dd>
+                        <dd><a href="#4">部门1</a></dd>
+                        <dd><a href="#4">部门1</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <a href="#5" class="item">友情链接</a>
+                    <dl class="g-dropmenu">
+                        <dd><a href="#4">部门1</a></dd>
+                        <dd><a href="#4">部门1</a></dd>
+                        <dd><a href="#4">部门1</a></dd>
+                        <dd><a href="#4">部门1</a></dd>
+                        <dd><a href="#4">部门1</a></dd>
+                        <dd><a href="#4">部门1</a></dd>
+                    </dl>
+                </li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('.ul-tab1 li').click(function() {
+                // 隐藏所有二级菜单
+                $('.g-dropmenu').slideUp();
+                //点击时 如果隐藏的元素个数不为0 ，将点击的子元素显示
+                if ($('.g-dropmenu:visible', $(this)).size()) {
+                    $('.g-dropmenu', $(this)).slideUp();
+                    // $(this).removeClass('click');
+                } else {
+                    $('.g-dropmenu', $(this)).slideDown();
+                    // $(this).addClass('click');
+                }
+            });
+        })
+    
+    </script>
+</body>
+
+</html>

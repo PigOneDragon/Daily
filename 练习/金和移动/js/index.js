@@ -27,7 +27,7 @@ $(function() {
     });
     });
 */
-    // news轮播
+    // news轮播  轮播后怎么控制列数？  已解决 responsive方法
     $('.row-1 .ul-pic').slick({
         // dots: true,
         slidesToShow: 3,
@@ -36,7 +36,25 @@ $(function() {
         autoplaySpeed: 3000,
         arrows: true,
         speed: 500,
-        cssEase: 'linear'
+        // 插件的响应式布局
+        responsive: [
+            
+            {
+            breakpoint: 969,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+                }
+            }
+        ]
+
     });
     $('.row-2 .ul-pic').slick({
         // dots: true,
@@ -46,8 +64,51 @@ $(function() {
         autoplaySpeed: 3000,
         arrows: true,
         speed: 500,
-        cssEase: 'linear'
+        responsive: [
+            
+            {
+            breakpoint: 1198,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },
+            {
+            breakpoint: 969,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+                }
+            }
+        ]
     });
+    $('.m-pic2').slick({
+        // dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        // autoplay:true,
+        autoplaySpeed: 3000,
+        arrows: true,
+        speed: 500,
+        /*responsive: [
+            
+            {
+            breakpoint: 1198,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },
+            {
+            breakpoint: 969,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+                }
+            }
+        ]*/
+    });
+
 
     //tab页切换
     /*

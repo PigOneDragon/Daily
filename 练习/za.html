@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="ul">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <p id="rem">remove ul列表</p>
+    <p id="emp">empty ul列表</p>
+    <br>
+    <p id="p">这是一个段落</p>
+    <p id="pp">这是另一个段落</p>
+    <button id="btn1">append</button>
+    <button id="btn2">appendTo</button>
+    <button id="btn3">after</button>
+    <button id="btn4">before</button>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $(window).keypress(function(event) {
+            //获取事件对象，里面包含各种有用的信息。
+            console.log(event);
+            console.log(event.which);
+        });
+
+        $('#btn1').click(function(){
+            $('#p').append('<span>在#p后面(标签内)添加内容</span>');
+        });
+        $('#btn2').click(function(){
+            $('<span>把我添加到#pp后面(标签内)</span>').appendTo($('#pp'));
+        });       
+        // prepend() 在元素(标签内)前面添加
+        // after  before  标签外的前后添加
+$('#btn3').click(function(){
+            $('#p').after('<b>在#p后面(标签外)添加内容</b>');
+        });
+$('#btn4').click(function(){
+            $('#pp').before('<i>在#pp前面(标签外)添加内容</i>');
+        });
+    });
+    $('#rem').click(function (){
+       $('#ul').remove(); 
+    });
+    $('#emp').click(function (){
+       $('#ul').empty(); 
+    });
+    
+    console.log($(window).width());
+    console.log($('#p').innerWidth());
+    console.log('body.outerWidth()',$('body').outerWidth());
+    console.log('body.outerWidth(true)',$('body').outerWidth(true));
+
+    </script>
+</body>
+
+</html>
