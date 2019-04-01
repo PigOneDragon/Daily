@@ -339,8 +339,8 @@ button{
     height: 41px;
     /* font-weight: 320; */
     letter-spacing: 7px;
-    margin-bottom: 12px;
-    margin-top: 55px;
+    padding: 55px 0 12px;
+    text-align: center;
 }
 .g-tit em{
     display: inline-block;
@@ -359,7 +359,7 @@ button{
 }
 .ul-pic .item{
     display: block;
-    margin-right: 45px; 
+    margin:0 20px; 
 }
 .ul-pic .pic{
     position: relative;
@@ -412,11 +412,11 @@ button{
     z-index: 2;
 }
 .slick-prev{
-    left: -59px;
+    left: -38px;
     background: url('../images/b-prev.png') center no-repeat;
 }
 .slick-next{
-    right: -15px;
+    right: -38px;
     background: url('../images/b-next.png') center no-repeat;
 }
 .row-2 .slick-prev,
@@ -657,7 +657,7 @@ button{
     background-color: #2f2f2f;
 }
 .row-f2 .wp{
-    width: 1000px;
+    max-width: 1000px;
     overflow: hidden;
 }
 .fd-nav{
@@ -719,17 +719,11 @@ button{
     display: none;
     position: fixed;
     right: 0;
-    bottom: 50px;
+    bottom: 150px;
 }
 .snv .icon{
-    width: 60px;
-    height: 60px;
-    border-radius: 8px;
-    background-color: #ed384e;
     margin-bottom: 10px;
     position: relative;
-    
-    /* overflow-x: visible; */
 }
 .snvLink{
     position: absolute;
@@ -744,6 +738,8 @@ button{
 .icon .item{
     width: 60px;
     height: 60px;
+    border-radius: 8px;
+    background-color: #ed384e;
     overflow: hidden;
     position: relative;
 } 

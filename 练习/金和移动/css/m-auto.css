@@ -20,19 +20,22 @@
     }
 
 
-    .nav{
+    .nav {
         position: absolute;
         top: 50px;
         left: 0;
     }
+
     .nav li {
         float: left;
         margin-left: 40px;
         position: relative;
     }
-    .nav li.on .item::after{
+
+    .nav li.on .item::after {
         display: none;
     }
+
     .nav .item {
         display: block;
         position: relative;
@@ -54,4 +57,156 @@
     .so1 {
         display: block;
     }
+    .show{
+        display: block;
+    }
+    /* 二维码区域 */
+    .m-pic ul {
+        display: block;
+    }
+
+    .m-pic li {
+        float: left;
+        margin: 0;
+        text-align: center;
+        width: 33.33%;
+    }
+
+    .m-pic li a {
+        display: block;
+        margin: 50px;
+    }
+
+    .m-pic .img {
+        position: relative;
+        padding-top: 99%;
+        height: 0;
+        overflow: hidden;
+        display: block;
+        width: auto;
+    }
+
+    .m-pic .img img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .row-5 .g-tit{
+        width: 100%;
+        color: #f4c951;
+        padding: 0 8px;
+        font-size: 16px;
+        line-height: 2em;
+        /* margin-top: 35px; */
+        background-size: 100%;
+        overflow: hidden;
+        -ms-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+@media only screen and (max-width: 969px) {
+    .fd-nav {
+        text-align: center;
+    }
+
+    .fd-nav li:not(.tit) {
+        display: none;
+    }
+
+    /* 侧边 */
+    .snv {
+        bottom: 0;
+        width: 100%;
+        /* position: relative; */
+    }
+
+    .snv .icon {
+        float: left;
+        width: 33.33%;
+        margin-bottom: 0;
+    }
+
+    .snv .item {
+        width: 100%;
+        border-radius: 0;
+        text-align: center;
+    }
+
+    .snv .backTop {
+        position: absolute;
+        top: -70px;
+        right: 50px;
+        width: 60px;
+    }
+
+    .snv .backTop .item {
+        border-radius: 8px;
+    }
+    .snv .backTop .item .img2{
+        height: 60px;
+        /* line-height: 60px; */
+    }
+    .snv .backTop .item .txt1{
+        display: none;
+    }
+    .snvLink {
+        width: 100%;
+    }
+
+    .icon .item .img2,
+    .icon .item .txt1 {
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .icon .item .txt1 {
+        padding-top: 0;
+        /* font-size: 0; */
+    }
+
+    .icon .item .img2 img {
+        height: 100%;
+    }
+
+    .icon .item .txt1 p {
+        /* float: left; */
+        display: inline-block;
+        letter-spacing: 0;
+        /* font-size: 14px; */
+    }
+
+    .m-now {
+        display: none;
+    }
+
+    .m-map {
+        display: none;
+    }
+
+    .container {
+        float: none;
+        width: auto;
+        height: 200px;
+    }
+
+    .m-local h4 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .m-local p {
+        font-size: 12px;
+    }
+
+    .m-local .path {
+        padding-left: 30px;
+    }
+
+    
 }

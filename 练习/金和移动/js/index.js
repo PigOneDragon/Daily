@@ -128,32 +128,18 @@ $(function() {
             scrollTop: '0'
         }, 500);
     });
-    // $('.nav li').click(function(){
-    //     $('.link').slideUp();
-    //     if($('.link:visible',$(this)).size()){
-    //         $('.link',$(this)).slideUp();
-    //         $(this).removeClass('click');
-    //     }else{
-    //         $('.link',$(this)).slideDown();
-    //         $(this).addClass('click');
-    //     }
-    // });
 
 // 页面变化去除隐藏的效果
     $(window).resize(function(event) {
         var Width = $(this).width();
         // console.log(Width);
         if(Width > 1198){
-            $('.inp1').css('display','block');
-            $('.nav').css('display','block');
-
-        }else{
-            $('.inp1').css('display','none');
-            $('.nav').css('display','none');
+            $('.nav').removeClass('show');
+            $('.inp1').removeClass('show');
         }
     });
-    // 输入框 导航条的淡入淡出  太麻烦~ 修改class试试
-    var f1 = false;
+    /* 输入框 导航条的淡入淡出  太麻烦~ 修改class试试*/
+    /*var f1 = false;
     var f2 = false;
     $('.btn1').click(function(){
         f1 = !f1;
@@ -173,6 +159,20 @@ $(function() {
         }else{
             $('.nav').fadeOut();
         };
+        return false;
+    });*/
+    $('.btn1').click(function(){
+        $('.nav').removeClass('show');
+
+        $('.inp1').toggleClass('show');
+ 
+        return false;
+    });
+    $('.menubtn').click(function(){
+        $('.nav').toggleClass('show');
+
+        $('.inp1').removeClass('show');
+ 
         return false;
     });
     
