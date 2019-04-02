@@ -67,6 +67,32 @@
 
 
     console.log(Date());
+// 构造
+    function test(){
+        var p={};
+        function _set(obj){
+            for(var i in obj){
+                p[i]=obj[i];
+            }
+        }
+        function _get(){
+            console.log(p)
+        }
+        this.set=function(){
+            return _set;
+        };
+        this.get=function(){
+            return _get;
+        }
+    }
+    test.prototype.zidingyi = "global_my";
+
+    var obj = new test();
+    obj.set()({'name':'xhhh','sex':'male','age':'10'});
+    obj.get()();
+
+    console.log(obj);
+
     </script>
 </body>
 

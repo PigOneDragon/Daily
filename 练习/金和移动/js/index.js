@@ -79,6 +79,13 @@ $(function() {
                 slidesToShow: 2,
                 slidesToScroll: 1
                 }
+            },
+            {
+            breakpoint: 479,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+                }
             }
         ]
     });
@@ -108,55 +115,47 @@ $(function() {
             }
         ]*/
     });
-
-
-    //tab页切换
-    /*
-     *tabItem 切换的top页
-     *see 控制tab显示的类
-     *cls 当前导航的类
-     */
-    // $.fn.Uitab = function(tabItem,see,cls){
-    //     var ui = this;
-    //     ui.on('mouseenter',function(){
-    //         var index = $(this).index();
-    //         // console.log(index);
-    //         ui.removeClass(cls).eq(index).addClass(cls);
-    //         tabItem.removeClass(see).eq(index).addClass(see);
-
-    //     });
-
-    // };
-
-    // $('.nav li').Uitab($('.nav dl'),'show','on');
-
  
-    $('.nav li').hover(function() {
-        $('dl', $(this)).stop().slideDown();
+    /*$('.nav li').hover(function() {
+        $('dl', this).stop().slideDown();
         $('.nav li').removeClass('on');
         $(this).addClass('on');
     }, function() {
-        $('dl', $(this)).stop().slideUp();
+        $('dl', this).stop().slideUp();
         $(this).removeClass('on');
-    });
+    });*/
 
+// 二级菜单item状态转换
     $('.nav dd').hover(function() {
         $('.nav dd').removeClass('ok');
         $(this).addClass('ok');
+
     }, function() {
         $(this).removeClass('ok');
+
     });
 
-    $('.nav').hover(function() {
-        $('.nav-sub').stop().slideDown();
-    }, function() {
-        $('.nav-sub').stop().slideUp();
+// 二级菜单
+var navLi = $('.nav li');
+var navSub = $('.nav-sub');
+
+    navLi.mouseenter(function() {
+        var index = $(this).index();
+        $('dl', this).stop().slideDown();
+        navSub.stop().slideDown();
+        navLi.removeClass('on').eq(index).addClass('on');
+    });
+    navLi.mouseleave(function() {
+        $('dl', this).stop().slideUp();
+        navSub.stop().slideUp();
+
+        $(this).removeClass('on');
     });
 
-    $('.nav-sub').hover(function() {
-        $('.nav-sub').stop().slideDown();
+    navSub.hover(function() {
+        $(this).stop().slideDown();
     }, function() {
-        $('.nav-sub').stop().slideUp();
+        $(this).stop().slideUp();
     });
 
 
@@ -177,26 +176,30 @@ $(function() {
         }
     });
     // 菜单二级菜单效果不好
-    $('.icon').mouseenter(function() {
+    $('.icon').hover(function() {
         $('.item1', $(this)).fadeIn(300);
-    });
-    $('.icon').mouseleave(function() {
-        $('.item1', $(this)).fadeOut();
-    });
-
+        return false;
+    },
+        function() {
+            $('.item1', $(this)).fadeOut();
+            return false;
+        }
+    );
+    // 返回顶部
     $('.backTop').click(function() {
         $('body,html').stop().animate({
             scrollTop: '0'
         }, 500);
     });
 
+
 // 页面变化去除隐藏的效果
     $(window).resize(function(event) {
         var Width = $(this).width();
         // console.log(Width);
         if(Width > 1198){
-            $('.nav').removeClass('show');
-            $('.inp1').removeClass('show');
+            nav.removeClass('show');
+            inp1.removeClass('show');
         }
     });
     /* 输入框 导航条的淡入淡出  太麻烦~ 修改class试试*/
@@ -222,19 +225,34 @@ $(function() {
         };
         return false;
     });*/
+    var nav = $('.nav');
+    var inp1 = $('.inp1');
     $('.btn1').click(function(){
-        $('.nav').removeClass('show');
+        nav.removeClass('show');
 
-        $('.inp1').toggleClass('show');
+        inp1.toggleClass('show');
  
         return false;
     });
     $('.menubtn').click(function(){
-        $('.nav').toggleClass('show');
+        nav.toggleClass('show');
 
-        $('.inp1').removeClass('show');
+        inp1.removeClass('show');
  
         return false;
     });
-    
+
+    nav.click(function(){
+        $(this).addClass('show');
+        return false;
+    });
+    inp1.click(function(){
+        $(this).addClass('show');
+        return false;
+    });
+    $('body , html').click(function(){
+        nav.removeClass('show');
+        inp1.removeClass('show');
+    });
+
 });

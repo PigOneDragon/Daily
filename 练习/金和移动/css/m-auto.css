@@ -69,15 +69,11 @@
     }
 
     .m-pic li {
-        float: left;
-        margin: 0;
-        text-align: center;
         width: 33.33%;
     }
 
-    .m-pic li a {
+    /*.m-pic li a {
         display: block;
-        margin: 50px;
     }
 
     .m-pic .img {
@@ -88,14 +84,14 @@
         display: block;
         width: auto;
     }
-
+    
     .m-pic .img img {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-    }
+    } */
 
     /* 轮播图按钮隐藏 */
     .slick-prev, .slick-next {
@@ -105,6 +101,10 @@
     .banner .slick-prev, .banner .slick-next {
         display: block !important;
     }
+    /* 案例 */
+    .ul-pic1 li{
+        width: 20%;
+    }
 
     .row-5 .g-tit {
         width: 100%;
@@ -112,16 +112,11 @@
         padding: 0 8px;
         font-size: 16px;
         line-height: 2em;        /* margin-top: 35px; */
-        background-size: 100%;
-        overflow: hidden;
-        -ms-text-overflow: ellipsis;
-        text-overflow: ellipsis;
-        white-space: nowrap;
     }
-
+    
 }
 
-@media only screen and (max-width:969px) {
+@media only screen and (max-width:959px) {
     .fd-nav {
         text-align: center;
     }
@@ -192,7 +187,7 @@
         display: inline-block;
         font-size: 14px;
     }
-
+/* 位置 */
     .m-now {
         display: none;
     }
@@ -219,6 +214,33 @@
     .m-local .path {
         padding-left: 30px;
     }
+    /* 案例 */
+    .ul-pic1 li{
+        width: 25%;
+    }
+    .row-3 .go{
+        display: none;
+    }
+    /* 二维码 */
+
+    .m-pic li a{
+        margin: 10px;
+    }
 
 
+}
+@media only screen and (max-width:767px) {
+    /* 案例 */
+    .ul-pic1 li{
+        width: 33.33%;
+    }
+
+}
+@media only screen and (max-width:479px) {
+     /* 案例 */
+    .ul-pic1 li,
+    .m-pic li{
+        float: none;
+        width: auto;
+    }
 }
