@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .wp {
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* 导航栏 */
+    .nav {
+        height: 60px;
+        background-color: #005196;
+        margin-bottom: -30px;
+        position: relative;
+        z-index: 5;
+    }
+
+    .nav li {
+        float: left;
+        width: 115px;
+        text-align: center;
+    }
+
+    .nav li a {
+        display: block;
+        height: 60px;
+        line-height: 60px;
+        font-size: 18px;
+        color: #fff;
+        -webkit-transition: background-color .3s;
+        -o-transition: background-color .3s;
+        transition: background-color .3s;
+        position: relative;
+    }
+
+
+    /* 图片阴影 */
+    .nav li a i {
+        display: none;
+        width: 4px;
+        height: 60px;
+        position: absolute;
+        top: 0;
+        right: -4px;
+        background: url('images/nav-ico.png') no-repeat;
+    }
+
+    .nav li a.on,
+    .nav li a:hover {
+        background-color: #dc0000;
+        padding-top: 4px;
+        margin-top: -4px;
+    }
+
+    .nav li a.on i,
+    .nav li a:hover i {
+        display: block;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- 1、二级效果跟随li不需要铺满屏幕 -->
+    <!-- 2、二级效果铺满整个屏幕，不需要跟随li -->
+    <!-- 3、二级效果铺满屏幕 跟随li -->
+    <div class="header">
+        <div class="wp">
+            <div class="menubtn"></div>
+            <div class="logo"><a href=""><img src="images/logo.png" /></a></div>
+            <ul class="nav">
+                <li>
+                    <a href="javascript:void(0);" class="item">关于</a>
+                    <div class="nav-sub">
+                        <dl>
+                            <dd class="ok"><a href=""><span>阳光共治</span></a></dd>
+                            <dd><a href=""><span>C6协同管理平台</span></a></dd>
+                            <dd><a href=""><span>C6协同管理平台</span></a></dd>
+                            <dd><a href=""><span>主体自律</span></a></dd>
+                            <dd><a href=""><span>JC6协同管理平台</span></a></dd>
+                            <dd><a href=""><span>JC6协同管理平台</span></a></dd>
+                        </dl>
+                        <div class="up"></div>
+                    </div>
+                </li>
+                <li class="on">
+                    <a href="javascript:void(0);" class="item">产品</a>
+                    <div class="nav-sub">
+                        <dl>
+                            <dd class="ok"><a href=""><span>阳光共治</span></a></dd>
+                            <dd><a href=""><span>C6协同管理平台</span></a></dd>
+                            <dd><a href=""><span>C6协同管理平台</span></a></dd>
+                            <dd><a href=""><span>主体自律</span></a></dd>
+                            <dd><a href=""><span>JC6协同管理平台</span></a></dd>
+                            <dd><a href=""><span>JC6协同管理平台</span></a></dd>
+                            <dd><a href=""><span>智慧治理</span></a></dd>
+                            <dd><a href=""><span>移动办公</span></a></dd>
+                            <dd><a href=""><span>移动办公</span></a></dd>
+                            <dd><a href=""><span>大数据</span></a></dd>
+                        </dl>
+                        <div class="up"></div>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="item">客户</a>
+                    <div class="nav-sub">
+                        <dl>
+                            <dd class="ok"><a href=""><span>阳光共治</span></a></dd>
+                            <dd><a href=""><span>C6协同管理平台</span></a></dd>
+                            <dd><a href=""><span>C6协同管理平台</span></a></dd>
+                            <dd><a href=""><span>主体自律</span></a></dd>
+                            <dd><a href=""><span>JC6协同管理平台</span></a></dd>
+                            <dd><a href=""><span>JC6协同管理平台</span></a></dd>
+                            <dd><a href=""><span>智慧治理</span></a></dd>
+                            <dd><a href=""><span>移动办公</span></a></dd>
+                            <dd><a href=""><span>移动办公</span></a></dd>
+                            <dd><a href=""><span>大数据</span></a></dd>
+                        </dl>
+                        <div class="up"></div>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="item">方案</a>
+                    <div class="nav-sub">
+                        <dl>
+                            <dd class="ok"><a href=""><span>阳光共治</span></a></dd>
+                            <dd><a href=""><span>C6协同管理平台</span></a></dd>
+                            <dd><a href=""><span>C6协同管理平台</span></a></dd>
+                            <dd><a href=""><span>主体自律</span></a></dd>
+                            <dd><a href=""><span>JC6协同管理平台</span></a></dd>
+                            <dd><a href=""><span>JC6协同管理平台</span></a></dd>
+                            <dd><a href=""><span>智慧治理</span></a></dd>
+                            <dd><a href=""><span>移动办公</span></a></dd>
+                            <dd><a href=""><span>移动办公</span></a></dd>
+                            <dd><a href=""><span>大数据</span></a></dd>
+                        </dl>
+                        <div class="up"></div>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="item">服务</a>
+                    <div class="nav-sub">
+                        <dl>
+                            <dd class="ok"><a href=""><span>阳光共治</span></a></dd>
+                            <dd><a href=""><span>C6协同管理平台</span></a></dd>
+                            <dd><a href=""><span>C6协同管理平台</span></a></dd>
+                            <dd><a href=""><span>主体自律</span></a></dd>
+                            <dd><a href=""><span>JC6协同管理平台</span></a></dd>
+                            <dd><a href=""><span>JC6协同管理平台</span></a></dd>
+                            <dd><a href=""><span>智慧治理</span></a></dd>
+                            <dd><a href=""><span>移动办公</span></a></dd>
+                            <dd><a href=""><span>移动办公</span></a></dd>
+                            <dd><a href=""><span>大数据</span></a></dd>
+                        </dl>
+                        <div class="up"></div>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="item">各地</a>
+                    <div class="nav-sub">
+                        <dl>
+                            <dd class="ok"><a href=""><span>阳光共治</span></a></dd>
+                            <dd><a href=""><span>C6协同管理平台</span></a></dd>
+                            <dd><a href=""><span>C6协同管理平台</span></a></dd>
+                            <dd><a href=""><span>主体自律</span></a></dd>
+                            <dd><a href=""><span>JC6协同管理平台</span></a></dd>
+                            <dd><a href=""><span>JC6协同管理平台</span></a></dd>
+                            <dd><a href=""><span>智慧治理</span></a></dd>
+                            <dd><a href=""><span>移动办公</span></a></dd>
+                            <dd><a href=""><span>移动办公</span></a></dd>
+                            <dd><a href=""><span>大数据</span></a></dd>
+                        </dl>
+                        <div class="up"></div>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="item">下载</a>
+                    <div class="nav-sub">
+                        <dl>
+                            <dd class="ok"><a href=""><span>阳光共治</span></a></dd>
+                            <dd><a href=""><span>C6协同管理平台</span></a></dd>
+                            <dd><a href=""><span>C6协同管理平台</span></a></dd>
+                            <dd><a href=""><span>主体自律</span></a></dd>
+                            <dd><a href=""><span>JC6协同管理平台</span></a></dd>
+                            <dd><a href=""><span>JC6协同管理平台</span></a></dd>
+                            <dd><a href=""><span>智慧治理</span></a></dd>
+                            <dd><a href=""><span>移动办公</span></a></dd>
+                            <dd><a href=""><span>移动办公</span></a></dd>
+                            <dd><a href=""><span>大数据</span></a></dd>
+                        </dl>
+                        <div class="up"></div>
+                    </div>
+                </li>
+            </ul>
+            <div class="so">
+                <form action="">
+                    <input type="text" class="inp" />
+                    <input type="submit" value="" class="btn" />
+                </form>
+            </div>
+            <div class="so1">
+                <form action="">
+                    <input type="text" class="inp1" />
+                    <div class="btn1"> </div>
+                </form>
+            </div>
+        </div>
+        <!-- <div class="nav-sub">
+            <dl>
+                    <dd class="ok"><a href=""><span>阳光共治</span></a></dd>
+                    <dd><a href=""><span>C6协同管理平台</span></a></dd>
+                    <dd><a href=""><span>C6协同管理平台</span></a></dd>
+                    <dd><a href=""><span>主体自律</span></a></dd>
+                    <dd><a href=""><span>JC6协同管理平台</span></a></dd>
+                    <dd><a href=""><span>JC6协同管理平台</span></a></dd>
+                </dl>
+                <dl class="show">
+                    <dd class="ok"><a href=""><span>阳光共治</span></a></dd>
+                    <dd><a href=""><span>C6协同管理平台</span></a></dd>
+                    <dd><a href=""><span>C6协同管理平台</span></a></dd>
+                    <dd><a href=""><span>主体自律</span></a></dd>
+                    <dd><a href=""><span>JC6协同管理平台</span></a></dd>
+                    <dd><a href=""><span>JC6协同管理平台</span></a></dd>
+                    <dd><a href=""><span>智慧治理</span></a></dd>
+                    <dd><a href=""><span>移动办公</span></a></dd>
+                    <dd><a href=""><span>移动办公</span></a></dd>
+                    <dd><a href=""><span>大数据</span></a></dd>
+                </dl>
+                <dl>
+                    <dd class="ok"><a href=""><span>阳光共治</span></a></dd>
+                    <dd><a href=""><span>C6协同管理平台</span></a></dd>
+                    <dd><a href=""><span>C6协同管理平台</span></a></dd>
+                    <dd><a href=""><span>主体自律</span></a></dd>
+                    <dd><a href=""><span>JC6协同管理平台</span></a></dd>
+                    <dd><a href=""><span>JC6协同管理平台</span></a></dd>
+                </dl>
+                <dl>
+                    <dd class="ok"><a href=""><span>阳光共治</span></a></dd>
+                    <dd><a href=""><span>C6协同管理平台</span></a></dd>
+                    <dd><a href=""><span>C6协同管理平台</span></a></dd>
+                    <dd><a href=""><span>主体自律</span></a></dd>
+                    <dd><a href=""><span>JC6协同管理平台</span></a></dd>
+                    <dd><a href=""><span>JC6协同管理平台</span></a></dd>
+                </dl>
+            <div class="up"></div>
+        </div> -->
+    </div>
+</body>
+
+</html>

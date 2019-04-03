@@ -64,13 +64,13 @@
     }
 
     /* 二维码区域 */
-    .m-pic ul {
+    /* .m-pic ul {
         display: block;
     }
-
+    
     .m-pic li {
         width: 33.33%;
-    }
+    } */
 
     /*.m-pic li a {
         display: block;
@@ -107,11 +107,14 @@
     }
 
     .row-5 .g-tit {
-        width: 100%;
         color: #f4c951;
         padding: 0 8px;
         font-size: 16px;
-        line-height: 2em;        /* margin-top: 35px; */
+        line-height: 2em; 
+        overflow: hidden;
+        white-space: nowrap;
+        -ms-text-overflow: ellipsis;
+              text-overflow: ellipsis;      
     }
     
 }

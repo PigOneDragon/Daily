@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .wp {
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* 导航栏 */
+    .nav {
+        height: 60px;
+        background-color: #005196;
+        margin-bottom: -30px;
+        position: relative;
+        z-index: 5;
+    }
+
+    .nav li {
+        float: left;
+        width: 115px;
+        text-align: center;
+    }
+
+    .nav li a {
+        display: block;
+        height: 60px;
+        line-height: 60px;
+        font-size: 18px;
+        color: #fff;
+        -webkit-transition: background-color .3s;
+        -o-transition: background-color .3s;
+        transition: background-color .3s;
+        position: relative;
+    }
+
+
+    /* 图片阴影 */
+    .nav li a i {
+        display: none;
+        width: 4px;
+        height: 60px;
+        position: absolute;
+        top: 0;
+        right: -4px;
+        background: url('images/nav-ico.png') no-repeat;
+    }
+
+    .nav li a.on,
+    .nav li a:hover {
+        background-color: #dc0000;
+        padding-top: 4px;
+        margin-top: -4px;
+    }
+
+    .nav li a.on i,
+    .nav li a:hover i {
+        display: block;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- 1、二级效果跟随li不需要铺满屏幕 -->
+    <!-- 2、二级效果铺满整个屏幕，不需要跟随li -->
+    <!-- 3、二级效果铺满屏幕 跟随li -->
+    <div class="nav">
+        <div class="wp">
+            <!-- 实现图标的阴影效果
+                        1、把红色整块作为一块图片放在a上 调整 z-index优先级
+                        2、只把阴影部分作为图片加到a后面，红色用背景填充，顶部超出部分利用padding-top:4px;margin-bottom:-4px;把超出部分顶上去 -->
+            <ul>
+                <li><a href="" class="on">首页<i></i></a></li>
+                <li><a href="">迁西简介<i></i></a></li>
+                <li><a href="">迁西快讯<i></i></a></li>
+                <li><a href="">新闻视频<i></i></a></li>
+                <li><a href="">专题报道<i></i></a></li>
+                <li><a href="">招商引资<i></i></a></li>
+                <li><a href="">部门导航<i></i></a></li>
+                <li><a href="">风景名胜<i></i></a></li>
+                <li><a href="">艺苑大观<i></i></a></li>
+                <li><a href="">便民服务<i></i></a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

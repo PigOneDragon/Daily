@@ -169,10 +169,13 @@ button {
     left: 0;
     z-index: 4;
 }
-
+/* 控制后几个li下二级菜单的位置 */
+.nav .dl1{
+    left: -550px;
+}
 .nav dd {
     float: left;
-    width: 33.33%;
+    width: 30%;
     text-align: left;
 }
 
@@ -652,11 +655,12 @@ button {
 }
 
 .m-pic {
-    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .m-pic ul {
-    display: inline-block;
+    
     overflow: hidden;
 }
 
@@ -664,7 +668,7 @@ button {
     float: left;
     /* margin: 135px 65px; */
     /* text-align: center; */
-    /* width: 33.33%; */
+    width: 33.33%;
 }
 
 .m-pic li a {
@@ -709,7 +713,6 @@ button {
 } */
 
 .row-5 .g-tit {
-    width: 307px;
     background: url('../images/Shape 2.png');
     -webkit-background-size: 100%;
     background-size: 100%;
@@ -821,10 +824,14 @@ button {
     text-align: center;
     background-color: #313131;
 }
-
+/* 限制一行，防止把页面撑开 */
 .copy p {
     font-size: 18px;
-    color: #a3a3a3
+    color: #a3a3a3;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 /* 侧边 */
@@ -894,9 +901,9 @@ button {
 .item1 {
     position: absolute;
     top: 0;
-    left: -150px;
-    display: none;
-    width: 130px;
+    right: 0;
+    visibility: hidden;
+    width: 0;
     height: 60px;
     background-color: #ed384e;
     border-radius: 10px;
@@ -908,8 +915,17 @@ button {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    opacity: 0;
 }
-
+.item1 p{
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 .item1::after {
     content: "";
     display: block;
@@ -919,4 +935,12 @@ button {
     transform: translateY(-50%);
     border: 7px solid;
     border-color: transparent transparent transparent #ed384e;
+}
+
+
+.icon:hover .item1{
+    right: 80px;
+    visibility: visible;
+    width: 150px;
+    opacity: 1;
 }
