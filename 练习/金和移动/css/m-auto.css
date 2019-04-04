@@ -33,11 +33,11 @@
         position: relative;
     }
 
-    .nav li.on .item::after {
+    .nav li.on .v1::after {
         display: none;
     }
 
-    .nav .item {
+    .nav .v1 {
         display: block;
         position: relative;
         font-size: 15px;
@@ -54,44 +54,10 @@
         width: 75px;
         height: 30px;
     }
-
-    .so1 {
+    .so1,
+    .header .show {
         display: block;
     }
-
-    .show {
-        display: block;
-    }
-
-    /* 二维码区域 */
-    /* .m-pic ul {
-        display: block;
-    }
-    
-    .m-pic li {
-        width: 33.33%;
-    } */
-
-    /*.m-pic li a {
-        display: block;
-    }
-
-    .m-pic .img {
-        position: relative;
-        padding-top: 99%;
-        height: 0;
-        overflow: hidden;
-        display: block;
-        width: auto;
-    }
-    
-    .m-pic .img img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    } */
 
     /* 轮播图按钮隐藏 */
     .slick-prev, .slick-next {
