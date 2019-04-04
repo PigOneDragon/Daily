@@ -124,69 +124,70 @@
         text-align: center;
     }
 
-    .fd-nav li:not(.tit) {
+    .fd-nav dd {
         display: none;
     }
 
     /* 侧边 */
-    .snv {
+    .m-slidebarR {
         bottom: 0;
         width: 100%;        /* position: relative; */
     }
 
-    .snv .icon {
+    .m-slidebarR li{
         float: left;
         width: 33.33%;
         margin-bottom: 0;
     }
 
-    .snv .item {
+    .m-slidebarR li .icon {
         width: 100%;
         border-radius: 0;
         text-align: center;
     }
 
-    .snv .backTop {
+    .m-slidebarR .backTop {
         position: absolute;
         top: -70px;
         right: 50px;
         width: 60px;
     }
 
-    .snv .backTop .item {
+    .m-slidebarR .backTop .icon {
         border-radius: 8px;
     }
 
-    .snv .backTop .item .img2 {
-        height: 60px;        /* line-height: 60px; */
-    }
 
-    .snv .backTop .item .txt1 {
+    .m-slidebarR .backTop .txt1 {
         display: none;
     }
 
-    .snvLink {
+    .m-slidebarR .snvLink {
         width: 100%;
     }
 
-    .icon .item .img2, .icon .item .txt1 {
+    .m-slidebarR li .icon .img2, .m-slidebarR li .icon .txt1 {
         width: 100%;
         height: 30px;
         line-height: 30px;
         text-align: center;
     }
     /* font-size:0 去除p转换成行内元素时换行符、空白文本的间隙 */
-    .icon .item .txt1 {
+    .m-slidebarR li  .txt1 {
         padding-top: 0;        
         font-size: 0;
         letter-spacing: 0;
     }
 
-    .icon .item .img2 img {
+.m-slidebarR .backTop .icon .img2 {
+        height: 60px;        /* line-height: 60px; */
+    }
+
+    .m-slidebarR .backTop .img2 img {
         height: 100%;
     }
 
-    .icon .item .txt1 p {
+    .m-slidebarR li .txt1 p {
         display: inline-block;
         font-size: 14px;
     }
@@ -199,7 +200,7 @@
         display: none;
     }
 
-    .container {
+    .row-4 .col-r {
         float: none;
         width: auto;
         height: 200px;
