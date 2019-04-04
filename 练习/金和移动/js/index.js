@@ -10,23 +10,23 @@ $(function() {
         cssEase: 'linear'
     });
 
-/*    // 定义一个参数控制页面的页数
-    
-    $(window).resize(function(event) {
-        var Width = $(this).width();
-        // console.log(Width);
-        var pageIndex = 4;
-        if(Width < 957){
-            pageIndex = 3;
-            // alert("ok");
-            console.log(pageIndex);
-        }
-        $('.row-2 .ul-pic').slick({
+    /*    // 定义一个参数控制页面的页数
+        
+        $(window).resize(function(event) {
+            var Width = $(this).width();
+            // console.log(Width);
+            var pageIndex = 4;
+            if(Width < 957){
+                pageIndex = 3;
+                // alert("ok");
+                console.log(pageIndex);
+            }
+            $('.row-2 .ul-pic').slick({
 
-            slidesToShow: pageIndex
-    });
-    });
-*/
+                slidesToShow: pageIndex
+        });
+        });
+    */
     // news轮播  轮播后怎么控制列数？  已解决 responsive方法
     $('.row-1 .ul-pic').slick({
         // dots: true,
@@ -38,19 +38,19 @@ $(function() {
         speed: 500,
         // 插件的响应式布局
         responsive: [
-            
+
             {
-            breakpoint: 969,
+                breakpoint: 969,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1
                 }
             },
             {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
                 }
             }
         ]
@@ -65,30 +65,36 @@ $(function() {
         arrows: true,
         speed: 500,
         responsive: [
-            
+
             {
-            breakpoint: 1198,
+                breakpoint: 1198,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 1
                 }
             },
             {
-            breakpoint: 969,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1
+                breakpoint: 969,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
                 }
             },
             {
-            breakpoint: 479,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
+                breakpoint: 479,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
                 }
             }
         ]
     });
+    // 控制几行
+    jQuery(".m-pic2 li").each(function(i) {
+        jQuery(".m-pic2 li").slice(i * 12, i * 12 + 12).wrapAll("<ul class='ul-pic1'></ul>");
+    });
+
+
     $('.m-pic2').slick({
         // dots: true,
         slidesToShow: 1,
@@ -115,7 +121,7 @@ $(function() {
             }
         ]*/
     });
- 
+
     /*$('.nav li').hover(function() {
         $('dl', this).stop().slideDown();
         $('.nav li').removeClass('on');
@@ -124,67 +130,120 @@ $(function() {
         $('dl', this).stop().slideUp();
         $(this).removeClass('on');
     });*/
+    // 项目给的
+    /*function myNav(){
+        var _winw = $(window).width();
+        if( _winw>767 ){
+            $('.nav').show();
+            $('.nav li').bind('mouseenter',function() {
+                $(this).find('dl').stop().slideDown();
+                $('.nav-sub').stop().slideDown();
+                if( $(this).find('dl').length ){
+                    $(this).addClass('ok');
+                }
+            });
+            $('.nav li').bind('mouseleave',function() {
+                $(this).removeClass('ok');
+                $(this).find('dl').stop().slideUp();
+                $('.nav-sub').stop().slideUp();
 
-// 二级菜单item状态转换
-    $('.nav dd').hover(function() {
-        $('.nav dd').removeClass('ok');
-        $(this).addClass('ok');
+            });
+            $('body').removeClass('open');
+        }else{
+            $('.nav').hide();
+            $('.nav li').unbind('mouseenter mouseleave');
+            $('.nav .v1').click(function(){
+                if( $(this).siblings('dl').length ){
+                    $(this).siblings('dl').stop().slideToggle();
+                    return false;
+                }
+            });
+        }
+    }
+    myNav();
+    $(window).resize(function(event) {
+        myNav();
+    });  */
+   function myNav(){
+        var _winw = $(window).width();
+        console.log(_winw);
+        if( _winw>1199 ){
+            $('.inp1').removeClass('show');
+            // $('.nav').stop().slideDown();
+            $('.nav').show();
+            $('.nav li').bind('mouseenter',function() {
+                $(this).find('dl').stop().slideDown();
+                $('.nav-sub').stop().slideDown();
+                if( $(this).find('dl').length ){
+                    $(this).addClass('on');
+                }
+            });
+            $('.nav li').bind('mouseleave',function() {
+                $(this).removeClass('on');
+                $(this).find('dl').stop().slideUp();
+                $('.nav-sub').stop().slideUp();
 
-    }, function() {
-        $(this).removeClass('ok');
+            });
+            // 二级菜单的箭头
+            $('.nav dd').hover(function() {
+                    $('.nav dd').removeClass('ok');
+                    $(this).addClass('ok');
 
-    });
+                }, function() {
+                    $(this).removeClass('ok');
 
-// 二级菜单
-var navLi = $('.nav li');
-var navSub = $('.nav-sub');
+                });
 
-    navLi.mouseenter(function() {
-        var index = $(this).index();
-        $('dl', this).stop().slideDown();
-        navSub.stop().slideDown();
-        navLi.removeClass('on').eq(index).addClass('on');
-    });
-    navLi.mouseleave(function() {
-        $('dl', this).stop().slideUp();
-        navSub.stop().slideUp();
+        }else{
+            $('.nav').hide();
+            // $('.nav').stop().slideUp();
+            $('.nav li').unbind('mouseenter mouseleave');
+            $('.nav .v1').click(function(){
+                if( $(this).siblings('dl').length ){
+                    $(this).siblings('dl').stop().slideToggle();
+                    return false;
+                }
+            });
+        }
+    }
+    myNav();
+    $(window).resize(function(event) {
+        myNav();
+    });  
 
-        $(this).removeClass('on');
-    });
 
-    navSub.hover(function() {
-        $(this).stop().slideDown();
-    }, function() {
-        $(this).stop().slideUp();
-    });
-
+    // navSub.hover(function() {
+    //     $(this).stop().slideDown();
+    // }, function() {
+    //     $(this).stop().slideUp();
+    // });
 
     // 侧边栏
     $(window).scroll(function() {
         if ($(this).scrollTop() > 1000) {
-            $('.snv').fadeIn();
+            $('.m-slidebarR').fadeIn();
         } else {
-            $('.snv').fadeOut();
+            $('.m-slidebarR').fadeOut();
         }
         // 头部背景
         var Height = $(this).scrollTop();
         // console.log(Height);
-        if(Height > 200){
-            $('.header').css('backgroundColor','#010508');
-        }else{
-            $('.header').css('backgroundColor','transparent');
+        if (Height > 200) {
+            $('.header').css('backgroundColor', '#010508');
+        } else {
+            $('.header').css('backgroundColor', 'transparent');
         }
     });
-    // 菜单二级菜单效果不好
-    $('.icon').hover(function() {
-        $('.item1', $(this)).fadeIn(300);
-        return false;
-    },
+    // 侧边二级菜单效果不好、用css控制宽度实现
+    /*$('.icon').hover(function() {
+            $('.item1', $(this)).fadeIn(300);
+            return false;
+        },
         function() {
             $('.item1', $(this)).fadeOut();
             return false;
         }
-    );
+    );*/
     // 返回顶部
     $('.backTop').click(function() {
         $('body,html').stop().animate({
@@ -193,15 +252,41 @@ var navSub = $('.nav-sub');
     });
 
 
-// 页面变化去除隐藏的效果
-    $(window).resize(function(event) {
+    // 二级菜单
+    var navLi = $('.nav li');
+    var navSub = $('.nav-sub');
+    /*navLi.mouseenter(function() {
+                var index = $(this).index();
+                $('dl', this).stop().slideDown();
+                navSub.stop().slideDown();
+                navLi.removeClass('on').eq(index).addClass('on');
+            });
+            navLi.mouseleave(function() {
+                $('dl', this).stop().slideUp();
+                navSub.stop().slideUp();
+
+                $(this).removeClass('on');
+
+
+                $('.nav dd').hover(function() {
+                    $('.nav dd').removeClass('ok');
+                    $(this).addClass('ok');
+
+                }, function() {
+                    $(this).removeClass('ok');
+
+                });
+            });*/
+    // 页面变化去除隐藏的效果
+/*    $(window).resize(function(event) {
         var Width = $(this).width();
         // console.log(Width);
-        if(Width > 1198){
-            nav.removeClass('show');
+        if (Width > 1050) {
+ 
             inp1.removeClass('show');
         }
-    });
+
+    });*/
     /* 输入框 导航条的淡入淡出  太麻烦~ 修改class试试*/
     /*var f1 = false;
     var f2 = false;
@@ -227,32 +312,80 @@ var navSub = $('.nav-sub');
     });*/
     var nav = $('.nav');
     var inp1 = $('.inp1');
-    $('.btn1').click(function(){
-        nav.removeClass('show');
-
+    var flag = false;
+    // 改变类名
+    function changeClass(obj1, obj2, cls) {
+        obj1.removeClass(cls);
+        obj2.toggleClass(cls);
+    }
+    $('.btn1').click(function() {
+        // changeClass(nav, inp1, 'show');
+        nav.stop().slideUp();
         inp1.toggleClass('show');
- 
+        // inp1.removeClass('show');
         return false;
     });
-    $('.menubtn').click(function(){
-        nav.toggleClass('show');
-
+    $('.menubtn').click(function() {
+        // changeClass(inp1, nav, 'show');
+        flag = !flag;
+        if (flag) {
+            nav.stop().slideDown();
+        } else {
+            nav.stop().slideUp();
+        }
         inp1.removeClass('show');
- 
         return false;
     });
 
-    nav.click(function(){
+    $('body , html').click(function() {
+        // nav.removeClass('show');
+        flag = !flag;
+        nav.stop().slideUp();
+        inp1.removeClass('show');
+        return false;
+    });
+
+    /*nav.click(function() {
+        $(this).addClass('show');
+        return false;
+    });*/
+    inp1.click(function() {
         $(this).addClass('show');
         return false;
     });
-    inp1.click(function(){
-        $(this).addClass('show');
-        return false;
-    });
-    $('body , html').click(function(){
-        nav.removeClass('show');
-        inp1.removeClass('show');
+
+    /*     ********************************************************   */
+    // 百度地图API功能
+
+    var map = new BMap.Map("allmap"); // 创建Map实例
+    map.centerAndZoom(new BMap.Point(116.309584, 40.060497), 15); // 初始化地图,设置中心点坐标和地图级别
+
+    map.setCurrentCity("北京"); // 设置地图显示的城市 此项是必须设置的
+    map.enableScrollWheelZoom(true); //开启鼠标滚轮缩放
+
+    // 定位的图标
+
+    var point = new BMap.Point(116.309584, 40.060497);
+    var marker = new BMap.Marker(point); // 创建标注
+    map.addOverlay(marker); // 将标注添加到地图中
+    marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+
+
+    //点击弹出标注
+
+    //var marker = new BMap.Marker(point);  // 创建标注
+    //map.addOverlay(marker);              // 将标注添加到地图中
+    //map.centerAndZoom(point, 15);
+    var opts = {
+        width: 200, // 信息窗口宽度
+        height: 100, // 信息窗口高度
+        title: "北京总部", // 信息窗口标题
+        enableMessage: true, //设置允许信息窗发送短息
+        message: "亲耐滴，晚上一起吃个饭吧？戳下面的链接看下地址喔~"
+    }
+    var infoWindow = new BMap.InfoWindow("上地东路1号盈创动力大厦A座北区401", opts); // 创建信息窗口对象 
+    marker.addEventListener("click", function() {
+        map.openInfoWindow(infoWindow, point); //开启信息窗口
     });
 
 });

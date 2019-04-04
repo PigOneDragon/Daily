@@ -42,7 +42,11 @@ button {
 
 .logo {
     float: left;
-    width: 124px;
+    /* width: 124px; */
+}
+
+.logo a {
+    display: block;
 }
 
 .logo img {
@@ -71,7 +75,7 @@ button {
     position: relative;
 }
 
-.nav .item {
+.nav .v1 {
     display: block;
     position: relative;
     font-size: 20px;
@@ -80,11 +84,11 @@ button {
     background: url('../images/down.png') right center no-repeat;
 }
 
-.nav li.on .item {
+.nav li.on .v1 {
     color: #005cab;
 }
 
-.nav li.on .item::after {
+.nav li.on .v1::after {
     content: "";
     display: block;
     width: 100%;
@@ -170,9 +174,14 @@ button {
     z-index: 4;
 }
 
+/* 控制后几个li下二级菜单的位置 */
+.nav .dl1 {
+    left: -550px;
+}
+
 .nav dd {
     float: left;
-    width: 33.33%;
+    width: 30%;
     text-align: left;
 }
 
@@ -201,20 +210,16 @@ button {
 /* header搜索 */
 .so {
     float: right;
-    width: 200px;
-    height: 30px;
+    line-height: 30px;
     background-color: #ddd;
     border-radius: 30px;
     margin-top: 25px;
     position: relative;
 }
 
-.inp {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.so .inp {
+    width: 200px;
+    height: 30px;
     padding: 3px 10px;
     border: none;
     background-color: transparent;
@@ -226,12 +231,12 @@ button {
     white-space: nowrap;
 }
 
-.btn {
+.so .btn {
     position: absolute;
-    top: 3px;
-    right: 18px;
-    width: 18px;
-    height: 24px;
+    top: 0;
+    right: 10px;
+    width: 30px;
+    height: 30px;
     border: none;
     cursor: pointer;
     background: url(../images/search.png) center no-repeat;
@@ -246,7 +251,7 @@ button {
     width: 100%;
 }
 
-.inp1 {
+.so1 .inp1 {
     display: none;
     position: absolute;
     top: 50px;
@@ -263,7 +268,7 @@ button {
     color: #fff;
 }
 
-.btn1 {
+.so1 .btn1 {
     position: absolute;
     top: 10px;
     right: 18px;
@@ -285,7 +290,7 @@ button {
     display: block;
 }
 
-.banner .item {
+.banner .item a {
     position: relative;
     padding-top: 30%;
     width: 100%;
@@ -371,13 +376,15 @@ button {
 .g-tit h5 {
     color: #fff;
     font-size: 20px;
-    max-width: 240px;
-    line-height: 2em;
+    width: 300px;
+    line-height: 2.25em;
     letter-spacing: 7px;
+    /* 文字间隙从头部往后，不设置indent导致字体不居中 */
+    text-indent: 7px;
     margin: 45px auto 15px;
     background: url('../images/tit_bg.png') center no-repeat;
-    -webkit-background-size: 100%;
-    background-size: 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
     overflow: hidden;
     -ms-text-overflow: ellipsis;
     text-overflow: ellipsis;
@@ -402,7 +409,7 @@ button {
     /* width: 33.33%; */
 }
 
-.ul-pic .item {
+.ul-pic li>a {
     display: block;
     margin: 0 20px;
 }
@@ -414,7 +421,7 @@ button {
     overflow: hidden;
 }
 
-.pic img {
+.ul-pic .pic img {
     position: absolute;
     top: 0;
     left: 0;
@@ -422,21 +429,22 @@ button {
     height: 100%;
 }
 
-.txt {
+.ul-pic .txt {
     padding: 18px 22px 5px 25px;
     background-color: #e9e9e9;
 }
 
-.txt p {
+.ul-pic .txt h4 {
     font-size: 20px;
+    font-weight: normal;
     color: #262626;
-    line-height: 25px;
-    height: 50px;
+    line-height: 1.25em;
+    height: 2.5em;
     text-overflow: ellipsis;
     overflow: hidden;
 }
 
-.txt span {
+.ul-pic .txt span {
     display: block;
     margin-top: 8px;
     font-size: 18px;
@@ -505,23 +513,22 @@ button {
     width: 25%;
 } */
 .row-2 .ul-pic .pic {
-    /* 309/270 */
     padding-top: 114%;
 }
 
-.text {
+.ul-pic .text {
     background-color: #fff;
     overflow: hidden;
 }
 
-.text .tit {
+.ul-pic .text .tit {
     font-size: 22px;
     color: #000;
     text-align: center;
     padding: 25px 0 18px;
 }
 
-.text p {
+.ul-pic .text p {
     font-size: 14px;
     color: #000;
     padding: 0 30px;
@@ -530,7 +537,8 @@ button {
     text-overflow: ellipsis;
 }
 
-.go {
+.ul-pic .go {
+    display: block;
     width: 125px;
     height: 35px;
     line-height: 35px;
@@ -560,13 +568,27 @@ button {
 
 .ul-pic1 li a {
     display: block;
-    padding-top: 54%;
-    height: 0;
-    position: relative;
     overflow: hidden;
     margin-right: 8px;
     margin-bottom: 8px;
 }
+
+.ul-pic1 .pic {
+    padding-top: 54%;
+    height: 0;
+    position: relative;
+    height: 0;
+    overflow: hidden;
+}
+
+.ul-pic1 .pic img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 
 .m-pic2 {
     padding: 0 20px;
@@ -581,10 +603,17 @@ button {
     left: 0;
 } */
 /* 客户案例go宽度 */
+
 .row-3 .go {
+    display: block;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    color: #3c6daa;
+    margin: 40px auto 40px;
+    text-align: center;
+    border: 2px solid #3c6daa;
     width: 203px;
-    margin-bottom: 40px;
-    cursor: pointer;
 }
 
 /* local */
@@ -593,19 +622,30 @@ button {
 }
 
 .m-map,
-.container {
+.row-4 .col-r {
     float: left;
     width: 50%;
     height: 502px;
     overflow: hidden;
 }
-
-.m-map img {
+/* 地图框架样式 */
+#allmap {
     width: 100%;
     height: 100%;
+    overflow: hidden;
+    margin: 0;
+    font-family: "微软雅黑";
+}
+#allmap img{
+    max-width: none;
 }
 
-.container {
+#allmap .BMap_bubble_title{
+    color: red;
+}
+
+
+.row-4 .col-r {
     position: relative;
     background-color: #ffc14a;
 }
@@ -637,7 +677,7 @@ button {
     background: url('../images/dingwei.png') left center no-repeat;
 }
 
-.path a {
+.m-local .path a {
     display: block;
     font-size: 18px;
     color: #fff;
@@ -652,19 +692,17 @@ button {
 }
 
 .m-pic {
-    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .m-pic ul {
-    display: inline-block;
     overflow: hidden;
 }
 
 .m-pic li {
     float: left;
-    /* margin: 135px 65px; */
-    /* text-align: center; */
-    /* width: 33.33%; */
+    width: 33.33%;
 }
 
 .m-pic li a {
@@ -677,9 +715,6 @@ button {
     padding-top: 99%;
     height: 0;
     overflow: hidden;
-    /* display: inline-block; */
-    /* width: 240px;
-    height: 238px; */
 }
 
 .m-pic .img img {
@@ -690,33 +725,18 @@ button {
     height: 100%;
 }
 
-/* case1 */
-/* .m-pic{
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-.img{
-    text-align: center; 
-}
-.m-pic li:nth-child(2){
-    margin: 0 100px;
-} */
-
 .row-5 .g-tit {
-    width: 307px;
     background: url('../images/Shape 2.png');
-    -webkit-background-size: 100%;
-    background-size: 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
     color: #46a1f3;
     font-size: 20px;
-    line-height: 32px;
+    line-height: 2em;
     margin-top: 35px;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 /* 页脚 */
@@ -727,7 +747,6 @@ button {
 .ul-txt {
     overflow: hidden;
     margin-left: 45px;
-
 }
 
 .ul-txt li {
@@ -739,7 +758,8 @@ button {
 }
 
 .ul-txt em {
-    display: block;
+    /* 浮动后自动变成块元素 */
+    /* display: block; */
     font-style: normal;
     font-size: 43px;
     float: left;
@@ -748,11 +768,8 @@ button {
 
 .ul-txt .info {
     font-size: 18px;
-    line-height: 18px;
-    max-width: 110px;
-    max-height: 36px;
+    line-height: 1em;
     overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 /* 底部链接 */
@@ -791,7 +808,8 @@ button {
     /* text-align: center; */
 }
 
-.now {
+.m-now a {
+    display: block;
     width: 324px;
     height: 46px;
     line-height: 46px;
@@ -800,15 +818,12 @@ button {
     background-color: transparent;
     border: 1px solid #fff;
     border-radius: 8px;
-    cursor: pointer;
-}
-
-.now a {
     color: #fff;
     font-size: 18px;
 }
 
-.tel {
+
+.m-now .tel {
     text-align: center;
     color: #fff;
     font-size: 16px;
@@ -824,11 +839,15 @@ button {
 
 .copy p {
     font-size: 18px;
-    color: #a3a3a3
+    color: #a3a3a3;
+    /* overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap; */
 }
 
 /* 侧边 */
-.snv {
+.m-slidebarR {
     /* 获取页面高度达到某一值显示 */
     display: none;
     position: fixed;
@@ -836,12 +855,12 @@ button {
     bottom: 150px;
 }
 
-.snv .icon {
+.m-slidebarR li {
     margin-bottom: 10px;
     position: relative;
 }
 
-.snvLink {
+.m-slidebarR .snvLink {
     position: absolute;
     top: 0;
     left: 0;
@@ -849,10 +868,9 @@ button {
     -o-transition: all .5s;
     transition: all .5s;
     display: block;
-
 }
 
-.icon .item {
+.m-slidebarR li .icon {
     width: 60px;
     height: 60px;
     border-radius: 8px;
@@ -861,21 +879,20 @@ button {
     position: relative;
 }
 
-.icon .item .img2,
-.icon .item .txt1 {
-    /* float: left; */
+.m-slidebarR li .img2,
+.m-slidebarR li .txt1 {
     width: 60px;
     height: 60px;
     line-height: 60px;
     text-align: center;
 }
 
-.icon .item .img2 img {
+.m-slidebarR li .img2 img {
     display: inline-block;
     vertical-align: middle;
 }
 
-.icon .item .txt1 {
+.m-slidebarR li .txt1 {
     color: #fff;
     font-size: 16px;
     line-height: 1.13em;
@@ -883,20 +900,21 @@ button {
     overflow: hidden;
     text-overflow: ellipsis;
     letter-spacing: 3px;
+    text-indent: 3px;
     padding-top: 13px;
     text-align: center;
 }
 
-.icon:hover .snvLink {
+.m-slidebarR li:hover .snvLink {
     top: -60px;
 }
 
-.item1 {
+.m-slidebarR .txt2 {
     position: absolute;
     top: 0;
-    left: -150px;
-    display: none;
-    width: 130px;
+    right: 0;
+    visibility: hidden;
+    width: 0;
     height: 60px;
     background-color: #ed384e;
     border-radius: 10px;
@@ -905,12 +923,24 @@ button {
     font-size: 14px;
     padding-top: 14px;
     letter-spacing: 3px;
+    text-indent: 3px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    opacity: 0;
 }
 
-.item1::after {
+.m-slidebarR .txt2 p {
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.m-slidebarR .txt2::after {
     content: "";
     display: block;
     position: absolute;
@@ -919,4 +949,12 @@ button {
     transform: translateY(-50%);
     border: 7px solid;
     border-color: transparent transparent transparent #ed384e;
+}
+
+/* 侧边栏弹出效果 */
+.m-slidebarR li:hover .txt2 {
+    right: 80px;
+    visibility: visible;
+    width: 150px;
+    opacity: 1;
 }

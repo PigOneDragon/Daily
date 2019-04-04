@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    /* 侧边 */
+    .snv {
+        /* js中获取页面高度达到某一值显示 */
+        /* display: none; */
+        position: fixed;
+        right: 0;
+        bottom: 150px;
+    }
+
+    .snv .icon {
+        margin-bottom: 10px;
+        position: relative;
+    }
+
+    .snvLink {
+        position: absolute;
+        top: 0;
+        left: 0;
+        -webkit-transition: all .5s;
+        -o-transition: all .5s;
+        transition: all .5s;
+        display: block;
+
+    }
+
+    .icon .item {
+        width: 60px;
+        height: 60px;
+        border-radius: 8px;
+        background-color: #ed384e;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .icon .item .img2,
+    .icon .item .txt1 {
+        /* float: left; */
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+    }
+
+    .icon .item .img2 img {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .icon .item .txt1 {
+        color: #fff;
+        font-size: 16px;
+        line-height: 1.13em;
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        letter-spacing: 3px;
+        padding-top: 13px;
+        text-align: center;
+    }
+
+    .icon:hover .snvLink {
+        top: -60px;
+    }
+
+    .item1 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        visibility: hidden;
+        width: 0;
+        height: 60px;
+        background-color: #ed384e;
+        border-radius: 10px;
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+        padding-top: 14px;
+        letter-spacing: 3px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: all .5s;
+        -o-transition: all .5s;
+        transition: all .5s;
+        opacity: 0;
+    }
+
+    .item1 p {
+        overflow: hidden;
+        -ms-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .item1::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: -14px;
+        transform: translateY(-50%);
+        border: 7px solid;
+        border-color: transparent transparent transparent #ed384e;
+    }
+
+
+    .icon:hover .item1 {
+        right: 80px;
+        visibility: visible;
+        width: 150px;
+        opacity: 1;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="snv">
+        <div class="icon">
+            <div class="item">
+                <a href="" class="snvLink">
+                    <div class="img2"><img src="images/snv_icon/zixun.png" alt=""></div>
+                    <div class="txt1">
+                        <p>在线</p>
+                        <p>咨询</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="icon">
+            <div class="item">
+                <a href="" class="snvLink">
+                    <div class="img2"><img src="images/snv_icon/jilu.png" alt=""></div>
+                    <div class="txt1">
+                        <p>申请</p>
+                        <p>试用</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item1">
+                <p>全国售前电话</p>
+                <p>400-816-888</p>
+            </div>
+        </div>
+        <div class="icon">
+            <div class="item">
+                <a href="" class="snvLink">
+                    <div class="img2"><img src="images/snv_icon/icon-test.png" alt=""></div>
+                    <div class="txt1">
+                        <p>拨打</p>
+                        <p>电话</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="icon backTop">
+            <div class="item">
+                <a href="#4" class="snvLink">
+                    <div class="img2"><img src="images/snv_icon/top.png" alt=""></div>
+                    <div class="txt1">
+                        <p>返回</p>
+                        <p>顶部</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- js -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+    // 侧边栏
+    /*$(window).scroll(function() {
+        if ($(this).scrollTop() > 700) {
+            $('.snv').fadeIn();
+        } else {
+            $('.snv').fadeOut();
+        }
+    });*/
+    /*$('.icon').mouseenter(function(){
+    // $('.item1',$(this)).fadeIn(300);
+    $('.item1',$(this)).stop().slideDown();
+    });
+    $('.icon').mouseleave(function(){
+    // $('.item1',$(this)).fadeOut();
+    $('.item1',$(this)).stop().slideUp();
+    });*/
+    $('.backTop').click(function() {
+        $('body,html').stop().animate({
+            scrollTop: '0'
+        }, 500);
+    });
+    </script>
+</body>
+
+</html>

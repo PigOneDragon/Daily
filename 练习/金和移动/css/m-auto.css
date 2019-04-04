@@ -14,7 +14,8 @@
         z-index: 999;
     }
 
-    .nav, .so {
+
+    .so {
         display: none;
     }
 
@@ -23,31 +24,34 @@
         top: 50px;
         left: 0;
         width: 100%;
-        height: 130px;
+        /* height: 130px; */
         background-color: rgba(0, 0, 0, .6);
     }
 
     .nav li {
-        float: left;
-        margin-left: 40px;
-        position: relative;
+        float: none;
     }
 
-    .nav li.on .item::after {
+    .nav li.on .v1::after {
         display: none;
     }
 
-    .nav .item {
-        display: block;
-        position: relative;
+    .nav .v1 {
         font-size: 15px;
         color: #fff;
-        padding-right: 18px;
+        line-height: 3.13em;
+        text-align: left;
+        padding-right: 0;
         background: none;
+    }
+
+    .nav .v1:hover {
+        color: #005cab;
     }
 
     .menubtn {
         display: block;
+        cursor: pointer;
     }
 
     .logo {
@@ -55,150 +59,69 @@
         height: 30px;
     }
 
-    .so1 {
+    .so1,
+    .header .show {
         display: block;
     }
-
-    .show {
-        display: block;
-    }
-
-    /* 二维码区域 */
-    .m-pic ul {
-        display: block;
-    }
-
-    .m-pic li {
-        width: 33.33%;
-    }
-
-    /*.m-pic li a {
-        display: block;
-    }
-
-    .m-pic .img {
-        position: relative;
-        padding-top: 99%;
-        height: 0;
-        overflow: hidden;
-        display: block;
-        width: auto;
-    }
-    
-    .m-pic .img img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    } */
 
     /* 轮播图按钮隐藏 */
-    .slick-prev, .slick-next {
+    .slick-prev,
+    .slick-next {
         display: none !important;
     }
 
-    .banner .slick-prev, .banner .slick-next {
+    .banner .slick-prev,
+    .banner .slick-next {
         display: block !important;
     }
+
     /* 案例 */
-    .ul-pic1 li{
+    .ul-pic1 li {
         width: 20%;
     }
 
     .row-5 .g-tit {
-        width: 100%;
         color: #f4c951;
         padding: 0 8px;
         font-size: 16px;
-        line-height: 2em;        /* margin-top: 35px; */
     }
-    
+
+    /* 位置信息 */
+
+    /*  .m-map {
+        display: none;
+    } */
+    .m-map,
+    .row-4 .col-r {
+        float: none;
+        width: auto;
+        height: 400px;
+    }
 }
 
 @media only screen and (max-width:959px) {
-    .fd-nav {
-        text-align: center;
+
+    /* 公用标题间距修改 */
+    .g-tit h5 {
+        font-size: 18px;
+        margin-top: 15px;
     }
 
-    .fd-nav li:not(.tit) {
-        display: none;
+    .ul-pic li>a {
+        margin: 0 10px;
     }
 
-    /* 侧边 */
-    .snv {
-        bottom: 0;
-        width: 100%;        /* position: relative; */
+    .row-1 {
+        padding-bottom: 15px;
     }
 
-    .snv .icon {
-        float: left;
-        width: 33.33%;
-        margin-bottom: 0;
-    }
-
-    .snv .item {
-        width: 100%;
-        border-radius: 0;
-        text-align: center;
-    }
-
-    .snv .backTop {
-        position: absolute;
-        top: -70px;
-        right: 50px;
-        width: 60px;
-    }
-
-    .snv .backTop .item {
-        border-radius: 8px;
-    }
-
-    .snv .backTop .item .img2 {
-        height: 60px;        /* line-height: 60px; */
-    }
-
-    .snv .backTop .item .txt1 {
-        display: none;
-    }
-
-    .snvLink {
-        width: 100%;
-    }
-
-    .icon .item .img2, .icon .item .txt1 {
-        width: 100%;
-        height: 30px;
-        line-height: 30px;
-        text-align: center;
-    }
-    /* font-size:0 去除p转换成行内元素时换行符、空白文本的间隙 */
-    .icon .item .txt1 {
-        padding-top: 0;        
-        font-size: 0;
-        letter-spacing: 0;
-    }
-
-    .icon .item .img2 img {
-        height: 100%;
-    }
-
-    .icon .item .txt1 p {
-        display: inline-block;
-        font-size: 14px;
-    }
-/* 位置 */
-    .m-now {
-        display: none;
-    }
+    /* 位置 */
 
     .m-map {
         display: none;
     }
 
-    .container {
-        float: none;
-        width: auto;
+    .row-4 .col-r {
         height: 200px;
     }
 
@@ -214,32 +137,164 @@
     .m-local .path {
         padding-left: 30px;
     }
+
     /* 案例 */
-    .ul-pic1 li{
+    .row-3 {
+        padding-bottom: 0;
+    }
+
+    .ul-pic1 {
+        margin: 15px -8px 15px 0;
+    }
+
+    .ul-pic1 li {
         width: 25%;
     }
-    .row-3 .go{
+
+    .m-pic2 {
+        padding: 0 10px;
+    }
+
+    .row-3 .go {
         display: none;
     }
-    /* 二维码 */
 
-    .m-pic li a{
+    /* 二维码 */
+    .m-pic li a {
         margin: 10px;
     }
 
+    .m-now {
+        display: none;
+    }
 
-}
-@media only screen and (max-width:767px) {
-    /* 案例 */
-    .ul-pic1 li{
+    .fd-nav {
+        text-align: center;
+    }
+
+
+
+    .fd-nav dd {
+        display: none;
+    }
+
+    /* 侧边 */
+    .m-slidebarR {
+        bottom: 0;
+        width: 100%;
+        /* position: relative; */
+    }
+
+    .m-slidebarR li {
+        float: left;
         width: 33.33%;
+        margin-bottom: 0;
+    }
+
+    .m-slidebarR li .icon {
+        width: 100%;
+        border-radius: 0;
+        text-align: center;
+    }
+
+    .m-slidebarR .backTop {
+        position: absolute;
+        top: -70px;
+        right: 50px;
+        width: 60px;
+    }
+
+    .m-slidebarR .backTop .icon {
+        border-radius: 8px;
+    }
+
+
+    .m-slidebarR .backTop .txt1 {
+        display: none;
+    }
+
+    .m-slidebarR .snvLink {
+        width: 100%;
+    }
+
+    .m-slidebarR li .icon .img2,
+    .m-slidebarR li .icon .txt1 {
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    /* font-size:0 去除p转换成行内元素时换行符、空白文本的间隙 */
+    .m-slidebarR li .txt1 {
+        padding-top: 0;
+        font-size: 0;
+        letter-spacing: 0;
+    }
+
+    .m-slidebarR .backTop .icon .img2 {
+        height: 60px;
+        /* line-height: 60px; */
+    }
+
+    .m-slidebarR .backTop .img2 img {
+        height: 100%;
+    }
+
+    .m-slidebarR li .txt1 p {
+        display: inline-block;
+        font-size: 14px;
+    }
+
+    .m-slidebarR li:hover .snvLink {
+        top: 0;
+    }
+
+    .m-slidebarR li:hover .txt2 {
+        opacity: 0;
     }
 
 }
+
+@media only screen and (max-width:767px) {
+    .nav li {
+        width: 25%;
+    }
+
+    /* 案例 */
+    .ul-pic1 li {
+        width: 33.33%;
+    }
+
+    .ul-txt {
+        display: none;
+    }
+
+    .fd-nav {
+        margin-top: 0;
+    }
+
+    .fd-nav .tit a {
+        font-size: 16px;
+        margin-bottom: 15px
+    }
+
+    .copy p {
+        overflow: hidden;
+        white-space: nowrap;
+        -ms-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+    }
+
+
+
+}
+
 @media only screen and (max-width:479px) {
-     /* 案例 */
+
+    /* 案例 */
     .ul-pic1 li,
-    .m-pic li{
+    .m-pic li {
         float: none;
         width: auto;
     }
