@@ -1,7 +1,23 @@
-@media only screen and (max-width:1199px) {
+@media only screen and (max-width:1370px) {
+
+    /* 轮播图按钮隐藏 */
+    .slick-prev,
+    .slick-next {
+        display: none !important;
+    }
+
+    .banner .slick-prev,
+    .banner .slick-next {
+        display: block !important;
+    }
+
     .wp {
         width: 98%;
     }
+}
+
+@media only screen and (max-width:1199px) {
+
 
     .header {
         position: fixed;
@@ -10,6 +26,10 @@
         height: 50px;
         line-height: 50px;
         width: 100%;
+        padding: 0 15px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
         background-color: transparent;
         z-index: 999;
     }
@@ -29,7 +49,15 @@
     }
 
     .nav li {
-        float: none;
+        /* float: none; */
+        float: left;
+        width: 25%;
+        text-align: left;
+        margin-left: 0;
+        padding-left: 18px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
     }
 
     .nav li.on .v1::after {
@@ -37,7 +65,7 @@
     }
 
     .nav .v1 {
-        font-size: 15px;
+        font-size: 14px;
         color: #fff;
         line-height: 3.13em;
         text-align: left;
@@ -48,7 +76,35 @@
     .nav .v1:hover {
         color: #005cab;
     }
+/* 控制二级菜单 */
+    .nav dl {
+        width: 80%;
+        top: 8px;
+        right: 0;
+        left: auto;
+    }
 
+    /* 控制后几个li下二级菜单的位置 */
+    .nav .dl1 {
+        left: auto;
+        right: 0;
+    }
+
+    .nav dd {
+        float: none;
+        width: auto;
+    }
+
+    .nav dd a {
+        font-size: 14px;
+        background-color: rgba(0, 0, 0, .6);
+        color: #fff;
+        text-align: center;
+    }
+
+    .ok span::after{
+        display: none;
+    }
     .menubtn {
         display: block;
         cursor: pointer;
@@ -64,16 +120,7 @@
         display: block;
     }
 
-    /* 轮播图按钮隐藏 */
-    .slick-prev,
-    .slick-next {
-        display: none !important;
-    }
 
-    .banner .slick-prev,
-    .banner .slick-next {
-        display: block !important;
-    }
 
     /* 案例 */
     .ul-pic1 li {
@@ -100,19 +147,64 @@
 }
 
 @media only screen and (max-width:959px) {
+    .banner {
+        /* height: 230px; */
+    }
+
+    .banner .item a {
+        padding-top: 40%;
+    }
+
+    .banner .slick-dots,
+    .banner .slick-prev,
+    .banner .slick-next {
+        bottom: 5px;
+    }
+
+    .ul-pic .txt {
+        padding: 5px;
+    }
+
+    .ul-pic .txt span {
+        font-size: 12px;
+    }
 
     /* 公用标题间距修改 */
     .g-tit h5 {
-        font-size: 18px;
-        margin-top: 15px;
+        width: 30%;
+        font-size: 14px;
+        margin: 10px auto;
+        /* line-height: 3.15em; */
+    }
+
+    .ul-pic {
+        margin-top: 10px;
     }
 
     .ul-pic li>a {
         margin: 0 10px;
     }
 
-    .row-1 {
-        padding-bottom: 15px;
+    .row-1,
+    .row-2,
+    .row-3 {
+        padding: 0 15px 20px;
+    }
+
+    .ul-pic .txt h4,
+    .ul-pic .text .tit {
+        font-size: 16px;
+    }
+
+    .ul-pic .text .tit,
+    .ul-pic .text p {
+        padding: 0 5px;
+    }
+
+    .ul-pic .go {
+        font-size: 12px;
+        margin: 15px auto;
+        padding: 0 18px;
     }
 
     /* 位置 */
@@ -122,11 +214,11 @@
     }
 
     .row-4 .col-r {
-        height: 200px;
+        height: 150px;
     }
 
     .m-local h4 {
-        font-size: 18px;
+        font-size: 16px;
         margin-bottom: 10px;
     }
 
@@ -139,12 +231,10 @@
     }
 
     /* 案例 */
-    .row-3 {
-        padding-bottom: 0;
-    }
+
 
     .ul-pic1 {
-        margin: 15px -8px 15px 0;
+        margin: 15px -8px 0 0;
     }
 
     .ul-pic1 li {
@@ -152,7 +242,7 @@
     }
 
     .m-pic2 {
-        padding: 0 10px;
+        padding: 0 4px;
     }
 
     .row-3 .go {
@@ -170,13 +260,23 @@
 
     .fd-nav {
         text-align: center;
+        position: relative;
     }
 
 
 
     .fd-nav dd {
         display: none;
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        background-color: #f5f5f5;
+        border-radius: 10px;
+        /* background-color: rgba(0, 0, 0, .7); */
     }
+
 
     /* 侧边 */
     .m-slidebarR {
@@ -199,12 +299,13 @@
 
     .m-slidebarR .backTop {
         position: absolute;
-        top: -70px;
-        right: 50px;
-        width: 60px;
+        top: -60px;
+        right: 15px;
+        width: 30px;
     }
 
     .m-slidebarR .backTop .icon {
+        height: 30px;
         border-radius: 8px;
     }
 
@@ -225,6 +326,10 @@
         text-align: center;
     }
 
+    .m-slidebarR li .icon .img2 img {
+        height: 85%;
+    }
+
     /* font-size:0 去除p转换成行内元素时换行符、空白文本的间隙 */
     .m-slidebarR li .txt1 {
         padding-top: 0;
@@ -233,17 +338,21 @@
     }
 
     .m-slidebarR .backTop .icon .img2 {
-        height: 60px;
+        height: 30px;
         /* line-height: 60px; */
     }
 
     .m-slidebarR .backTop .img2 img {
-        height: 100%;
+        /* height: 100%; */
+    }
+
+    .m-slidebarR .backTop .txt1 {
+        display: none;
     }
 
     .m-slidebarR li .txt1 p {
         display: inline-block;
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .m-slidebarR li:hover .snvLink {
@@ -257,10 +366,17 @@
 }
 
 @media only screen and (max-width:767px) {
-    .nav li {
-        width: 25%;
-    }
 
+    /* .nav li {
+        width: 25%;
+    } */
+    .g-tit h5 {
+        width: 45%;
+    }
+    .ul-pic1 li a{
+        margin-right: 4px;
+        margin-bottom: 4px;
+    }
     /* 案例 */
     .ul-pic1 li {
         width: 33.33%;
@@ -270,6 +386,10 @@
         display: none;
     }
 
+    .row-5 .g-tit {
+        margin-top: 8px;
+    }
+
     .fd-nav {
         margin-top: 0;
     }
@@ -277,6 +397,10 @@
     .fd-nav .tit a {
         font-size: 16px;
         margin-bottom: 15px
+    }
+
+    .fd-nav dd a {
+        font-size: 12px;
     }
 
     .copy p {
@@ -291,11 +415,52 @@
 }
 
 @media only screen and (max-width:479px) {
+    .header {
+        height: 35px;
+        line-height: 35px;
+    }
 
-    /* 案例 */
-    .ul-pic1 li,
-    .m-pic li {
+    .nav {
+        top: 35px;
+    }
+
+    .nav li {
         float: none;
         width: auto;
+        margin-left: 0;
     }
+
+    .nav .v1 {
+        font-size: 12px;
+        line-height: 2.5em;
+    }
+    .nav dl {
+        top: 3px;
+    }
+    .menubtn {
+        height: 35px;
+    }
+
+    .so1 .btn1 {
+        height: 35px;
+    }
+
+    .so1 .inp1 {
+        top: 35px;
+    }
+
+    .row-1,
+    .row-2,
+    .row-3 {
+        padding: 0 5px 5px;
+    }
+
+    .ul-pic li>a {
+        margin: 0 5px;
+    }
+
+    .row-5 .g-tit {
+        display: none;
+    }
+
 }

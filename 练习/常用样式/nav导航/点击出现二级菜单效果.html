@@ -5,14 +5,16 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <style>
-        .wp{
-            width: 1150px;
-            margin: 500px auto;
-        }
-        .clear{
-            clear: both;
-            zoom: 1;
-        }
+    .wp {
+        width: 1150px;
+        margin: 500px auto;
+    }
+
+    .clear {
+        clear: both;
+        zoom: 1;
+    }
+
     .ul-tab1 li {
         position: relative;
         z-index: 6;
@@ -142,21 +144,35 @@
     </div>
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <script>
-        $(function(){
-            $('.ul-tab1 li').click(function() {
-                // 隐藏所有二级菜单
-                $('.g-dropmenu').slideUp();
-                //点击时 如果隐藏的元素个数不为0 ，将点击的子元素显示
-                if ($('.g-dropmenu:visible', $(this)).size()) {
-                    $('.g-dropmenu', $(this)).slideUp();
-                    // $(this).removeClass('click');
-                } else {
-                    $('.g-dropmenu', $(this)).slideDown();
-                    // $(this).addClass('click');
-                }
-            });
-        })
-    
+    $(function() {
+        var dropMenu = $('.g-dropmenu');
+        $('.ul-tab1 li').click(function() {
+            // 隐藏所有二级菜单
+            dropMenu.slideUp();
+            //点击时 如果隐藏的元素个数不为0 ，将点击的子元素显示
+            if ($('.g-dropmenu:visible', $(this)).size()) {
+                $('.g-dropmenu', $(this)).slideUp();
+                // $(this).removeClass('click');
+            } else {
+                $('.g-dropmenu', $(this)).slideDown();
+                // $(this).addClass('click');
+            }
+            return false;
+        });
+
+        $('body').click(function() {
+            dropMenu.stop().slideUp();
+            
+        });
+
+        dropMenu.click(function() {
+            $(this).css('display', 'block');
+            return false;
+        });
+
+
+
+    })
     </script>
 </body>
 
