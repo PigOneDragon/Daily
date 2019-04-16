@@ -10,23 +10,6 @@ $(function() {
         cssEase: 'linear'
     });
 
-    /*    // 定义一个参数控制页面的页数
-        
-        $(window).resize(function(event) {
-            var Width = $(this).width();
-            // console.log(Width);
-            var pageIndex = 4;
-            if(Width < 957){
-                pageIndex = 3;
-                // alert("ok");
-                console.log(pageIndex);
-            }
-            $('.row-2 .ul-pic').slick({
-
-                slidesToShow: pageIndex
-        });
-        });
-    */
     // news轮播  轮播后怎么控制列数？  已解决 responsive方法
     $('.row-1 .ul-pic').slick({
         // dots: true,
@@ -38,21 +21,31 @@ $(function() {
         speed: 500,
         // 插件的响应式布局
         responsive: [
+            {
+                breakpoint: 1371,
+                settings: {
+                    arrows: false,
+                    dots: true
+                }
+            },
 
             {
-                breakpoint: 969,
+                breakpoint: 768,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    dots: true
+                    // arrows: false
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    dots: true
                 }
-            }
+            },
         ]
 
     });
@@ -65,31 +58,34 @@ $(function() {
         arrows: true,
         speed: 500,
         responsive: [
+            {
+                breakpoint: 1371,
+                settings: {
+                    arrows: false,
+                    dots: true
+                }
+            },
 
             {
-                breakpoint: 1198,
+                breakpoint: 1200,
                 settings: {
                     slidesToShow: 3,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    dots: true
                 }
             },
             {
-                breakpoint: 969,
+                breakpoint: 480,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    dots: true
                 }
             },
-            {
-                breakpoint: 479,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
+
         ]
     });
-    // 控制几行
+    // 控制小图标列表的个数
     jQuery(".m-pic2 li").each(function(i) {
         jQuery(".m-pic2 li").slice(i * 12, i * 12 + 12).wrapAll("<ul class='ul-pic1'></ul>");
     });
@@ -103,33 +99,19 @@ $(function() {
         autoplaySpeed: 3000,
         arrows: true,
         speed: 500,
-        /*responsive: [
-            
+         responsive: [
             {
-            breakpoint: 1198,
+                breakpoint: 1371,
                 settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1
-                }
-            },
-            {
-            breakpoint: 969,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1
+                    arrows: false,
+                    dots: true
                 }
             }
-        ]*/
+            ]
+
     });
 
-    /*$('.nav li').hover(function() {
-        $('dl', this).stop().slideDown();
-        $('.nav li').removeClass('on');
-        $(this).addClass('on');
-    }, function() {
-        $('dl', this).stop().slideUp();
-        $(this).removeClass('on');
-    });*/
+
     // 项目给的
     /*function myNav(){
         var _winw = $(window).width();
@@ -164,21 +146,26 @@ $(function() {
     $(window).resize(function(event) {
         myNav();
     });  */
-   function myNav(){
-        var _winw = $(window).width();
-        console.log(_winw);
-        if( _winw>1199 ){
+
+    function myNav() {
+        // var _winw = $(window).width();
+        var _winw = window.innerWidth;
+        /*console.log(_winw);
+        console.log(winw);*/
+        if (_winw > 1199) {
+
             $('.inp1').removeClass('show');
-            // $('.nav').stop().slideDown();
+            $('.nav').removeAttr('id');
+
             $('.nav').show();
-            $('.nav li').bind('mouseenter',function() {
+            $('.nav li').bind('mouseenter', function() {
                 $(this).find('dl').stop().slideDown();
                 $('.nav-sub').stop().slideDown();
-                if( $(this).find('dl').length ){
+                if ($(this).find('dl').length) {
                     $(this).addClass('on');
                 }
             });
-            $('.nav li').bind('mouseleave',function() {
+            $('.nav li').bind('mouseleave', function() {
                 $(this).removeClass('on');
                 $(this).find('dl').stop().slideUp();
                 $('.nav-sub').stop().slideUp();
@@ -186,30 +173,32 @@ $(function() {
             });
             // 二级菜单的箭头
             $('.nav dd').hover(function() {
-                    $('.nav dd').removeClass('ok');
-                    $(this).addClass('ok');
+                $('.nav dd').removeClass('ok');
+                $(this).addClass('ok');
 
-                }, function() {
-                    $(this).removeClass('ok');
+            }, function() {
+                $(this).removeClass('ok');
 
-                });
+            });
 
-        }else{
+        } else {
             $('.nav').hide();
+            $('.nav').attr('id', 'nav-w');
             // $('.nav').stop().slideUp();
             $('.nav li').unbind('mouseenter mouseleave');
-            $('.nav .v1').click(function(){
-                if( $(this).siblings('dl').length ){
+            /*$('.nav .v1').click(function() {
+                if ($(this).siblings('dl').length) {
                     $(this).siblings('dl').stop().slideToggle();
                     return false;
                 }
-            });
+            });*/
         }
     }
     myNav();
     $(window).resize(function(event) {
         myNav();
-    });  
+        // myFdnav();
+    });
 
 
     // navSub.hover(function() {
@@ -220,15 +209,16 @@ $(function() {
 
     // 侧边栏
     $(window).scroll(function() {
-        if ($(this).scrollTop() > 1000) {
+        var Height = $(this).scrollTop();
+        if (Height > 700) {
             $('.m-slidebarR').fadeIn();
         } else {
             $('.m-slidebarR').fadeOut();
         }
         // 头部背景
-        var Height = $(this).scrollTop();
+
         // console.log(Height);
-        if (Height > 200) {
+        if (Height > 100) {
             $('.header').css('backgroundColor', '#010508');
         } else {
             $('.header').css('backgroundColor', 'transparent');
@@ -278,15 +268,15 @@ $(function() {
                 });
             });*/
     // 页面变化去除隐藏的效果
-/*    $(window).resize(function(event) {
-        var Width = $(this).width();
-        // console.log(Width);
-        if (Width > 1050) {
- 
-            inp1.removeClass('show');
-        }
+    /*    $(window).resize(function(event) {
+            var Width = $(this).width();
+            // console.log(Width);
+            if (Width > 1050) {
+     
+                inp1.removeClass('show');
+            }
 
-    });*/
+        });*/
     /* 输入框 导航条的淡入淡出  太麻烦~ 修改class试试*/
     /*var f1 = false;
     var f2 = false;
@@ -319,10 +309,18 @@ $(function() {
         obj2.toggleClass(cls);
     }
     $('.btn1').click(function() {
-        // changeClass(nav, inp1, 'show');
+
+        flag = false;
         nav.stop().slideUp();
         inp1.toggleClass('show');
-        // inp1.removeClass('show');
+        /*var r = inp1.hasClass('show');
+        // alert(r);
+        if(r){
+           $('.header').height('100px'); 
+       }else{
+            $('.header').height('50px');
+       }*/
+
         return false;
     });
     $('.menubtn').click(function() {
@@ -339,9 +337,12 @@ $(function() {
 
     $('body , html').click(function() {
         // nav.removeClass('show');
-        flag = !flag;
-        nav.stop().slideUp();
+        flag = false;
+        // 去除跟nav状态的冲突
+        $('#nav-w').stop().slideUp();
         inp1.removeClass('show');
+        // $('.fd-nav dd').slideUp();
+        // $('.nav dl').slideUp();
         return false;
     });
 
@@ -351,6 +352,122 @@ $(function() {
     });*/
     inp1.click(function() {
         $(this).addClass('show');
+        return false;
+    });
+    /* // 导航
+     $('.nav li').click(function() {
+         // 隐藏所有二级菜单
+         $('.nav dl').slideUp();
+         if ($('dl:visible', $(this)).size()) {
+             $('dl', $(this)).slideUp();
+             // $(this).removeClass('click');
+         } else {
+             $('dl', $(this)).slideDown();
+             // $(this).addClass('click');
+         }
+         return false;
+     });*/
+
+
+$(window).resize(function(event) {
+    var Width = $(window).width();
+    if (Width < 967) {
+        $('body').data('open','open');
+        console.log($('body').data('open'));
+        if($('body').data('open')){
+            /*$('.fd-nav dt a').click(function () {
+            // console.log('aa');
+            if($(this).parent('dt').siblings('dd').length){
+                $(this).parent('dt').siblings('dd').stop().slideToggle();
+            }
+            return false;
+            });*/
+            $('.fd-nav').click(function() {
+                // console.log(Width);
+                // alert('www');
+                // 隐藏所有二级菜单
+                $('.fd-nav dd').slideUp();
+                if ($('dd:visible', $(this)).size()) {
+                    $('dd', $(this)).slideUp();
+                    // $(this).removeClass('click');
+                } else {
+                    $('dd', $(this)).slideDown();
+                    // $(this).addClass('click');
+                }
+                return false;
+            });
+            $('.fd-nav dd').click(function() {
+                $(this).css('display', 'block');
+                return false;
+            });
+       }
+
+    }else{
+        $('body').removeData('open');
+        $('.fd-nav').unbind("click");
+    }
+});
+    
+   /* function myFdnav() {
+        var Width = $(window).width();
+        if (Width < 967) {
+            $('.fd-nav').click(function() {
+                console.log(Width);
+                alert('www');
+                // 隐藏所有二级菜单
+                $('.fd-nav dd').slideUp();
+                if ($('dd:visible', $(this)).size()) {
+                    $('dd', $(this)).slideUp();
+                    // $(this).removeClass('click');
+                } else {
+                    $('dd', $(this)).slideDown();
+                    // $(this).addClass('click');
+                }
+                return false;
+            });
+            $('.fd-nav dd').click(function() {
+                $(this).css('display', 'block');
+                return false;
+            });
+        } else {
+            $('.fd-nav').unbind("click");
+            // $('.fd-nav dd').slideDown();
+        }
+    }
+    myFdnav();*/
+    // 底部链接
+    /* $(window).resize(function(event) {
+         var Width = $(window).width();
+         if (Width < 967) {
+             $('.fd-nav').click(function() {
+                 console.log(Width);
+                 alert('www');
+                 // 隐藏所有二级菜单
+                 $('.fd-nav dd').slideUp();
+                 if ($('dd:visible', $(this)).size()) {
+                     $('dd', $(this)).slideUp();
+                     // $(this).removeClass('click');
+                 } else {
+                     $('dd', $(this)).slideDown();
+                     // $(this).addClass('click');
+                 }
+                 return false;
+             });
+             $('.fd-nav dd').click(function() {
+                 $(this).css('display', 'block');
+                 return false;
+             });
+         } else {
+             $('.fd-nav').unbind("click");
+         }
+     });*/
+   // 菜单效果
+     $('.menubtn').click(function() {
+        $(this).toggleClass('act');
+    });
+
+    $('.nav dl').click(function() {
+        $(this).css('display', 'block');
         return false;
     });
 

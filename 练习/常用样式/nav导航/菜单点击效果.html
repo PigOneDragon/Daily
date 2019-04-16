@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            outline: 0;
+        }
+        .navbar-btn{
+            width: 35px;
+            height: 35px;
+            position: relative;
+            background-color: yellow;
+            overflow: hidden;
+            margin:50px; 
+        }
+        .icon-bar{
+            display: block;
+            width: 85%;
+            height: 2px;
+            margin: 6px auto;
+            background-color: red;
+            -webkit-transition: all .5s;
+            -o-transition: all .5s;
+            transition: all .5s;
+            /* position: absolute; */
+        }
+        .act .icon-bar:nth-child(1){
+            position: absolute;
+            transform: rotate(-90deg);
+            top: -100%;
+        }
+        .act .icon-bar:nth-child(2){
+            position:absolute;
+            top:10px;
+            transform:rotate(37deg);
+        }
+        .act .icon-bar:nth-child(3){
+            position:absolute;
+            top:10px;
+            transform:rotate(-37deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hdr">
+        <div type="button" class="navbar-btn">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </div>
+        <ul class="nav" style="display: none;">
+            <li><a href="">关于画方</a></li>
+            <li><a href="">产品</a></li>
+            <li><a href="">方案</a></li>
+            <li><a href="">服务</a></li>
+            <li><a href="">资质荣誉</a></li>
+            <li><a href="">客户</a></li>
+            <li><a href="">合作</a></li>
+            <li><a href="">新闻</a></li>
+            <li><a href="">人力</a></li>
+        </ul>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.3.0/jquery.min.js"></script>
+    <script>
+    $('.navbar-btn').click(function() {
+        $(this).toggleClass('act');
+    });
+    </script>
+</body>
+
+</html>

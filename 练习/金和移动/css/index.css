@@ -5,6 +5,7 @@
 
 body {
     font-family: "黑体";
+    /* overflow-x: hidden; */
 }
 
 input {
@@ -58,10 +59,41 @@ button {
     display: none;
     float: left;
     width: 30px;
-    height: 25px;
-    margin-top: 12px;
-    margin-right: 25px;
-    background: url('../images/menubtn.png') center no-repeat;
+    height: 40px;
+    position: relative;
+    padding-top: 10px;
+    /* margin-right: 25px; */
+    /* background: url('../images/menubtn.png') left center no-repeat; */
+}
+
+.icon-bar {
+    display: block;
+    width: 85%;
+    height: 2px;
+    margin: 6px auto;
+    background-color: #fff;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    /* position: absolute; */
+}
+
+.act .icon-bar:nth-child(1) {
+    position: absolute;
+    transform: rotate(-90deg);
+    top: -100%;
+}
+
+.act .icon-bar:nth-child(2) {
+    position: absolute;
+    top: 20px;
+    transform: rotate(37deg);
+}
+
+.act .icon-bar:nth-child(3) {
+    position: absolute;
+    top: 20px;
+    transform: rotate(-37deg);
 }
 
 .nav {
@@ -258,10 +290,10 @@ button {
     left: 0;
     width: 96%;
     margin-left: 2%;
-    height: 75px;
+    height: 40px;
     border: 1px solid #dcdcdc;
     background-color: rgba(0, 0, 0, .6);
-    border-radius: 18px;
+    border-radius: 20px;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
@@ -270,10 +302,10 @@ button {
 
 .so1 .btn1 {
     position: absolute;
-    top: 10px;
-    right: 18px;
-    width: 30px;
-    height: 31px;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
     border: none;
     cursor: pointer;
     background: url(../images/so.png) center no-repeat;
@@ -306,6 +338,8 @@ button {
 }
 
 /* banner下的插件默认样式修改 */
+.ul-pic .slick-dots,
+.m-pic2 .slick-dots,
 .banner .slick-dots {
     position: absolute;
     left: 50%;
@@ -316,6 +350,16 @@ button {
     bottom: 28px;
 }
 
+.ul-pic .slick-dots {
+    bottom: -30px;
+}
+
+.m-pic2 .slick-dots {
+    bottom: 12px;
+}
+
+.ul-pic .slick-dots li,
+.m-pic2 .slick-dots li,
 .banner .slick-dots li {
     float: left;
     width: 8px;
@@ -328,10 +372,14 @@ button {
 
 }
 
+.ul-pic .slick-dots button,
+.m-pic2 .slick-dots button,
 .banner .slick-dots button {
     display: none;
 }
 
+.ul-pic .slick-dots li.slick-active,
+.m-pic2 .slick-dots li.slick-active,
 .banner .slick-dots li.slick-active {
     background-color: #d5d5d5;
 }
@@ -364,7 +412,7 @@ button {
 /* 最新新闻 */
 .row-1 {
     background-color: #f3f3f3;
-    padding-bottom: 70px;
+    padding-bottom: 50px;
 }
 
 /* 公用标题 */
@@ -376,7 +424,7 @@ button {
 .g-tit h5 {
     color: #fff;
     font-size: 20px;
-    width: 300px;
+    width: 280px;
     line-height: 2.25em;
     letter-spacing: 7px;
     /* 文字间隙从头部往后，不设置indent导致字体不居中 */
@@ -399,8 +447,6 @@ button {
 
 .ul-pic {
     position: relative;
-    /* overflow: hidden; */
-    /* margin: 55px -45px 50px 0; */
     margin-top: 30px;
 }
 
@@ -412,6 +458,7 @@ button {
 .ul-pic li>a {
     display: block;
     margin: 0 20px;
+    text-align: center;
 }
 
 .ul-pic .pic {
@@ -442,12 +489,14 @@ button {
     height: 2.5em;
     text-overflow: ellipsis;
     overflow: hidden;
+    text-align: left;
 }
 
 .ul-pic .txt span {
     display: block;
     margin-top: 8px;
     font-size: 18px;
+    text-align: left;
     color: #3c6daa;
     padding-left: 35px;
     background: url('../images/arrow.png') left center no-repeat;
@@ -505,13 +554,10 @@ button {
 .row-2 .g-tit h5 {
     background: url('../images/tit-w_bg.png') center no-repeat;
     color: #000;
-    -webkit-background-size: 100%;
-    background-size: 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
 }
 
-/* .row-2 .ul-pic li{
-    width: 25%;
-} */
 .row-2 .ul-pic .pic {
     padding-top: 114%;
 }
@@ -531,6 +577,7 @@ button {
 .ul-pic .text p {
     font-size: 14px;
     color: #000;
+    text-align: left;
     padding: 0 30px;
     height: 2.29em;
     overflow: hidden;
@@ -538,11 +585,12 @@ button {
 }
 
 .ul-pic .go {
-    display: block;
-    width: 125px;
-    height: 35px;
-    line-height: 35px;
+    display: inline-block;
+    /* width: 125px; */
+    /* height: 35px; */
+    line-height: 2.5em;
     font-size: 14px;
+    padding: 0 35px;
     color: #3c6daa;
     margin: 40px auto 20px;
     text-align: center;
@@ -592,6 +640,7 @@ button {
 
 .m-pic2 {
     padding: 0 20px;
+    position: relative;
 }
 
 /* .ul-pic1 a img{
@@ -628,6 +677,7 @@ button {
     height: 502px;
     overflow: hidden;
 }
+
 /* 地图框架样式 */
 #allmap {
     width: 100%;
@@ -636,11 +686,12 @@ button {
     margin: 0;
     font-family: "微软雅黑";
 }
-#allmap img{
+
+#allmap img {
     max-width: none;
 }
 
-#allmap .BMap_bubble_title{
+#allmap .BMap_bubble_title {
     color: red;
 }
 
@@ -779,7 +830,11 @@ button {
 
 .row-f2 .wp {
     max-width: 1000px;
-    overflow: hidden;
+    /* overflow: hidden; */
+}
+
+.clear {
+    clear: both;
 }
 
 .fd-nav {
@@ -789,6 +844,14 @@ button {
     margin-top: 44px;
 }
 
+.fd-nav a {
+    display: block;
+    color: #a2a2a2;
+    font-size: 18px;
+    line-height: 1em;
+    margin-top: 12px;
+}
+
 .fd-nav .tit a {
     font-size: 24px;
     line-height: 18px;
@@ -796,12 +859,8 @@ button {
     margin-bottom: 22px;
 }
 
-.fd-nav a {
-    display: block;
-    color: #a2a2a2;
-    font-size: 18px;
-    line-height: 18px;
-    margin-top: 12px;
+.fd-nav dd a:hover {
+    color: #fff;
 }
 
 .row-f3 {
@@ -890,6 +949,7 @@ button {
 .m-slidebarR li .img2 img {
     display: inline-block;
     vertical-align: middle;
+
 }
 
 .m-slidebarR li .txt1 {
