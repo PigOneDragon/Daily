@@ -58,10 +58,42 @@ button {
 .menubtn {
     display: none;
     float: left;
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 40px;
+    position: relative;
+    padding-top: 10px;
     /* margin-right: 25px; */
-    background: url('../images/menubtn.png') left center no-repeat;
+    /* background: url('../images/menubtn.png') left center no-repeat; */
+}
+
+.icon-bar {
+    display: block;
+    width: 85%;
+    height: 2px;
+    margin: 6px auto;
+    background-color: #fff;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    /* position: absolute; */
+}
+
+.act .icon-bar:nth-child(1) {
+    position: absolute;
+    transform: rotate(-90deg);
+    top: -100%;
+}
+
+.act .icon-bar:nth-child(2) {
+    position: absolute;
+    top: 20px;
+    transform: rotate(37deg);
+}
+
+.act .icon-bar:nth-child(3) {
+    position: absolute;
+    top: 20px;
+    transform: rotate(-37deg);
 }
 
 .nav {
@@ -306,6 +338,8 @@ button {
 }
 
 /* banner下的插件默认样式修改 */
+.ul-pic .slick-dots,
+.m-pic2 .slick-dots,
 .banner .slick-dots {
     position: absolute;
     left: 50%;
@@ -316,6 +350,16 @@ button {
     bottom: 28px;
 }
 
+.ul-pic .slick-dots {
+    bottom: -30px;
+}
+
+.m-pic2 .slick-dots {
+    bottom: 12px;
+}
+
+.ul-pic .slick-dots li,
+.m-pic2 .slick-dots li,
 .banner .slick-dots li {
     float: left;
     width: 8px;
@@ -328,10 +372,14 @@ button {
 
 }
 
+.ul-pic .slick-dots button,
+.m-pic2 .slick-dots button,
 .banner .slick-dots button {
     display: none;
 }
 
+.ul-pic .slick-dots li.slick-active,
+.m-pic2 .slick-dots li.slick-active,
 .banner .slick-dots li.slick-active {
     background-color: #d5d5d5;
 }
@@ -592,6 +640,7 @@ button {
 
 .m-pic2 {
     padding: 0 20px;
+    position: relative;
 }
 
 /* .ul-pic1 a img{
@@ -628,6 +677,7 @@ button {
     height: 502px;
     overflow: hidden;
 }
+
 /* 地图框架样式 */
 #allmap {
     width: 100%;
@@ -636,11 +686,12 @@ button {
     margin: 0;
     font-family: "微软雅黑";
 }
-#allmap img{
+
+#allmap img {
     max-width: none;
 }
 
-#allmap .BMap_bubble_title{
+#allmap .BMap_bubble_title {
     color: red;
 }
 
@@ -781,9 +832,11 @@ button {
     max-width: 1000px;
     /* overflow: hidden; */
 }
-.clear{
+
+.clear {
     clear: both;
 }
+
 .fd-nav {
     width: 25%;
     float: left;
@@ -798,15 +851,18 @@ button {
     line-height: 1em;
     margin-top: 12px;
 }
+
 .fd-nav .tit a {
     font-size: 24px;
     line-height: 18px;
     color: #cacaca;
     margin-bottom: 22px;
 }
-.fd-nav dd a:hover{
+
+.fd-nav dd a:hover {
     color: #fff;
 }
+
 .row-f3 {
     /* text-align: center; */
 }
@@ -893,7 +949,7 @@ button {
 .m-slidebarR li .img2 img {
     display: inline-block;
     vertical-align: middle;
-    
+
 }
 
 .m-slidebarR li .txt1 {
@@ -962,5 +1018,3 @@ button {
     width: 150px;
     opacity: 1;
 }
-
-

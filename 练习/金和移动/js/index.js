@@ -21,19 +21,29 @@ $(function() {
         speed: 500,
         // 插件的响应式布局
         responsive: [
+            {
+                breakpoint: 1371,
+                settings: {
+                    arrows: false,
+                    dots: true
+                }
+            },
 
             {
-                breakpoint: 767,
+                breakpoint: 768,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    dots: true
+                    // arrows: false
                 }
             },
             {
-                breakpoint: 467,
+                breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    dots: true
                 }
             },
         ]
@@ -48,19 +58,28 @@ $(function() {
         arrows: true,
         speed: 500,
         responsive: [
+            {
+                breakpoint: 1371,
+                settings: {
+                    arrows: false,
+                    dots: true
+                }
+            },
 
             {
-                breakpoint: 1198,
+                breakpoint: 1200,
                 settings: {
                     slidesToShow: 3,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    dots: true
                 }
             },
             {
-                breakpoint: 467,
+                breakpoint: 480,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    dots: true
                 }
             },
 
@@ -80,6 +99,15 @@ $(function() {
         autoplaySpeed: 3000,
         arrows: true,
         speed: 500,
+         responsive: [
+            {
+                breakpoint: 1371,
+                settings: {
+                    arrows: false,
+                    dots: true
+                }
+            }
+            ]
 
     });
 
@@ -118,6 +146,7 @@ $(function() {
     $(window).resize(function(event) {
         myNav();
     });  */
+
     function myNav() {
         // var _winw = $(window).width();
         var _winw = window.innerWidth;
@@ -168,6 +197,7 @@ $(function() {
     myNav();
     $(window).resize(function(event) {
         myNav();
+        // myFdnav();
     });
 
 
@@ -308,10 +338,11 @@ $(function() {
     $('body , html').click(function() {
         // nav.removeClass('show');
         flag = false;
+        // 去除跟nav状态的冲突
         $('#nav-w').stop().slideUp();
         inp1.removeClass('show');
-        $('.fd-nav dd').slideUp();
-        $('.nav dl').slideUp();
+        // $('.fd-nav dd').slideUp();
+        // $('.nav dl').slideUp();
         return false;
     });
 
@@ -323,39 +354,120 @@ $(function() {
         $(this).addClass('show');
         return false;
     });
-    // 导航
-    $('.nav li').click(function() {
-        // 隐藏所有二级菜单
-        $('.nav dl').slideUp();
-        if ($('dl:visible', $(this)).size()) {
-            $('dl', $(this)).slideUp();
-            // $(this).removeClass('click');
+    /* // 导航
+     $('.nav li').click(function() {
+         // 隐藏所有二级菜单
+         $('.nav dl').slideUp();
+         if ($('dl:visible', $(this)).size()) {
+             $('dl', $(this)).slideUp();
+             // $(this).removeClass('click');
+         } else {
+             $('dl', $(this)).slideDown();
+             // $(this).addClass('click');
+         }
+         return false;
+     });*/
+
+
+$(window).resize(function(event) {
+    var Width = $(window).width();
+    if (Width < 967) {
+        $('body').data('open','open');
+        console.log($('body').data('open'));
+        if($('body').data('open')){
+            /*$('.fd-nav dt a').click(function () {
+            // console.log('aa');
+            if($(this).parent('dt').siblings('dd').length){
+                $(this).parent('dt').siblings('dd').stop().slideToggle();
+            }
+            return false;
+            });*/
+            $('.fd-nav').click(function() {
+                // console.log(Width);
+                // alert('www');
+                // 隐藏所有二级菜单
+                $('.fd-nav dd').slideUp();
+                if ($('dd:visible', $(this)).size()) {
+                    $('dd', $(this)).slideUp();
+                    // $(this).removeClass('click');
+                } else {
+                    $('dd', $(this)).slideDown();
+                    // $(this).addClass('click');
+                }
+                return false;
+            });
+            $('.fd-nav dd').click(function() {
+                $(this).css('display', 'block');
+                return false;
+            });
+       }
+
+    }else{
+        $('body').removeData('open');
+        $('.fd-nav').unbind("click");
+    }
+});
+    
+   /* function myFdnav() {
+        var Width = $(window).width();
+        if (Width < 967) {
+            $('.fd-nav').click(function() {
+                console.log(Width);
+                alert('www');
+                // 隐藏所有二级菜单
+                $('.fd-nav dd').slideUp();
+                if ($('dd:visible', $(this)).size()) {
+                    $('dd', $(this)).slideUp();
+                    // $(this).removeClass('click');
+                } else {
+                    $('dd', $(this)).slideDown();
+                    // $(this).addClass('click');
+                }
+                return false;
+            });
+            $('.fd-nav dd').click(function() {
+                $(this).css('display', 'block');
+                return false;
+            });
         } else {
-            $('dl', $(this)).slideDown();
-            // $(this).addClass('click');
+            $('.fd-nav').unbind("click");
+            // $('.fd-nav dd').slideDown();
         }
-        return false;
+    }
+    myFdnav();*/
+    // 底部链接
+    /* $(window).resize(function(event) {
+         var Width = $(window).width();
+         if (Width < 967) {
+             $('.fd-nav').click(function() {
+                 console.log(Width);
+                 alert('www');
+                 // 隐藏所有二级菜单
+                 $('.fd-nav dd').slideUp();
+                 if ($('dd:visible', $(this)).size()) {
+                     $('dd', $(this)).slideUp();
+                     // $(this).removeClass('click');
+                 } else {
+                     $('dd', $(this)).slideDown();
+                     // $(this).addClass('click');
+                 }
+                 return false;
+             });
+             $('.fd-nav dd').click(function() {
+                 $(this).css('display', 'block');
+                 return false;
+             });
+         } else {
+             $('.fd-nav').unbind("click");
+         }
+     });*/
+   // 菜单效果
+     $('.menubtn').click(function() {
+        $(this).toggleClass('act');
     });
 
-    // 底部链接
-    $('.fd-nav').click(function() {
-        // 隐藏所有二级菜单
-        $('.fd-nav dd').slideUp();
-        if ($('dd:visible', $(this)).size()) {
-            $('dd', $(this)).slideUp();
-            // $(this).removeClass('click');
-        } else {
-            $('dd', $(this)).slideDown();
-            // $(this).addClass('click');
-        }
-        return false;
-    });
-    $('.fd-nav dd').click(function(){
+    $('.nav dl').click(function() {
         $(this).css('display', 'block');
-        return false;
-    });
-    $('.nav dl').click(function(){
-        $(this).css('display','block');
         return false;
     });
 

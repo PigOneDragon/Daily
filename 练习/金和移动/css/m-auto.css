@@ -76,35 +76,39 @@
     .nav .v1:hover {
         color: #005cab;
     }
-/* 控制二级菜单 */
+
+    /* 控制二级菜单 */
     .nav dl {
+        display: none;
+    }
+
+    /* .nav dl {
         width: 80%;
         top: 8px;
         right: 0;
         left: auto;
     }
-
-    /* 控制后几个li下二级菜单的位置 */
+    
     .nav .dl1 {
         left: auto;
         right: 0;
     }
-
+    
     .nav dd {
         float: none;
         width: auto;
     }
-
+    
     .nav dd a {
         font-size: 14px;
         background-color: rgba(0, 0, 0, .6);
         color: #fff;
         text-align: center;
     }
-
+    
     .ok span::after{
         display: none;
-    }
+    } */
     .menubtn {
         display: block;
         cursor: pointer;
@@ -123,9 +127,9 @@
 
 
     /* 案例 */
-    .ul-pic1 li {
+    /* .ul-pic1 li {
         width: 20%;
-    }
+    } */
 
     .row-5 .g-tit {
         color: #f4c951;
@@ -161,6 +165,14 @@
         bottom: 5px;
     }
 
+    .ul-pic .slick-dots {
+        bottom: -31px;
+    }
+
+    .m-pic2 .slick-dots {
+        bottom: -29px;
+    }
+
     .ul-pic .txt {
         padding: 5px;
     }
@@ -188,15 +200,19 @@
     .row-1,
     .row-2,
     .row-3 {
-        padding: 0 15px 20px;
+        padding: 0 0 50px;
     }
 
     .ul-pic .txt h4,
     .ul-pic .text .tit {
-        font-size: 16px;
+        font-size: 14px;
+        padding-top: 10px;
     }
 
-    .ul-pic .text .tit,
+    .ul-pic .text .tit {
+        padding: 10px 5px;
+    }
+
     .ul-pic .text p {
         padding: 0 5px;
     }
@@ -242,7 +258,7 @@
     }
 
     .m-pic2 {
-        padding: 0 4px;
+        padding: 0 10px;
     }
 
     .row-3 .go {
@@ -277,6 +293,9 @@
         /* background-color: rgba(0, 0, 0, .7); */
     }
 
+    .fd-nav dd a:hover {
+        color: #000;
+    }
 
     /* 侧边 */
     .m-slidebarR {
@@ -293,6 +312,7 @@
 
     .m-slidebarR li .icon {
         width: 100%;
+        height: 50px;
         border-radius: 0;
         text-align: center;
     }
@@ -321,8 +341,8 @@
     .m-slidebarR li .icon .img2,
     .m-slidebarR li .icon .txt1 {
         width: 100%;
-        height: 30px;
-        line-height: 30px;
+        height: 25px;
+        line-height: 25px;
         text-align: center;
     }
 
@@ -373,10 +393,16 @@
     .g-tit h5 {
         width: 45%;
     }
-    .ul-pic1 li a{
+
+    .ul-pic1 {
+        margin-right: -4px;
+    }
+
+    .ul-pic1 li a {
         margin-right: 4px;
         margin-bottom: 4px;
     }
+
     /* 案例 */
     .ul-pic1 li {
         width: 33.33%;
@@ -396,7 +422,7 @@
 
     .fd-nav .tit a {
         font-size: 16px;
-        margin-bottom: 15px
+        margin-bottom: 8px
     }
 
     .fd-nav dd a {
@@ -404,13 +430,12 @@
     }
 
     .copy p {
+        font-size: 12px;
         overflow: hidden;
         white-space: nowrap;
         -ms-text-overflow: ellipsis;
         text-overflow: ellipsis;
     }
-
-
 
 }
 
@@ -433,12 +458,20 @@
     .nav .v1 {
         font-size: 12px;
         line-height: 2.5em;
+        text-align: center;
     }
-    .nav dl {
+
+    /* .nav dl {
         top: 3px;
-    }
+    } */
     .menubtn {
         height: 35px;
+        padding-top: 4px;
+    }
+
+    .act .icon-bar:nth-child(2),
+    .act .icon-bar:nth-child(3)  {
+        top: 10px;
     }
 
     .so1 .btn1 {
@@ -449,14 +482,18 @@
         top: 35px;
     }
 
-    .row-1,
+    /* .row-1,
     .row-2,
     .row-3 {
         padding: 0 5px 5px;
-    }
+    } */
 
     .ul-pic li>a {
         margin: 0 5px;
+    }
+
+    .m-pic2 {
+        padding: 0 5px;
     }
 
     .row-5 .g-tit {

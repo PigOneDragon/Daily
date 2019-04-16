@@ -94,15 +94,50 @@ img {
     padding: 0 30px;
     background-color: #ff5f01;
 }
-.m-menuBtn .btn-c{
+.m-menuBtn .navbar-btn{
     display: block;
     float: right;
     margin: 15px;
     width: 30px;
     height: 30px;
-    background: url('btn.png') no-repeat center;
+    /* background: url('btn.png') no-repeat center; */
     cursor: pointer;
 }
+/* 菜单点击按钮 */
+.navbar-btn{
+            width: 35px;
+            height: 35px;
+            position: relative;
+            /* background-color: yellow; */
+            overflow: hidden;
+            margin:50px; 
+        }
+        .icon-bar{
+            display: block;
+            width: 85%;
+            height: 2px;
+            margin: 6px auto;
+            background-color: #fff;
+            -webkit-transition: all .5s;
+            -o-transition: all .5s;
+            transition: all .5s;
+            /* position: absolute; */
+        }
+        .act .icon-bar:nth-child(1){
+            position: absolute;
+            transform: rotate(-90deg);
+            top: -100%;
+        }
+        .act .icon-bar:nth-child(2){
+            position:absolute;
+            top:10px;
+            transform:rotate(37deg);
+        }
+        .act .icon-bar:nth-child(3){
+            position:absolute;
+            top:10px;
+            transform:rotate(-37deg);
+        }
 @media only screen and (max-width: 1198px){
     .m-menuBtn{
         display: block;

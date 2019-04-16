@@ -12,7 +12,12 @@
             <!-- menuBtn -->
             <div class="m-menuBtn">
                 全部 (<span>8</span>)
-                <div class="btn-c"></div>
+                <!-- <div class="btn-c"></div> -->
+                <div type="button" class="navbar-btn">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </div>
             </div>
             <ul class="m-nav-c">
                 <li class="on"><a href="" class="link">淬火设备</a></li>
@@ -48,7 +53,8 @@
 <script>
 
     var flag = false;
-    $('.btn-c').click(function(){
+    $('.navbar-btn').click(function(){
+        $(this).toggleClass('act');
         flag = ! flag;
         if (flag) {
             $('.m-nav-c').stop().slideDown();
