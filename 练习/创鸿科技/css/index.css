@@ -141,7 +141,7 @@ body {
 .hdr .lang dd a:hover{
     border-radius: 8px;
     border: 1px solid #ccc;
-    background-color: blue;
+    background-color: #2e699e;
     color: #000;
 }
 .hdr .lang dt span {
@@ -539,27 +539,13 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #5c9bce;
     opacity: 0;
     -webkit-transition: all .5s;
     -o-transition: all .5s;
     transition: all .5s;
+    background: #5c9bce url('../imgs/link-bg.png') center no-repeat;
 }
 
-.ul-pic .link {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    width: 75px;
-    height: 75px;
-    border: 1px solid #77a3ce;
-    border-radius: 50%;
-    background: url('../imgs/link.png') center no-repeat;
-}
 
 .ul-pic .pic:hover .mask {
     opacity: .9;
