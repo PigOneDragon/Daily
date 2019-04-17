@@ -30,8 +30,9 @@
 
     .header {
         position: fixed;
-        padding-top: 12px;
+        padding-top: 0;
         background-color: brown;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
     }
 
     .header .logo {
@@ -46,7 +47,7 @@
     .header .nav {
         display: none;
         position: fixed;
-        top: 82px;
+        top: 70px;
         left: 0;
         bottom: 0;
         right: 0;
@@ -66,15 +67,6 @@
         text-align: center;
     }
 
-    .header .plr30 {
-        padding: 0;
-    }
-
-    .header .mp {
-        padding: 0;
-        margin-left: 0;
-    }
-
     .header li.on .v1,
     .header .v1:hover {
         border: 1px solid transparent;
@@ -84,13 +76,35 @@
         display: none;
     }
 
+    /* 语言选项 */
+    .hdr .lang{
+       margin: 20px 30px 0 0; 
+    }
+    .hdr .lang dt{
+        padding: 0 10px;       
+        font-size: 12px;
+        height: 30px;
+        line-height: 28px;
+        border-radius: 8px;
+        border: 1px solid #fff;
+    }
+    .hdr .lang dd{
+        top: 30px;
+        line-height: 30px;    
+    }
+    .hdr .lang dd a{
+        border-radius: 8px;
+        border: 1px solid transparent;
+        text-align: center;
+    }
+
     .navbar-btn {
         display: block;
-        margin-top: 8px;
+        margin-top: 16px;
     }
 
     .m-ban {
-        margin-top: 82px;
+        margin-top: 70px;
     }
 
     .m-ban .tit {
@@ -144,6 +158,7 @@
     .row-3 {
         padding-top: 50px;
     }
+
     .g-tit {
         font-size: 24px;
     }
@@ -155,9 +170,11 @@
     .ul-pic {
         padding: 0 30px;
     }
+
     .ul-pic .txt1 {
         margin-bottom: 20px;
     }
+
     .row-3 .g-more {
         margin: 10px auto 30px;
     }
@@ -225,10 +242,12 @@
     }
 
     .m-txt4 {
+        float: none;
         margin: 0 auto 10px;
     }
 
     .fd-qr {
+        float: none;
         text-align: center;
     }
 
@@ -343,7 +362,17 @@
     .header .nav {
         top: 50px;
     }
-
+    .hdr .lang{
+       margin: 12px 20px 0 0; 
+    }
+    .hdr .lang dt{
+        padding: 0 5px;
+        height: 25px;
+        line-height: 23px;
+    }
+    .hdr .lang dt span {
+        margin-left: 5px;
+    }
     .navbar-btn {
         width: 30px;
         height: 30px;
@@ -390,9 +419,11 @@
     .g-tit {
         font-size: 18px;
     }
-    .ul-tab li{
+
+    .ul-tab li {
         margin: 0 5px;
     }
+
     .ul-pic li {
         width: 50%;
     }

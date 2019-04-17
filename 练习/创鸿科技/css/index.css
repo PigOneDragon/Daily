@@ -112,37 +112,45 @@ body {
     border-radius: 25px;
     border: 1px solid transparent;
 }
-.hdr .nav,
-.hdr .lang{
+.hdr .nav{
     float: left;
 }
+.hdr .lang{
+    float: left;
+    position: relative;
+}
 /* 语言选项 */
-.hdr .lang dt a{
+.hdr .lang dt{
     display: block;
     padding: 0 20px 0 40px;
-    /* margin-left: 15px; */
     font-size: 16px;
-    color: #fff;
     height: 50px;
     line-height: 48px;
     border-radius: 25px;
     border: 1px solid #fff;
 }
+.hdr .lang dt a{
+    color: #fff;
+}
 .hdr .lang dd{
     display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    line-height: 40px;  
+    
 }
 .hdr .lang dd a{
-    display: block; 
-    line-height: 40px;  
-    color: #fff;
-    text-align: center;
+    display: block;
+    color: #000;
+    border-radius: 8px;
     border: 1px solid transparent;
+    text-align: center;
 }
 .hdr .lang dd a:hover{
-    border-radius: 8px;
     border: 1px solid #ccc;
-    background-color: #2e699e;
-    color: #000;
+    background-color: brown;
 }
 .hdr .lang dt span {
     float: right;
@@ -294,6 +302,7 @@ body {
     background-color: #fff;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
 }
 .row-1::after,
 .row-1::before{
@@ -731,15 +740,11 @@ body {
     overflow: hidden;
 }
 
-
-.footer .col-c {
-    margin-left: 145px;
-}
-
 .m-txt4 {
     width: 310px;
     line-height: 2em;
     color: #999;
+    float: left;
 }
 
 .m-txt4 h4 {
@@ -748,8 +753,12 @@ body {
     padding-bottom: 16px;
     color: #fff;
 }
-
-.fd-link {
+.fd-link{
+    margin-left: 145px;
+    overflow: hidden;
+    float: left;
+}
+.fd-link dl {
     float: left;
     margin-right: 50px;
 }
@@ -761,7 +770,9 @@ body {
     line-height: 2em;
     text-align: left;
 }
-
+.fd-qr{
+    float: right;
+}
 .fd-qr h6 {
     font-size: 16px;
     line-height: 2em;
