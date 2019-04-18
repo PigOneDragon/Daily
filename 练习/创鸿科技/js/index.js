@@ -54,21 +54,21 @@ $(function() {
     lang.click(function(event) {
         arrowLang.toggleClass('open');
         if ($('dd:visible', lang).size()) {
-            dd.slideUp();
+            dd.stop().slideUp();
         } else {
-            dd.slideDown();
+            dd.stop().slideDown();
         }
         return false;
     });
 
     $('a',dd).click(function(event) {
         $('dt a', lang).html($(this).text() + '<span></span>' );
-        dd.slideUp();
+        dd.stop().slideUp();
         return false;
     });
 
     $('body').click(function () {
-        dd.slideUp();
+        dd.stop().slideUp();
         arrowLang.removeClass('open');
     });
 
