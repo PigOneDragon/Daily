@@ -37,10 +37,12 @@
     .box1 li.act {
         background-color: yellow;
     }
-    .box2{
+
+    .box2 {
         margin-top: 200px;
     }
-    .box2 .item{
+
+    .box2 .item {
         width: 500px;
         height: 800px;
         margin: 0 auto;
@@ -63,50 +65,63 @@
         <div class="item" id="three">三楼内容</div>
         <div class="item" id="four">四楼内容</div>
     </div>
-
-
-
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <script>
-        $(window).scroll(function(){
-        if($(document).scrollTop()>200){
+    $(window).scroll(function() {
+        if ($(document).scrollTop() > 100) {
             $(".box1").show();
-        }
-        else{
+        } else {
             $(".box1").hide();
         }
-        var sTop = $(window).scrollTop()+200;
+        /*var sTop = $(window).scrollTop()+100;
         // var sTop = $(window).scrollTop() + 400;
-        var floor1 = $("#one").offset().top;
+        var floor1 = $("#one").offset().top; //200
+        // var floor5 = $('#one')[0].offsetTop; //200
+        // console.log(floor1,floor5);
         var floor2 = $("#two").offset().top;
         var floor3 = $("#three").offset().top;
         var floor4 = $("#four").offset().top;
-        if(sTop > floor1 ){
+        if (sTop > floor1) {
             $(".floor").eq(0).delay(300).addClass("act").siblings("li").removeClass("act");
         }
-        if(sTop > floor2 ){
+        if (sTop > floor2) {
             $(".floor").eq(1).delay(300).addClass("act").siblings("li").removeClass("act");
         }
-        if(sTop > floor3 ){
+        if (sTop > floor3) {
             $(".floor").eq(2).delay(300).addClass("act").siblings("li").removeClass("act");
         }
-        if(sTop > floor4 ){
+        if (sTop > floor4) {
             $(".floor").eq(3).delay(300).addClass("act").siblings("li").removeClass("act");
         }
 
+*/
+        if(flag){
+            var sTop = $(window).scrollTop()+100;
+            var l=$('.item').length;
+            for(var i = 0; i<l;i++){
+                // 遍历楼层内容距离顶部的距离  该值为固定值
+                var ft = $('.item').eq(i).offset().top;
+                if(sTop > ft){
+                    $(".floor").eq(i).delay(300).addClass("act").siblings("li").removeClass("act");
+                }
+            }
+        }
 
-});
-        // 点击返回对应楼层
-         $(".floor").on("click",function(){
-            // alert(1);
-            var floorIndex = $(this).index();
-            $(this).addClass('act').siblings().removeClass('act');
-            console.log(floorIndex);
-            $("body,html").animate({
-                scrollTop:($(".item").eq(floorIndex).offset().top)
-            },500);
+    });
+
+    var flag = true; //设置标识。防止出现跑马灯
+    // 点击返回对应楼层
+    $(".floor").on("click", function() {
+        flag = false;
+        var floorIndex = $(this).index();
+        $(this).addClass('act').siblings().removeClass('act');
+        console.log(floorIndex);
+        $("body,html").animate({
+            scrollTop: ($(".item").eq(floorIndex).offset().top)
+        }, 500,function(){
+            flag =true;
         });
-
+    });
     </script>
 </body>
 
