@@ -242,10 +242,12 @@
     }
 
     .m-txt4 {
+        float: none;
         margin: 0 auto 10px;
     }
 
     .fd-qr {
+        float: none;
         text-align: center;
     }
 
