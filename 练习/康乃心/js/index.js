@@ -2,7 +2,7 @@ $(function() {
     // 轮播
     $('.banner').slick({
         slidesToShow: 1,
-        slidesToScroll:1,
+        slidesToScroll: 1,
         // autoplay: true,
         autoplaySpeed: 3000,
         arrows: true,
@@ -20,7 +20,7 @@ $(function() {
     // 资质
     $('.ul-pic').slick({
         slidesToShow: 3,
-        slidesToScroll:1,
+        slidesToScroll: 1,
         autoplaySpeed: 3000,
         arrows: false,
         // dots: true,
@@ -39,7 +39,7 @@ $(function() {
     // 宣传视频
     $('.m-ban').slick({
         slidesToShow: 1,
-        slidesToScroll:1,
+        slidesToScroll: 1,
         autoplaySpeed: 3000,
         arrows: false,
         dots: true,
@@ -56,7 +56,7 @@ $(function() {
     // 合作伙伴
     $('.m-ban1').slick({
         slidesToShow: 5,
-        slidesToScroll:1,
+        slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 5000,
         arrows: true,
@@ -67,7 +67,12 @@ $(function() {
 
     // 滚动达到某一高度给head添加阴影效果
     var $head = $('.header');
+    var nowSh = $(document).scrollTop();
     var headHeight = $head.height();
+    // 页面初始化判断
+    if(nowSh > headHeight){
+        $head.addClass('fixed');
+    }
     $(window).scroll(function(event) {
         var _sTop = $(window).scrollTop();
 
@@ -78,6 +83,17 @@ $(function() {
         }
     });
 
+    // 搜索按钮
+    var btn = $('#soBtn');
+    var inp = $('.hdr form');
+    btn.click(function(e){
+        inp.toggleClass('open');
+        inp.click(function(){
+            $(this).addClass('open');
+            return false;//bug影响了submit的默认事件
+        });
+        return false;
+    });
 
     // 二维码展开效果
     var down = $('.down');
@@ -93,5 +109,10 @@ $(function() {
         $('body,html').stop().animate({
             scrollTop: '0'
         }, 500);
+        return false;
     });
+    $('body').click(function(){
+        inp.removeClass('open');
+    });
+
 });

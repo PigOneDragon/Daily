@@ -12,7 +12,10 @@ a {
 ul {
     list-style: none;
 }
-
+input{
+    border: none;
+    outline: none;
+}
 img {
     border: none;
     max-width: 100%;
@@ -46,8 +49,8 @@ body{
 .hdl li{
     float: left;
 }
-.hdr li .btn,
-.hdl li .btn{
+.hdr li span,
+.hdl li span{
     background-position: left center;
     background-repeat: no-repeat;
     display: block;
@@ -59,16 +62,22 @@ body{
     -o-transition: all .3s;
     transition: all .3s;
 }
-.hdr li .btn{
+.hdr li span{
     background-position: right center;
+}
+.hdr li .btn{
+    background-repeat: no-repeat;
+    background-position: center;
     background-color: transparent;
-    outline: none;
-    border: none;
+    width: 16px;
+    height: 78px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 10px;
 }
 
-.hdr .inp{
-    display: none;
-}
+
 .hdr li .v1,
 .hdl li .v1{
     position: relative;
@@ -76,6 +85,33 @@ body{
     padding: 0 55px;
     color: #333;
     font-size: 18px;
+}
+.hdr .nav li:last-of-type{
+    position: relative;
+}
+.hdr form{
+    position: absolute;
+    visibility: hidden;
+    width: 0;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+.hdr .inp{   
+    width: 100%;
+    height: 50px;
+    vertical-align: middle;
+    font-size: 16px;
+    color: #333;
+    padding: 0 30px 0 8px;
+    border: 1px solid #ccc;
+}
+.hdr form.open{
+    visibility: visible;
+    width: 300px;
 }
 
 /* 短横线 */
@@ -121,11 +157,13 @@ body{
     line-height: 60px;
 }
 .header.fixed .hdr li span,
-.header.fixed .hdl li span{
+.header.fixed .hdl li span,
+.header.fixed .hdr .btn{
     height: 60px;
 }
-
-
+.header.fixed .hdr .inp{
+    height: 30px;
+}
 /* banner */
 .banner1{
     position: relative;
