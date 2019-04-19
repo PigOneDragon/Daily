@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/slick.min.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/m-auto.css">
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=700b132845ef5b0b135066dfa0222a37"></script>
 </head>
 
 <body>
@@ -18,13 +19,18 @@
                     <li><a href="" class="v1">资讯</a></li>
                     <li><a href="" class="v1">我们</a></li>
                     <li>
-                        <span style="background-image: url('imgs/so.png');"></span></li>
+                        <form action="">
+                            <input type="text" class="inp" />
+                            <input style="background-image: url('imgs/so.png');" type="submit" class="btn"value="" />
+                        </form>
+                    </li>
                 </ul>
             </div>
             <div class="hdl">
                 <ul class="nav">
                     <li>
-                        <span style="background-image: url('imgs/home.png');"></span></li>
+                        <span class="btn" style="background-image: url('imgs/home.png');"></span>                       
+                    </li>
                     <li class="on"><a href="" class="v1">产品</a></li>
                     <li><a href="" class="v1">案例</a></li>
                 </ul>
@@ -34,52 +40,53 @@
                     <img src="imgs/logo.png" alt="logo" />
                 </a>
             </div>
-            <div class="hdr"></div>
         </div>
     </div>
     <!-- banenr -->
-    <div class="banner">
-        <div class="item">
-            <a href="">
-                <img src="imgs/banner1.png" alt="" />
-            </a>
-            <div class="wp1">
-                <div class="txt">
-                    <div class="tit">
-                        <em>3</em>
-                        <span style="background-image: url('imgs/clock.png');">分钟</span>
+    <div class="banner1">
+        <div class="banner">
+            <div class="item">
+                <a href="">
+                    <img src="imgs/banner1.png" alt="" />
+                </a>
+                <div class="wp1">
+                    <div class="txt">
+                        <div class="tit">
+                            <em>3</em>
+                            <span style="background-image: url('imgs/clock.png');">分钟</span>
+                        </div>
+                        <h3>给心脏精准监护</h3>
+                        <ul class="ul-icon">
+                            <li>
+                                <em style="background-image: url('imgs/icon_1.png');">可穿戴式</em>
+                            </li>
+                            <li>
+                                <em style="background-image: url('imgs/icon_2.png');">医用级别</em>
+                            </li>
+                            <li>
+                                <em style="background-image: url('imgs/icon_3.png');">操作简单</em>
+                            </li>
+                            <li>
+                                <em style="background-image: url('imgs/icon_4.png');">私人订制</em>
+                            </li>
+                        </ul>
                     </div>
-                    <h3>给心脏精准监护</h3>
-                    <ul class="ul-icon">
-                        <li>
-                            <em style="background-image: url('imgs/icon_1.png');">可穿戴式</em>
-                        </li>
-                        <li>
-                            <em style="background-image: url('imgs/icon_2.png');">医用级别</em>
-                        </li>
-                        <li>
-                            <em style="background-image: url('imgs/icon_3.png');">操作简单</em>
-                        </li>
-                        <li>
-                            <em style="background-image: url('imgs/icon_4.png');">私人订制</em>
-                        </li>
-                    </ul>
                 </div>
             </div>
-            <span class="sDown" style="background-image: url('imgs/scrolldown.png');"></span>
-        </div>
-        <div class="item">
-            <a href="">
-                <img src="imgs/banner2.png" alt="" />
-            </a>
-            <div class="wp1 left">
-                <div class="txt1">
-                    <h4>康乃心App已正式上线快来<br>下载体验吧！ </h4>
-                    <p>关注健康 从现在开始</p>
-                    <a href="" class="more">了解更多</a>
+            <div class="item">
+                <a href="">
+                    <img src="imgs/banner2.png" alt="" />
+                </a>
+                <div class="wp1 left">
+                    <div class="txt1">
+                        <h4>康乃心App已正式上线快来<br>下载体验吧！ </h4>
+                        <p>关注健康 从现在开始</p>
+                        <a href="" class="more">了解更多</a>
+                    </div>
                 </div>
             </div>
         </div>
+        <span class="sDown" style="background-image: url('imgs/scrolldown.png');"></span>
     </div>
     <!-- 资质荣誉 -->
     <div class="row-1">
@@ -88,6 +95,7 @@
                 <h4>资质荣誉</h4>
                 <span>专业值得信赖</span>
             </div>
+           
             <ul class="ul-pic fix">
                 <li>
                     <a href="">
@@ -110,6 +118,27 @@
                         </div>
                     </a>
                 </li>
+                <li>
+                    <a href="">
+                        <div class="pic">
+                            <img src="imgs/row-1_4.png" alt="">
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="pic">
+                            <img src="imgs/row-1_5.png" alt="">
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="pic">
+                            <img src="imgs/row-1_1.png" alt="">
+                        </div>
+                    </a>
+                </li>
             </ul>
             <a href="#" class="g-more">查看更多</a>
         </div>
@@ -118,7 +147,7 @@
     <div class="row-2" style="background-image: url('imgs/appbg.png');">
         <div class="wp">
             <div class="g-tit">
-                 <h4>应用程序</h4>
+                <h4>应用程序</h4>
                 <span>APP应用下载</span>
             </div>
             <div class="m-txt">
@@ -126,18 +155,228 @@
                 <p>康乃心App提供用药提醒、运动训练指导、体征参数监测、心电图评估、图文咨询、电话咨询、视频咨询等服务，旨在实现医生对患者全过程</p>
                 <div class="qr">
                     <div class="down d1">
-                        <em style="background-image: url('imgs/icon31-38.png');"></em>安卓端  扫码下载
+                        <em style="background-image: url('imgs/icon31-38.png');"></em>安卓端 扫码下载
                         <div class="ma">
                             <img src="imgs/anqr.png" alt="">
                         </div>
                     </div>
                     <div class="down d2">
-                         <div class="ma">
+                        <div class="ma">
                             <img src="imgs/iosqr.png" alt="">
                         </div>
-                        <em style="background-image: url('imgs/icon31_38.png');"></em>IOS端  扫码下载
-                       
+                        <em style="background-image: url('imgs/icon31_38.png');"></em>IOS端 扫码下载
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 宣传视频 -->
+    <div class="row-3">
+        <div class="m-ban">
+            <div class="item">
+                <a href="">
+                    <img src="imgs/video.png" alt="">
+                </a>
+                <div class="wp">
+                    <h4>精心呵护　　从心开始</h4>
+                    <em style="background-image: url('imgs/play.png');"></em>
+                </div>
+            </div>
+            <div class="item">
+                <a href="">
+                    <img src="imgs/video.png" alt="">
+                </a>
+                <div class="wp">
+                    <h4>精心呵护　　从心开始</h4>
+                    <em style="background-image: url('imgs/play.png');"></em>
+                </div>
+            </div>
+            <div class="item">
+                <a href="">
+                    <img src="imgs/video.png" alt="">
+                </a>
+                <div class="wp">
+                    <h4>精心呵护　　从心开始</h4>
+                    <em style="background-image: url('imgs/play.png');"></em>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 新闻资讯 -->
+    <div class="row-4">
+        <div class="wp">
+            <div class="g-tit">
+                <h4>新闻资讯</h4>
+                <span>最新的公司新闻与行业资讯实时掌握</span>
+            </div>
+            <ul class="m-newslist fix">
+                <li>
+                    <a href="">
+                        <div class="pic">
+                            <img src="imgs/news1.png" alt="">
+                        </div>
+                        <div class="txt2">
+                            <h5>第三届医疗科技大会顺利举行！</h5>
+                            <p>公司管理团队来自解放军理工大学、清华大学、上海交大、国防科技大学、北京……</p>
+                            <div class="time">2019.1.12</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="pic">
+                            <img src="imgs/news1.png" alt="">
+                        </div>
+                        <div class="txt2">
+                            <h5>第三届医疗科技大会顺利举行！</h5>
+                            <p>公司管理团队来自解放军理工大学、清华大学、上海交大、国防科技大学、北京……</p>
+                            <div class="time">2019.1.12</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="pic">
+                            <img src="imgs/news1.png" alt="">
+                        </div>
+                        <div class="txt2">
+                            <h5>第三届医疗科技大会顺利举行！</h5>
+                            <p>公司管理团队来自解放军理工大学、清华大学、上海交大、国防科技大学、北京……</p>
+                            <div class="time">2019.1.12</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="pic">
+                            <img src="imgs/news1.png" alt="">
+                        </div>
+                        <div class="txt2">
+                            <h5>第三届医疗科技大会顺利举行！</h5>
+                            <p>公司管理团队来自解放军理工大学、清华大学、上海交大、国防科技大学、北京……</p>
+                            <div class="time">2019.1.12</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="pic">
+                            <img src="imgs/news1.png" alt="">
+                        </div>
+                        <div class="txt2">
+                            <h5>第三届医疗科技大会顺利举行！</h5>
+                            <p>公司管理团队来自解放军理工大学、清华大学、上海交大、国防科技大学、北京……</p>
+                            <div class="time">2019.1.12</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="pic">
+                            <img src="imgs/news1.png" alt="">
+                        </div>
+                        <div class="txt2">
+                            <h5>第三届医疗科技大会顺利举行！</h5>
+                            <p>公司管理团队来自解放军理工大学、清华大学、上海交大、国防科技大学、北京……</p>
+                            <div class="time">2019.1.12</div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <a href="#" class="g-more">查看更多</a>
+        </div>
+    </div>
+    <!-- 合作伙伴 -->
+    <div class="row-5">
+        <div class="wp">
+            <div class="g-tit">
+                <h4>合作伙伴</h4>
+                <span>携手合作的战略伙伴</span>
+            </div>
+            <div class="m-ban1">
+                <div class="item">
+                    <a href="">
+                        <img src="imgs/hezuo1.png" alt="">
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="">
+                        <img src="imgs/hezuo2.png" alt="">
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="">
+                        <img src="imgs/hezuo3.png" alt="">
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="">
+                        <img src="imgs/hezuo4.png" alt="">
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="">
+                        <img src="imgs/hezuo5.png" alt="">
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="">
+                        <img src="imgs/hezuo1.png" alt="">
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="">
+                        <img src="imgs/hezuo2.png" alt="">
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="">
+                        <img src="imgs/hezuo3.png" alt="">
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="">
+                        <img src="imgs/hezuo4.png" alt="">
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="">
+                        <img src="imgs/hezuo5.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 位置 -->
+    <div class="row-6">
+        <div class="m-map">
+            <div id="allmap"></div>
+        </div>
+    </div>
+    <!-- 页脚 -->
+    <div class="footer">
+        <div class="backTop" style="background-image: url('imgs/top.png');">
+        </div>
+        <div class="img" style="background-image: url('imgs/kouhao.png');"></div>
+        <div class="wp fix">
+            <div class="fd-tel">
+                <p>邮箱：chenyecai@cardiocloud.cn</p>
+                <p>电话：010-60604866</p>
+                <p>传真：60604866</p>
+                <p>地址：北京市海淀区西八里庄路亮甲店130号华玉大厦3层</p>
+            </div>
+            <div class="fd-copy">
+                <p>Copyright 2016 康乃心 All Rights Reserved.</p>
+                <p><em class="ico"></em>京ICP备16032124号-1</p>
+                <p>Designed by MHD°妙合</p>
+            </div>
+            <div class="fd-qr">
+                <div class="pic">
+                    <img src="imgs/fd-ma.png" alt="">
+                </div>
+                <div class="tit">
+                    <p>扫一扫</p>
+                    <p>关注官方微信</p>
                 </div>
             </div>
         </div>
@@ -145,6 +384,11 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/map.js"></script>
+
+
+
+
 </body>
 
 </html>
