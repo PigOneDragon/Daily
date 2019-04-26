@@ -1,0 +1,66 @@
+//二级菜单 点击一个，自身显示其它隐藏  bug  resize事件会给下面的click绑定多次
+
+  function qrDown(_winw) {
+        if (_winw > 1200) {
+            down.unbind('click');
+            down.bind('mouseenter', function() {
+                $(this).addClass('act');
+                $('.ma', $(this)).stop().slideDown();
+            });
+            down.bind('mouseleave', function() {
+                $(this).removeClass('act');
+                $('.ma', $(this)).stop().slideUp();
+
+            });
+        } else {
+            down.unbind('mouseenter mouseleave');
+            down.bind('click', function() {
+                $('.ma').slideUp();
+                down.removeClass('act');
+                if ($('.ma:visible', $(this)).size()) {
+                    $('.ma', $(this)).slideUp();
+                    $(this).removeClass('act');
+                } else {
+                    $('.ma', $(this)).slideDown();
+                    $(this).addClass('act');
+                }
+                return false;
+            });
+        }
+    }
+//初始化执行
+    qrDown(width);
+$(window).resize(function(event) {
+    var _width = $(window).width();
+    qrDown(_width);
+});  
+
+
+//返回顶部
+    $('.backTop').click(function() {
+        $('body,html').stop().animate({
+            scrollTop: '0'
+        }, 500);
+    });
+    
+    
+    
+    // 手机页面 导航按钮
+    var navbarBtn = $('.navbar-btn');
+    var nav = $('.nav');
+
+    navbarBtn.click(function() {
+        navbarBtn.toggleClass('act');
+
+        var _winw = $(window).width();
+        if (navbarBtn.hasClass('act')) {
+            if (_winw <= 1200) {
+                nav.stop().slideDown();
+            }
+        } else {
+            if (_winw <= 1200) {
+                nav.stop().slideUp();
+            }
+        }
+        return false;
+    });
