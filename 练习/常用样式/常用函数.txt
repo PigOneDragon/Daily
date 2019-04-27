@@ -64,3 +64,19 @@ $(window).resize(function(event) {
         }
         return false;
     });
+
+
+//导航条的二级菜单贴着主导航不脱离文档流展开
+
+ $('.nav .v1').click(function(){
+        console.log($(this).next());
+        // $(this).parents(".nav").find("dl").stop().slideUp("fast");
+        $('dl').stop().slideUp("fast");
+        // $(this).parents('.nav').find("li").removeClass('on');
+        $(this).parents('.nav li').removeClass('on');
+        if( $(this).siblings('dl').length ){
+            $(this).siblings('dl').stop().slideToggle("fast");
+            $(this).parent("li").toggleClass('on');
+            return false;
+        }
+    });
