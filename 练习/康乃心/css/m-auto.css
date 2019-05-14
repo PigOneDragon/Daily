@@ -214,10 +214,53 @@
         display: none;
     }
 
-    .ul-pic {
+/*     .ul-pic,
+    .UL-PIC {
         margin: 40px -27px;
+    } */
+     /* 资讯荣誉下插件圆点样式 */
+    .ul-pic,
+    .UL-PIC {
+        padding: 0 0 30px;
+        margin-bottom: 20px;
     }
 
+    .ul-pic li ,
+    .UL-PIC li{
+        padding: 0;
+    }
+
+    .ul-pic .slick-dots ,
+    .UL-PIC .slick-dots{
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+        bottom: 0;
+    }
+
+    .ul-pic .slick-dots li ,
+    .UL-PIC .slick-dots li{
+        float: left;
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+        border-radius: 50%;
+        background-color: #ccc;
+        cursor: pointer;
+    }
+
+    .ul-pic .slick-dots button ,
+    .UL-PIC .slick-dots button{
+        display: none;
+    }
+
+    .ul-pic .slick-dots li.slick-active ,
+    .UL-PIC .slick-dots li.slick-active{
+        background-color: #009fe8;
+    }
     /* app */
     .row-2 {
         height: 700px;
@@ -255,7 +298,7 @@
         font-size: 24px;
     }
 
-    .m-ban .wp em {
+    .m-ban .wp a {
         width: 50px;
         height: 50px;
     }
@@ -364,26 +407,29 @@
     }
     /* 荣誉 */
 
-    .ul-pic {
+    .ul-pic,
+    .UL-PIC {
         margin: 30px -20px;
     }
 
-    .ul-pic li {
+    .ul-pic li 
+    .UL-PIC li{
         padding: 20px 0;
     }
 
-    .ul-pic li a {
+    .ul-pic li a,
+    .UL-PIC li a {
         margin: 0 20px;
     }
 
-    .ul-pic .slick-center a {
+    /* .ul-pic .slick-center a {
         box-shadow: 0 0 5px #e0e0e0;
         border: 1px;
-    }
+    } */
 
     /* app下载 */
     .row-2 {
-        height: 650px;
+        height: 530px;
     }
 
     .m-txt {
@@ -411,7 +457,7 @@
         margin-bottom: 18px;
     }
 
-    .m-ban .wp em {
+    .m-ban .wp a{
         width: 30px;
         height: 30px;
     }
@@ -494,7 +540,8 @@
         display: none;
     }
 
-    .ul-pic {
+    .ul-pic,
+    .UL-PIC {
         margin: 10px 0;
     }
 
@@ -563,43 +610,7 @@
         border-radius: 10px;
     }
 
-    /* 资讯荣誉下插件圆点样式 */
-    .ul-pic {
-        padding: 0 0 30px;
-        margin-bottom: 20px;
-    }
 
-    .ul-pic li {
-        padding: 0;
-    }
-
-    .ul-pic .slick-dots {
-        position: absolute;
-        left: 50%;
-        -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        -o-transform: translateX(-50%);
-        transform: translateX(-50%);
-        bottom: 0;
-    }
-
-    .ul-pic .slick-dots li {
-        float: left;
-        width: 10px;
-        height: 10px;
-        margin: 0 5px;
-        border-radius: 50%;
-        background-color: #ccc;
-        cursor: pointer;
-    }
-
-    .ul-pic .slick-dots button {
-        display: none;
-    }
-
-    .ul-pic .slick-dots li.slick-active {
-        background-color: #009fe8;
-    }
 
     /* app */
     .row-2{
@@ -643,7 +654,7 @@
         margin-bottom: 8px;
     }
 
-    .m-ban .wp em {
+    .m-ban .wp a {
         width: 20px;
         height: 20px;
     }

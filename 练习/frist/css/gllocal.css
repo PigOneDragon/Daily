@@ -1,0 +1,123 @@
+body{
+    color: #3d4c63;
+    font-size: 12px;
+    /* line-height: 1.5; */
+    background: #fff;
+    font-family: "微软雅黑","Microsoft Yahei";
+    max-width: 750px;
+    margin: 0 auto;
+}
+body *{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+input{
+    border: none;
+    outline: none;
+}
+.wp{
+    padding: 0 10px;
+}
+body.g-bgf3{
+    background-color: #f3f3f9;
+}
+.header{
+    height: 64px;
+    background: #3275fd;
+}
+.m-local{
+    position: relative;
+}
+.m-local li{
+    margin-top: 10px;
+    padding: 0 10px;
+    color: #353535;
+    background-color: #fff;
+    overflow: hidden;
+}
+.m-local .txt{
+    border-bottom: 1px solid #e5e5e5;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 64px;
+}
+.m-local .txt span{
+    padding-left: 15px;
+}
+.m-local .radio{
+    width: 16px;
+    height: 16px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    background-color: #fff;
+    -webkit-appearance:none;
+    vertical-align: middle;
+}
+.m-local .radio:checked{
+   background: url("../images/radioact.png")no-repeat center;
+   -webkit-background-size: 16px auto;
+   background-size: 16px auto;
+}
+.m-local .inp{
+    float: left;
+    line-height: 45px;
+}
+
+
+.m-local .btn{
+    float: right;
+    overflow: hidden;
+    line-height: 45px;
+}
+.m-local .btn a{
+    padding-left: 19px;
+    float: left;
+    color: #353535;
+    
+}
+.m-local .btn a.xg{
+    background: url('../images/xiugai.png') no-repeat left center;
+    -webkit-background-size: auto 17px;
+    background-size: auto 17px;
+}
+.m-local .btn a.del{
+    background: url('../images/del.png') no-repeat left center;
+    -webkit-background-size: auto 17px;
+    background-size: auto 17px;
+    margin-left: 16px;
+}
+.m-local .add{
+    position: absolute;
+    right: 0;
+    bottom: -58px;
+    left: 0;
+    padding: 0 10px;
+}
+.m-local .add a{
+    display: block;
+    background-color: #3275fd;
+    line-height: 44px;
+    text-align: center;
+    color: #fff;
+    border-radius: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

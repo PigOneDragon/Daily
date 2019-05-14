@@ -18,26 +18,36 @@ $(function() {
         }]
     });
     // 资质
-    $('.ul-pic').slick({
-        slidesToShow: 3,
+    /*    $('.ul-pic').on("mouseenter",".ul-pic.UL-PIC",function(){
+            $('.ul-pic.UL-PIC').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplaySpeed: 3000,
+            arrows: false,
+            });
+        });*/
+
+
+    $('.UL-PIC').slick({
+        slidesToShow: 2,
         slidesToScroll: 1,
         autoplaySpeed: 3000,
         arrows: false,
-        // dots: true,
-        centerMode: true,
-        centerPadding: '0px',
+        dots: true,
+        // centerMode: true,
+        // centerPadding: '0px',
         // speed: 500,
         // cssEase: 'linear',
-        responsive: [{
+         responsive: [{
 
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                arrows: false,
-                dots: true,
-                centerMode: false
-            }
-        }]
+             breakpoint: 480,
+             settings: {
+                 slidesToShow: 1,
+                 arrows: false,
+                 dots: true,
+                 centerMode: false
+             }
+         }]
     });
     // 宣传视频
     $('.m-ban').slick({
@@ -131,8 +141,17 @@ $(function() {
     }
 
     navBar(Width);
-
-
+    // 初始化判断
+    function ulPic(Width) {
+        if (Width < 960) {
+            $('.ul-pic').css('display', 'none');
+            $('.UL-PIC').css('display', 'block');
+        } else {
+            $('.ul-pic').css('display', 'block');
+            $('.UL-PIC').css('display', 'none');
+        }
+    }
+    ulPic(Width);
     $(window).resize(function(event) {
         var _width = $(window).width();
         navBar(_width);
@@ -145,6 +164,8 @@ $(function() {
         }
         // 二维码事件 bug 页面改变后显示一下就隐藏了
         qrDown(_width);
+        // 资质荣誉在手机页面开始轮播 添加一个类
+        ulPic(_width);
     });
 
     // 搜索按钮
@@ -206,7 +227,7 @@ $(function() {
             });
         } else {
             down.unbind('mouseenter mouseleave');
-        
+
             //     down.bind('click', function() {
             //         console.log('被点击了');
             //     $('.ma').slideUp();
@@ -221,36 +242,36 @@ $(function() {
             //     return false;
             // });
 
-            
+
         }
     }
- down.bind('click', function() {
-                    console.log('被点击了');
-                $('.ma').slideUp();
-                down.removeClass('act');
-                if ($('.ma:visible', $(this)).size()) {
-                    $('.ma', $(this)).slideUp();
-                    $(this).removeClass('act');
-                } else {
-                    $('.ma', $(this)).slideDown();
-                    $(this).addClass('act');
-                }
-                return false;
-            });
+    down.on('click', function() {
+        console.log('被点击了');
+        $('.ma').slideUp();
+        down.removeClass('act');
+        if ($('.ma:visible', $(this)).size()) {
+            $('.ma', $(this)).slideUp();
+            $(this).removeClass('act');
+        } else {
+            $('.ma', $(this)).slideDown();
+            $(this).addClass('act');
+        }
+        return false;
+    });
     qrDown(Width);
- //迁西网站的二级菜单事件点击下拉文本水平居中
-/*            $(".f-link li span").click(function(event) {
-                $(this).parent(".f-link li").siblings("li").find("dl").hide();
-                $(this).parent(".f-link li").siblings("li").find("span").removeClass('open');
-                $(this).parent(".f-link li").find("dl").stop().slideToggle("fast");
-                $(this).toggleClass('open');
-                event.stopPropagation();
-                
-            });
-            $(document).click(function(event){
-                $(".f-link li dl").slideUp();
-                event.stopPropagation();
-            })*/
+    //迁西网站的二级菜单事件点击下拉文本水平居中
+    /*            $(".f-link li span").click(function(event) {
+                    $(this).parent(".f-link li").siblings("li").find("dl").hide();
+                    $(this).parent(".f-link li").siblings("li").find("span").removeClass('open');
+                    $(this).parent(".f-link li").find("dl").stop().slideToggle("fast");
+                    $(this).toggleClass('open');
+                    event.stopPropagation();
+                    
+                });
+                $(document).click(function(event){
+                    $(".f-link li dl").slideUp();
+                    event.stopPropagation();
+                })*/
 
     // 返回顶部
     $('.backTop').click(function() {
@@ -264,5 +285,17 @@ $(function() {
         down.removeClass('act');
         $('.ma', down).stop().slideUp();
     });
+
+    // 视频弹框
+    $('.js-video-pop').click(function() {
+        $('.pop-fixed.video').fadeIn();
+        var sSrc = $(this).attr('data-video-src');
+        $('.pop-fixed.video #videoBox').attr('src', sSrc);
+    });
+
+    $('.pop-fixed.video .close').click(function() {
+        $('.pop-fixed.video').fadeOut();
+        $('.pop-fixed.video #videoBox').attr('src', '');
+    })
 
 });

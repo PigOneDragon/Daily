@@ -508,40 +508,45 @@ body{
 .row-1{
     padding: 106px 0 0;
 }
-.row-1 .wp{
-    overflow: hidden;
-}
-.ul-pic{
-    overflow: hidden;
+
+.ul-pic,
+.UL-PIC{
     margin: 92px -27px;
 }
-.ul-pic li{
+.UL-PIC{
+    display: none;
+}
+.ul-pic li,
+.UL-PIC li{
     float: left;
     width: 33.33%;
-    padding: 50px 0;
+    /* padding: 50px 0; */
 }
 
-.ul-pic li a{
+.ul-pic li a,
+.UL-PIC li a{
     display: block;
     margin: 0 27px;
     -webkit-transition: all .3s;
     -o-transition: all .3s;
     transition: all .3s;
 }
-.ul-pic .pic{
+.ul-pic .pic,
+.UL-PIC .pic{
     position: relative;
     height: 0;
     padding-top: 68%;
     overflow: hidden;
 }
 
-.ul-pic .slick-center a{
+.ul-pic li a:hover{
     transform: scale(1.24);
     box-shadow: 0 0 15px #e0e0e0;
     border:2px solid #f6f6f6;
 }
 
-.ul-pic .pic img{
+.ul-pic .pic img,
+.UL-PIC .pic img{
     position: absolute;
     top: 0;
     left: 0;
@@ -668,14 +673,13 @@ body{
 .m-ban .item{
     position: relative;
 }
-.m-ban .item a{
-    display: block;
+.m-ban .item .pic{
     position: relative;
     height: 0;
     padding-top: 30%;
     overflow: hidden;
 }
-.m-ban .item a img{
+.m-ban .item .pic img{
     position: absolute;
     top: 0;
     left: 0;
@@ -701,7 +705,7 @@ body{
     color: #fff;
     margin-bottom: 45px;
 }
-.m-ban .wp em{
+.m-ban .wp a{
     display: inline-block;
     background-position: center;
     background-repeat: no-repeat;
@@ -740,7 +744,60 @@ body{
 .m-ban .slick-dots li.slick-active {
     background-color: #009fe8;
 }
+/* 宣传视频弹框 */
+.pop-fixed {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999
+}
 
+.pop-fixed .cont {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+}
+
+.pop-fixed .mask {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.pop-fixed .close {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 25px;
+    height: 25px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAB3UlEQVRoQ9Wa7VHDMAyGX08Am8AIjMAIMAHdBDagGzACHYFVmECces5dSGNbkuVEyd+67fNEH9YlTkT0AeANwGtK6YwDXET0COATwCUR0Q+Ah8wdXiLDfwO4Z2YWYJsLgLvoEkv4a9Yw9BEkVuFTOl8FokuU4K8pNK/ZiJGowd8IRItEC35VIIqEBL4osLeEFL4qsJeEBr4psLWEFl4ksJWEBV4sMFrCCq8SGCXRA68W8JYgohcA79NgZpmI/+3E0knaY8fO8DwST5dpEjYJ5Eg8A/iyAHjBm1JoMTtxCqjuoid8t0COhFjCG95FQCoxAt5NoCUxCt5VoCSRa0ZVJ9Ju6C5QkJjzmFplTcjcRms/upIyvNwdfkgEKlE4hkDh7nfttpul0Fq3OUwR11pl+DYqAZSs0bTPaW13F9KAadZKZboELECW7wwp4h6Qnu8uZUwRWAD8AnhKKfFjevHlJaEW8ICfLD0kVAKe8F4SYoER8B4SIoGR8L0STYEt4HskqgJbwlsligJ7wFskVgX2hNdK3AhEgNdILF/yzZ/xmHZY8VYsXNja7OavWcPBSyIxvegOC9+S4KMG4eGrEkREeUGInG+VxrImOAJ83IYPfJy0I3Hrz0Z9niVOfEjlD7tkzwux++iEAAAAAElFTkSuQmCC) center center no-repeat;
+    cursor: pointer;
+    z-index: 10
+}
+
+.pop-fixed.video .video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2
+}
+
+.pop-fixed.video .video iframe {
+    display: block;
+    width: 100%;
+    height: 100%
+}
 /* 新闻资讯 */
 .row-4{
     padding-top: 144px;

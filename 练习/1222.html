@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        p{
+            width: 200px;
+            height: 200px;
+            position: relative;
+            background-color: red;
+        }
+        a{
+    position: absolute;
+   /*  top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   margin: auto; */
+    top: 50%;
+    left: 50%; 
+    display: block;
+    -webkit-transform: translate(-50%,-50%);
+   -ms-transform: translate(-50%,-50%);
+   -o-transform: translate(-50%,-50%);
+   transform: translate(-50%,-50%); 
+    font-size: 14px;
+}
+input, textarea {
+    /* 光标设置颜色 */
+    caret-color: blue;
+    color: blue;
+}
+    </style>
+</head>
+
+<body>
+    <input type="text">
+    <p>
+        <a href="#43">ssss</a>
+    </p>
+    <ul>
+        <li>一级</li>
+        <li>一级</li>
+        <li>一级</li>
+    </ul>
+    <!-- <div>ssss</div> -->
+    <ul>
+        <li>
+            二级
+            <p>sss</p>
+            <ul>
+                <li>三级</li>
+                <li>三级</li>
+                <li>三级</li>
+            </ul>
+        </li>
+        <li>二级</li>
+        <li>二级</li>
+    </ul>
+    <div id="div">
+        {{meg}}
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+    <script>
+        var data = {meg:"hello"};
+        var  v= new Vue({
+            el:"#div",
+
+            data:data
+        });
+
+        $(window).resize(function(event) {
+            var w = $(window).width();
+            if (w < 1200) {
+                v.meg='hi';
+            }
+            else{
+                v.meg="hello"
+            }
+        });
+        // vue下的$以便与用户定义的属性区分开
+        // alert(v.$data === data);//true
+        console.log(v.$el === document.getElementById("div")); //true
+    var d = document.createElement('div');
+    d.id = 'ff';
+    d.innerHTML = 'addelement';
+    document.body.appendChild(d);
+    console.log($('p,div').text());
+
+    // single
+    var fn = (function(){
+        var ins = null;
+        return function(){
+            if (ins) {
+                return ins;
+            }
+            this.name='1';
+            this.id=Math.random();
+            return ins = this;
+        }
+    })();
+    alert(fn().id);
+
+    function ff(){
+        this.name='1';
+        this.id=Math.random();
+        // return ins = this; 
+    }
+
+    var d=[];
+
+    var te = new ff();
+    var te1 = new ff();
+    var te2 = new ff();
+    var f = new fn();
+    var f1 = new fn();
+    var f2 = new fn();
+    console.log(te.id);
+    console.log(f.id);
+    console.log(te1.id);
+    console.log(f1.id);
+    console.log(te2.id);
+    console.log(f2.id);
+    console.log(typeof f);
+    console.log(typeof f1);
+    console.log(Object.prototype.toString.call(f));//window
+    console.log(Object.prototype.toString.call(d));//array
+    </script>
+</body>
+
+</html>

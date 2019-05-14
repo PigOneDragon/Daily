@@ -1,0 +1,14 @@
+﻿.m-slide-certify { position: relative; margin: 60px auto; width: 1123px;/*判断宽度设置响应式效果*/ }
+    .m-slide-certify .swiper-container { padding-bottom: 60px; }
+        .m-slide-certify  .swiper-slide { width: 641px; height: 347px; background: #fff; border: 1px solid #c2c2c2; }
+            .m-slide-certify  .swiper-slide img { display: block; width: 637px; height: 343px; border: 2px solid #fff; }
+
+        .m-slide-certify .swiper-pagination { width: 100%; bottom: 20px; }
+            .m-slide-certify .swiper-pagination-bullets .swiper-pagination-bullet { opacity: 1; margin: 0 5px; width: 10px; height: 10px; border: 3px solid #fff; background-color: #d5d5d5; }
+                .m-slide-certify .swiper-pagination-bullets .swiper-pagination-bullet-active { border-color: #00aadc; background-color: #fff; }
+
+        .m-slide-certify .swiper-button-prev, .m-slide-certify .swiper-button-next { top: 133px; width: 60px; height: 111px; background-repeat: no-repeat; -webkit-background-size: 100% 100%; background-size: 100% 100%; }
+        .m-slide-certify .swiper-button-prev { left: 140px; background-image: url(http://pic.celong.cn/15235318388.png); }
+            .m-slide-certify .swiper-button-prev:hover {}
+        .m-slide-certify .swiper-button-next { right: 140px; background-image: url(http://pic.celong.cn/152353183810.png); }
+            .m-slide-certify .swiper-button-next:hover {}

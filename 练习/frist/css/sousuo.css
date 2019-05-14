@@ -1,0 +1,98 @@
+body{
+    color: #3d4c63;
+    font-size: 12px;
+    /* line-height: 1.5; */
+    background: #fff;
+    font-family: "微软雅黑","Microsoft Yahei";
+    max-width: 750px;
+    margin: 0 auto;
+}
+body *{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+input{
+    border: none;
+    outline: none;
+}
+.wp{
+    padding: 0 10px;
+}
+
+.header{
+    height: 64px;
+    background: #3275fd;
+}
+
+.row-a1 .serach{
+    position: relative;
+    overflow: hidden;
+    line-height: 43px;
+    padding: 10px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+.row-a1 .icon-sousuo{
+    position: absolute;
+    left: 10px;
+    color: #888;
+}
+.row-a1 .serach .inp{
+    float: left;
+    width: 90%;
+    padding-left: 35px;
+    height: 43px;
+    background-color: #ededed;
+    color: #888888;
+    border-radius: 4px;
+}
+.row-a1 .serach .sub{
+    overflow: hidden;
+    width: 10%;
+    line-height: 43px;
+    text-align: right;
+    background-color: transparent;
+}
+.g-tit{
+    line-height: 45px;
+    overflow: hidden;
+}
+.g-tit h5{
+    float: left;
+    padding-left: 20px;
+    color: #666666;
+    font-weight: normal;
+    background: url('../images/sousuo/clock.png') no-repeat left center;
+    -webkit-background-size: 15px auto;
+    background-size: 15px auto;
+}
+.g-tit .del{
+    float: right;
+    width: 45px;
+    height: 45px;
+    background: url('../images/sousuo/del.png') no-repeat right center;
+    -webkit-background-size: 13px auto;
+    background-size: 13px auto;
+}
+.m-fire .g-tit h5{
+    background: url('../images/sousuo/fire.png') no-repeat left center;
+    -webkit-background-size: 15px auto;
+    background-size: 15px auto;
+}
+.g-cont{
+    overflow: hidden;
+}
+.g-cont li{
+    float: left;
+    margin: 0 10px 10px 0;
+}
+.g-cont li a{
+    display: block;
+    padding: 0 19px;
+    line-height: 30px;
+    color: #666;
+    background-color: #f4f4f4;
+    border-radius: 15px;
+}
+
+

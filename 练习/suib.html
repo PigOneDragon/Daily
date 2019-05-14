@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="https://cdn.bootcss.com/animate.css/3.7.0/animate.min.css" rel="stylesheet">
+    <style>
+        .pic{
+            width: 200px;
+            height: 150px;
+            background: url('row-a2-1.png') 100% 100% no-repeat;
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-attachment: fixed;
+            /* 背景图大小不能动态？好像是的 */
+            -webkit-transition: all 3s;
+            -o-transition: all 3s;
+            transition: all 3s;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <header class="site__header island">
+        <div class="wrap">
+            <span id="animationSandbox" style="display: block;" class="">
+                <h1>Animate.css</h1>
+            </span>
+            <span class="beta subhead">Just-add-water CSS animations</span>
+        </div>
+    </header>
+
+    <div class="pic"></div>
+    <h1 class="animated infinite bounce delay-2s">Example</h1>
+    <script src="https://cdn.bootcss.com/jquery/3.3.0/jquery.min.js"></script>
+    <script>
+    function testAnim(x) {
+        $('#animationSandbox').removeClass().addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+            $(this).removeClass();
+        });
+    };
+
+    $(document).ready(function() {
+        // $('.js--triggerAnimation').click(function(e) {
+        //     e.preventDefault();
+        //     var anim = $('.js--animations').val();
+        testAnim('bounce');
+    });
+
+    $('.js--animations').change(function() {
+        var anim = $(this).val();
+        testAnim(anim);
+    });
+
+    function p(name, sex) {
+        this.name = name;
+        this.sex = sex;
+    }
+    p.prototype.say = function() {
+        console.log(this.name + '今天星期三');
+    }
+
+    function c() {
+        // 构造方法这里需要用this
+        this.sayHello = function() {
+            console.log('1427');
+        }
+    }
+    c.prototype = new p('xk', 'n');
+    var ccc = new c();
+    console.log(ccc.say()); //ccc{}-->ccc.__proto__-->c.prototype-->中间对象的.__proto__ -->p.prototype-->p.prototype.say()
+    console.log(ccc.sayHello());
+
+
+
+
+
+    function SuperType() {
+        this.property = true;
+    }
+    SuperType.prototype.getSuperValue = function() {
+        return this.property;
+    };
+
+    function SubType() {
+        this.subproperty = false;
+        this.property = '子元素的属性';
+    }
+    //继承了SuperType
+    SubType.prototype = new SuperType();
+    //使用字面量添加新方法，会导致上一行代码无效
+    /*使用对象字面量添加新方法在new之后，但与此同时也创建了新对象。
+因为每创建一个函数，就会创建它的prototype对象，这个对象也会自动获得constructor属性。而我们使用对象字面量，本质上完全重写了默认的prototype对象，因此
+constructor属性也就变成了新对象的constructor属性*/
+
+    /*SubType.prototype = {
+        getSubValue: function() {
+            return this.subproperty;
+        },
+        someOtherMethod: function() {
+            return false;
+        }
+    };
+    var instance = new SubType();
+    alert(instance.getSuperValue()); //error！
+    */
+    SubType.prototype.getSubValue= function() {
+            return this.subproperty;
+        };
+     
+    var instance = new SubType();
+    alert(instance.getSuperValue()); //true
+  
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+body{
+    color: #3d4c63;
+    font-size: 12px;
+    /* line-height: 1.5; */
+    background: #fff;
+    font-family: "微软雅黑","Microsoft Yahei";
+    max-width: 750px;
+    margin: 0 auto;
+}
+body *{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+input{
+    border: none;
+    outline: none;
+}
+.wp{
+    padding: 0 10px;
+}
+body.g-bgf3{
+    background-color: #f3f3f9;
+}
+.header{
+    height: 64px;
+    background: #3275fd;
+}
+
+.m-newlocal{
+    margin-top: 10px;
+    background-color: #fff;
+    color: #888888;
+    font-size: 14px;
+    padding: 0 10px;
+}
+.m-newlocal .group{
+    line-height: 51px;
+    border-top: 1px solid #e5e5e5;
+}  
+.m-newlocal .group:first-of-type{
+    border-top: none;
+    line-height: 52px;
+} 
+.m-newlocal .group label{
+    float: left;
+}
+.m-newlocal .group p{
+    overflow: hidden;
+}
+.m-newlocal .group input{
+    line-height: 52px;
+    width: 100%;
+}
+.m-newlocal .group .dz{
+    min-height: 71px;
+    width: 100%;
+    outline: 0;
+    border: none;
+    padding-top: 19px;
+    resize: none;
+}
+.m-newlocal .group1 input{
+    width: 83%;
+}
+.m-newlocal .group1 .dw{
+    float: right;
+    width: 17%;
+    height: 53px;
+    background: url('../images/local/dw.png') no-repeat center center;
+    -webkit-background-size: 16px auto;
+    background-size: 16px auto;
+    position: relative;
+}
+.m-newlocal .group1 .dw::before{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 32px;
+ /*    top: 10px;
+    left: 0; */
+    background-color: #e5e5e5;
+    margin-top: 10px;
+}
+.m-btn{
+    position: absolute;
+    bottom: 58px;
+    width: 100%;
+    padding: 0 12px;
+    overflow: hidden;
+    text-align: center;
+}
+.m-btn input{
+/*     padding: 0 70px; */
+    line-height: 43px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 2px;
+    float: left;
+    width: 48%;
+}
+.m-btn input.save{
+    color: #fff;
+    margin-right: 10px;
+    background-color: #3275fd;
+}
+.m-btn input.cancel{
+    color: #353535;
+    background-color: #f4f4f4;
+    border: 1px solid #e5e5e5;
+    line-height: 41px;
+}
+
+
+
+
+

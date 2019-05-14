@@ -1,0 +1,120 @@
+body{
+    color: #3d4c63;
+    font-size: 12px;
+    /* line-height: 1.5; */
+    background: #fff;
+    font-family: "微软雅黑","Microsoft Yahei";
+    max-width: 750px;
+    margin: 0 auto;
+}
+body *{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body.g-bgf3{
+    background: #f3f3f9;
+}
+input{
+    border: none;
+    outline: none;
+}
+.wp{
+    padding: 0 10px;
+}
+
+.header{
+    height: 64px;
+    background: #3275fd;
+}
+.m-history{
+    position: relative;
+}
+.m-history .ul-tab{
+    border-bottom: 1px solid #e5e5e5;
+    text-align: left;
+    background-color: #fff;
+    padding: 0 10px;
+}
+.m-history .ul-tab li{
+    display: inline-block;
+    
+}
+.m-history .ul-tab li a{
+    display: block;
+    text-align: center;
+    padding: 0 12px;
+    line-height: 42px;
+    color: #353535;
+    border-bottom: 1px solid transparent;
+}
+.m-history .ul-tab li.on a{
+    border-color: #3275fd;
+    color: #3275fd;
+}
+.g-info{
+    margin: 10px 0;
+    
+    overflow: hidden;
+    background-color: #fff;
+}
+.g-info .txt{
+    color: #888;
+    line-height: 1.5;
+    padding: 10px 0;
+    margin: 0 10px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.g-info .txt span{
+    color: #353535;
+    padding-right: 37px;
+}
+.g-info .txt span.price{
+    color: #b61122;
+}
+.g-info .txt em{
+    font-style: normal;
+    color: #3275fd;
+}
+.g-info .btn {
+    height: 48px;
+    overflow: hidden;
+    float: right;
+    padding-right: 10px;
+}
+.g-info .btn a{
+    float: left;
+    display: inline-block;
+    padding: 0 14px;
+    margin-top: 10px;
+    color: #353535;
+    text-align: center;
+    line-height: 26px;
+    border: 1px solid #353535;
+    border-radius: 14px;
+    margin-left: 10px;
+}
+.g-info .btn a.act{
+    background-color: #fd8d32;
+    color: #fff;
+    border-color: #fd8d32;
+}
+.m-history .backToLocal{
+
+    /* width: 100%; */
+    padding: 0 10px;
+    line-height: 44px;
+}
+.m-history .backToLocal a{
+    display: block;
+    text-align: center;
+    background-color: #3275fd;
+    color: #fff;
+}
+.m-history .backToLocal a.help{
+    text-align: center;
+    margin-top: 25px;
+    color: #3275fd;
+    background-color: transparent;
+    text-decoration: underline;
+}

@@ -1,7 +1,0 @@
-﻿测试如何pull到本地  --  在克隆下来的Daily文件夹右键 git bash here   -->git pull  即可   success！！
-
-
-
-*********
-将本地代码更新至远程仓库    在相同文件夹 git gui here   打开即有提示  commit 后 push即可  
-？在vscode中为何不可呢 疑问 难道是打开的文件夹路径不对吗？打开练习文件夹试试

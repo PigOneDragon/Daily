@@ -1,0 +1,22 @@
+﻿.m-slide-certify {position: relative; margin: 60px auto;max-width: 1200px;}
+.m-slide-certify .swiper-container { padding-bottom: 60px; }
+.m-slide-certify .swiper-slide { 
+    width: 539px; height: 367px; 
+/*    width: auto;
+    height: auto;*/
+}
+.m-slide-certify .swiper-slide .pic{ 
+    width: 100%;
+    height: 100%;
+/*    height: 0;
+    padding-top: 60%;
+    background-color: #000;*/
+}
+.m-slide-certify .swiper-slide img { 
+    display: block; 
+    width: 100%;
+    height: 100%;
+}
+.m-slide-certify .swiper-slide-active{
+    box-shadow: 0 10px 20px rgba(0,0,0,.5)
+}
