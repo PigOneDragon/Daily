@@ -28,10 +28,9 @@ $(function() {
                 $(this).prop("checked", true)
             }
         })
-
+       
         input.change(function() {
             $(this).parents('label').toggleClass('checked');
-            alert(1);
         });
     });
 
@@ -54,6 +53,7 @@ $(function() {
         var on = tab.find("li").index(this);
         $(this).addClass('on').siblings(tab.find("li")).removeClass('on');
         $(con).eq(on).show().siblings(con).hide();
+        return false;
     });
 // $('.TAB_CLICK').each(function(index, el) {
 //         $(this).children('li').filter(':first').trigger('click');

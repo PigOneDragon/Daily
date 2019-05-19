@@ -271,7 +271,7 @@ body *{
 }
 .m-select .list1 label input[type="checkbox"]{
     position: absolute;
-    left: 999999px;
+    left: -999999px;
 }
 .m-select .list1 label.checked{
     background-image: url(../images/b-ico2.png);
@@ -569,7 +569,7 @@ body *{
 }
 .ul-list{
     overflow: hidden;
-    margin: 0 -15px;
+    margin: 60px -15px 0;
 }
 .ul-list li{
     float: left;
