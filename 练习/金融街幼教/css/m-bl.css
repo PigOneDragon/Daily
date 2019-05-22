@@ -1,0 +1,221 @@
+body.index{
+    background:  url('../images/bg.png') no-repeat center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    padding: 31px 53px;
+}
+.header .logo{
+    line-height: 100px;
+}
+.header .logo img{
+    display: inline-block;
+    vertical-align: middle;
+}
+.ul-tab {
+    /* float: left; */
+    margin-left: 30px;
+    position: absolute;
+    top: 200px;
+    left: 50px;
+}
+.ul-tab li a{
+    display: block;
+    width: 35px;
+    height: 35px;
+    line-height: 33px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    margin: 10px 0;
+}
+.ul-tab li a em{
+    display: block;
+    height: 35px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: auto 20px;
+    background-size: auto 20px;
+}
+.ul-tab li a span{
+    display: none;
+}
+
+.tab-b1 .top{
+    text-align: center;
+    height: 200px;
+    line-height: 200px;
+}
+.tab-b1 .top img{
+    display: inline-block;
+    vertical-align: middle;
+}
+.tab-b1 .txt{
+    font-size: 28px;
+    text-align: center;
+    font-family: "微软雅黑";
+    color: #fff;
+}
+.tab-b1 .txt h2{
+    /* font-weight: normal; */
+    text-align: center;
+    font-family: Arial;
+}
+.tab-b1 .txt span{
+    display: inline-block;
+    font-size: 222px;
+    text-transform: uppercase;
+    /* font-weight: black */
+}
+.tab-b1 .txt .s1{
+    color: #ef5344;
+}
+.tab-b1 .txt .s2{
+    color: #0193d5;
+}
+.tab-b1 .txt .s3{
+    color: #9957b2;
+}
+.tab-b1 .txt .s4{
+    color: #ec6922;
+}
+.tab-b1 .txt .s5{
+    color: #6460ac;
+    -webkit-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+    transform: rotate(10deg);
+}
+.ul-imgtxtb1{
+    overflow: hidden;
+    width: 1198px;
+    margin: 0 auto;
+}
+.ul-imgtxtb1 li{
+    float: left;
+    width: 20%;
+    height: 252px;
+}
+.ul-imgtxtb1 li a{
+    display: block;
+    overflow: hidden;
+    text-align: center;
+}
+.ul-imgtxtb1 li a i{
+    display: block;
+    height: 100px;
+    margin: 44px 0 12px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.ul-imgtxtb1 li a span{
+    display: block;
+    font-size: 24px;
+    line-height: 2em;
+    color: #fff;
+}
+.ul-imgtxtb1 li a em{
+    display: block;
+    font-size: 18px;
+    color: #b7d1b2;
+}
+.ul-imgtxtb1 .li1{
+    background-color: #ff7e38;
+}
+.ul-imgtxtb1 .li2{
+    background-color: #5e5aa2;
+}
+.ul-imgtxtb1 .li3{
+    background-color: #73ba64;
+}
+.ul-imgtxtb1 .li4{
+    background-color: #2669b8;
+}
+.ul-imgtxtb1 .li5{
+    background-color: #9756b0;
+}
+
+.fd-top{
+    width: 260px;
+    padding: 10px 0;
+    border-bottom: 1px solid #f9de97;
+}
+.fd-top select{
+    float: left;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    background-color: transparent;
+    outline: 0;
+}
+.fd-top select option{
+    background-color: rgba(0,0,0,.8);
+}
+.fd-qr{
+    /* overflow: hidden; */
+    float: left;
+    position: relative;
+}
+.fd-qr i{
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.fd-qr em{
+    display: none;
+    position: absolute;
+    top: -26px;
+    right: 0;
+    width: 26px;
+    height: 26px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.fd-qr i:hover +em{
+    display: block;
+}
+.fd-link{
+    margin:  0 -8px;
+}
+.fd-link a{
+    display: inline-block;
+    padding: 0 8px;
+    font-size: 14px;
+    color: #fff;
+    position: relative;
+}
+.fd-link a::after{
+    content: "";
+    display: block;
+    border-right: 1px solid #f9de97;
+    width: 1px;
+    height: 12px;
+    background-color: #f9de97;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.fd-link a:last-child::after{
+    display: none;
+}
+.fd-copy{
+    font-size: 12px;
+    line-height: 1.5em;
+    color: #fff;
+}
+#idd{
+    width: 100px;
+    height: 50px;
+    background-color: blue;
+}
+
+
+
+
+

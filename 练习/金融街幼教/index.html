@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>金融街幼教</title>
+    <link rel="stylesheet" href="css/m-cui.css" />
+    <link rel="stylesheet" href="css/m-bl.css" />
+</head>
+<body class="index">
+    <div class="header">
+        <div class="logo"><a href=""><img src="images/logo.png" alt=""></a></div>
+    </div>
+    <!-- 左侧导航 -->
+    <ul class="ul-tab">
+        <li>
+            <a href="javascript:void(0)" class="a1">
+                <em style="background-image: url(images/ico1.png)"></em>
+                <span>关于我们</span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)" class="a2">
+                <em style="background-image: url(images/ico2.png)"></em>
+                <span>新闻资讯</span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)" class="a3">
+                <em style="background-image: url(images/ico3.png)"></em>
+                <span>新闻资讯</span>
+            </a>
+        </li>
+    </ul>  
+    <div class="tabbox">
+        <div class="tab-b1">
+            <div class="top">
+                <img src="images/top1.png" alt="">
+            </div>
+            <div class="txt">
+                <h2>
+                    <span class="s1">s</span>
+                    <span class="s2">t</span>
+                    <span class="s3">a</span>
+                    <span class="s4">r</span>
+                    <span class="s5">t</span>
+
+                </h2>
+                <p>Professional and Love, the best start for kids!</p>
+            </div>
+            <ul class="ul-imgtxtb1">
+                <li class="li1">
+                    <a href="">
+                        <i style="background-image: url(images/ico8.png);"></i>
+                        <span>国际化理念</span>
+                        <em>The international</em>
+                    </a>
+                </li>
+                <li class="li2">
+                    <a href="">
+                        <i style="background-image: url(images/ico9.png);"></i>
+                        <span>中外师资</span>
+                        <em>Chinese and foreign<br>teachers</em>
+                    </a>
+                </li>
+                <li class="li3">
+                    <a href="">
+                        <i style="background-image: url(images/ico10.png);"></i>
+                        <span>温馨环境</span>
+                        <em>Warm environment</em>
+                    </a>
+                </li>
+                <li class="li4">
+                    <a href="">
+                        <i style="background-image: url(images/ico11.png);"></i>
+                        <span>多元文化</span>
+                        <em>The multicultural</em>
+                    </a>
+                </li>
+                <li class="li5">
+                    <a href="">
+                        <i style="background-image: url(images/ico12.png);"></i>
+                        <span>无边界教育</span>
+                        <em>Borderless Education</em>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="fd-top fix">
+            <select name="" id="">
+                <option value="">金融街教育网站群</option>
+                <option value="">金融街教育网站群</option>
+                <option value="">金融街教育网站群</option>
+            </select>
+            <div class="fd-qr">
+                <i style="background-image: url(images/wechar.png)"></i>
+                <em style="background-image: url(images/wechar.png)"></em>
+            </div>
+        </div>
+        <div class="fd-link">
+            <a href="">隐私条款</a>
+            <a href="">网站地图</a>
+            <a href="">友情链接</a>
+        </div>
+        <div class="fd-copy">
+            <p>© 2018-2019 北京金融街国际教育科技有限公司</p>
+        </div>
+    </div>
+
+
+<div id="idd"></div>
+    <script src="js/jquery.min.js"></script>
+    <script>
+       $(function(){
+        $('#idd').click(function(){
+            var htmlObj = $.ajax({
+            url:"./js/load.json",
+            async:false
+        });
+
+            $(this).html(htmlObj.responseText);
+        });
+        
+       })
+    </script>
+</body>
+</html>

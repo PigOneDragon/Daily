@@ -1,0 +1,417 @@
+@media only screen and (max-width: 1199px) {
+    .wp {
+        width: auto;
+        padding: 0 10px;
+    }
+    .m-muban,
+    .m-liucheng,
+    .m-service,
+    .m-adv,
+    .m-fw,
+    .m-school {
+        padding: 50px 0;
+    }
+    .head {
+        margin-top: 0;
+        /* padding-top: 10px; */
+        position: fixed;
+        height: 70px;
+        background-color: #606bee;
+        -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+        box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    }
+
+    .navbar-btn {
+        display: block;
+    }
+
+    .head .logo {
+        line-height: 70px;
+    }
+
+    .head .h-pt {
+        display: none;
+    }
+    .head .hdr{
+        display: none;
+        position: fixed;
+        top: 70px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, .6);
+    }
+    .head .nav {
+        float: none;
+        width: auto;
+    }
+
+    .head .nav li {
+        float: none;
+        width: auto;
+        text-align: center;
+    }
+
+    .head .nav li:hover .v1::after,
+    .head .nav .on .v1::after {
+        content: "";
+        display: none;
+
+    }
+
+    .banner .item .txt {
+        text-align: center;
+    }
+
+    .banner .now {
+        margin: 15px auto;
+    }
+
+
+
+    .m-select {
+        margin-top: -155px;
+    }
+    
+
+    #serve-img-area .point-area{
+        display: none;
+    }
+    .fd-tel{
+        float: none;
+        width: auto;
+        text-align: center;
+        background: none;
+        padding: 0;
+    }
+    .fd-tel span{
+        font-size: 14px;
+    }
+    .fd-nav{
+        display: none;
+    }
+    .fd-link{
+        line-height: 30px;
+        text-align: center;
+    }
+    .fd-link dt{
+        float: none;
+        width: auto;
+    }
+  
+    .fd-link dd a{
+        margin-right: 20px;
+    }
+    .fd-bm{
+        padding: 20px 0;
+    }
+    .fd-sever{
+        margin: 10px 0;
+        text-align: center;
+    }
+    .fd-sever a{
+        margin-right: 20px;
+    }
+    .fd-qr{
+        float: none;
+        width: auto;
+    }
+    .fd-qr .pic{
+        margin: 0 auto;
+    }
+    .fd-copy{
+        text-align: center;
+    }
+
+
+}
+
+@media only screen and (max-width: 959px) {
+    .g-tit_1 h4 {
+        font-size: 24px;
+    }
+
+    
+
+    .banner .item {
+        height: 410px;
+    }
+
+    .banner .item .txt {
+        margin-top: 150px;
+        font-size: 18px;
+    }
+
+    .banner .item .txt h3 {
+        font-size: 24px;
+    }
+
+    .banner .slick-dots {
+        bottom: 20px;
+    }
+
+    .m-select {
+        margin-top: 10px;
+    }
+
+    .m-select .con {
+        padding: 15px 15px 0;
+    }
+
+    .m-select .txt {
+        display: none;
+    }
+
+    .m-select .news {
+        padding: 0 15px;
+    }
+
+    .m-select .news .left {
+        float: none;
+        width: auto;
+        text-align: center;
+    }
+
+    .m-select .news .left a {
+        float: none;
+    }
+
+    .m-select .news .right {
+        float: none;
+        width: auto;
+    }
+
+    .m-select .list1 label {
+        margin-right: 18px;
+    }
+
+    .ul-tab {
+        float: none;
+        width: auto;
+        margin-right: 0;
+        overflow: hidden;
+    }
+
+    .ul-tab li {
+        float: left;
+        width: 25%;
+        /* text-align: center; */
+    }
+
+  /*   .ul-tab li a {
+        display: block;
+        border: none;
+    } */
+.ul-tab li a{
+        display: block;
+        width: auto;
+        margin: 5px 10px;
+        border: none;
+    }
+    .ul-imgtxt{
+        margin: 20px -10px;
+    }
+    .m-muban .tabbox {
+        margin-top: 20px;
+    }
+
+    .ul-list {
+        margin: 20px 0 0;
+    }
+
+    .ul-list .con2 {
+        margin: 0 10px;
+    }
+
+    .ul-list .pic span {
+        font-size: 18px;
+    }
+
+    .ul-imgtxt2 {
+        margin-top: 30px;
+    }
+
+    .m-count {
+        padding: 40px 0;
+    }
+    
+    .m-count li em {
+        font-size: 24px;
+    }
+
+    .m-count li em::after {
+        top: 0;
+    }
+    .m-fw .map{
+        margin-top: 20px;
+    }
+    .ul-list2{
+        padding-top: 20px;
+    }
+    .ul-list3 {
+        margin: 20px -5px 0;
+    }
+    .ul-list3 .con3{
+        margin: 0 5px;
+    }
+    .ul-list3 .pic span{
+        font-size: 18px;
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+    .g-tit_1 h4 {
+        font-size: 18px;
+    }
+
+    .head {
+        height: 50px;
+    }
+
+    .head .logo {
+        line-height: 50px;
+    }
+
+    .head .logo img {
+        max-width: 60%;
+    }
+
+    .navbar-btn {
+        margin-top: 7px;
+    }
+
+    .head .hdr{   
+        top: 50px;      
+    }
+
+    .head .nav .v1 {
+        font-size: 14px;
+    }
+
+    .banner .item {
+        height: 250px;
+    }
+
+    .banner .item .txt {
+        font-size: 14px;
+        margin-top: 90px;
+    }
+
+    .banner .item .txt h3 {
+        font-size: 18px;
+    }
+
+    .banner .now {
+        width: 120px;
+        height: 35px;
+        line-height: 35px;
+    }
+
+    .m-muban,
+    .m-liucheng,
+    .m-service,
+    .m-adv,
+    .m-fw,
+    .m-school {
+        padding: 20px 0;
+    }
+
+    .m-select .con {
+        padding: 10px;
+    }
+
+    .m-select .so {
+        padding-right: 50px;
+    }
+
+    .m-select .so .btn {
+        width: 50px;
+        /* background-image: url(../images/search.png); */
+        background: #fe8431 url(../images/search.png) center no-repeat;
+        -webkit-background-size: auto;
+        background-size: auto;
+    }
+
+    .m-select .news {
+        padding: 0 10px;
+    }
+
+    .m-select .list1 label {
+        margin-right: 5px;
+        line-height: 30px;
+    }
+
+    .m-select .news .right .more {
+        margin-right: 0;
+    }
+
+    .ul-tab li {
+        width: 50%;
+    }
+    
+    .ul-imgtxt li {
+        float: none;
+        width: auto;
+    }
+
+    .ul-imgtxt .txt h5 a {
+        font-size: 14px;
+        padding: 10px 0;
+    }
+    .m-service{
+        padding-bottom: 50px;
+    }
+    .ul-list .info{
+        padding: 10px;
+    }
+    .ul-list .con2{
+        margin: 0 5px;
+    }
+    .ul-list2 {
+        padding-top: 20px;
+    }
+
+    .ul-list2 li {
+        float: none;
+        width: auto;
+        margin-bottom: 10px;
+    }
+
+    .ul-list2 .li1::after,
+    .ul-list2 .li2::after {
+        display: none;
+    }
+
+    .ul-list2 .txt h4 {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+
+.ul-imgtxt2 li{
+    width: 50%;
+}
+.m-count{
+    padding: 25px 0;
+}
+.m-count li em{
+    font-size: 18px;
+}
+.m-count li em::after{
+    font-size: 12px;
+    right: -12px;
+}
+.m-count li span{
+    font-size: 12px;
+}
+
+.ul-list3 > li{
+    float: none;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+
+}
+
+@media only screen and (max-width: 420px) {}
