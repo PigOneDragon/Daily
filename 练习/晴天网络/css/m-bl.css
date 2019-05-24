@@ -29,8 +29,8 @@
     font-size: 16px;
     color: #1d1d1d;
 }
-.nav li:hover > a::after,
-.nav .on > a::after{
+.nav li:hover > a::before,
+.nav .on > a::before{
     content: "";
     display: block;
     position: absolute;
@@ -40,7 +40,15 @@
     height: 3px;
     background-color: #f0230e;
 }
-
+.nav .v1::after{
+    content: "";
+    width: 9px;
+    height: 5px;
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url(../images/up.png) no-repeat center right;
+}
 
 
 .nav dl{
@@ -65,21 +73,110 @@
     color: #f0230e;
 }
 
-.nav li:hover > dl{
+/* .nav li:hover > dl{
     display: block;
+} */
+.nav .on .v1::after{
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
 }
+/* .nav .v1.open +dl{
+    position: static;
+    width: auto;
+}
+.nav .v1.open +dl dd a{
+    line-height: 30px;
+    font-size: 12px;
+} */
+/* 导航按钮样式 */
+.navbar-btn {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    overflow: hidden;
+    float: right;
+    display: none;
+    margin-top: 16px;
+}
+
+.icon-bar {
+    display: block;
+    width: 85%;
+    height: 2px;
+    margin: 8px auto;
+    background-color: #ccc;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+.act .icon-bar:nth-child(1) {
+    position: absolute;
+    transform: rotate(-90deg);
+    top: -100%;
+}
+
+.act .icon-bar:nth-child(2),
+.act .icon-bar:nth-child(3) {
+    position: absolute;
+    top: 8px;
+}
+.act .icon-bar:nth-child(2){
+    transform: rotate(37deg);
+}
+.act .icon-bar:nth-child(3) {
+    transform:  rotate(-37deg);
+}
+
 .banner{
     position: relative;
 }
-.banner .item{
+.banner .item a{
+    display: block;
     height: 1070px;
     overflow: hidden;
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .banner .item img{
     display: block;
     width: 100%;
     height: 100%;
+}
+/* banner下的圆点 */
+.banner .slick-dots {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: 170px;
+}
+
+.banner .slick-dots li {
+    float: left;
+    width: 65px;
+    height: 3px;
+    margin: 0 3px;
+    background-color: #846d8c;
+    cursor: pointer;
+}
+
+.banner .slick-dots button {
+    display: none;
+}
+
+.banner .slick-dots li.slick-active {
+    background-color: #fff;
 }
 .m-news .wp{
     position: relative;
@@ -88,10 +185,11 @@
     position: absolute;
     background-color: #fff;
     height: 85px;
-    top: -200px;
+    top: -120px;
     left: 0;
     right: 0;
     padding: 0 50px;
+    overflow: hidden;
 }
 .m-news li a{
     display: block;
@@ -99,7 +197,17 @@
     color: #000;
     line-height: 85px;
     padding-left: 50px;
-    background: url(../images/ico1.jpg) no-repeat left;
+    background: url(../images/ico1.jpg) no-repeat left center;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+    overflow: hidden;
+    white-space: nowrap;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+.m-news li a:hover{
+    color: #f0230e;
 }
 
 .m-news li .date{
@@ -138,8 +246,13 @@
     color: #4e4e4e;
     font-size: 16px;
 }
+.row-a1{
+    overflow: hidden;
+}
 .list1{
     overflow: hidden;
+    padding-bottom: 68px;
+    margin: 0 -20px;
 }
 .list1 li{
     float: left;
@@ -156,12 +269,22 @@
     margin: 45px 0;
     height: 135px;
     line-height: 135px;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
 }
 .list1 li .pic img{
     display: inline-block;
     vertical-align: middle;
     max-width: 100%;
 }
+.list1 li .pic:hover{
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+
 .list1 li .txt{
     color: #4e4e4e;
     font-size: 15px;
@@ -202,6 +325,15 @@
     left: 0;
     width: 100%;
     height: 100%;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+.list2 li .pic:hover img{
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
 }
 .list2 li .txt{
     padding: 25px 30px;
@@ -209,11 +341,17 @@
     font-size: 14px;
     background-color: #fff;
 }
-.list2 li .txt h4{
+.list2 li .txt h4 a{
     color:  #383838;
     font-size: 18px;
     font-weight: normal;
     margin-bottom: 12px;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+}
+.list2 li .txt h4 a:hover{
+    color: #f0230e;
 }
 .m-case .more{
     display: block;
@@ -225,8 +363,14 @@
     font-size: 16px;
     text-align: center;
     border: 1px solid #bfbfbf;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
 }
-
+.m-case .more:hover{
+    background-color: #f0230e;
+    color: #fff;
+}
 .m-chengxu{
     overflow: hidden;
     background-color: #000;
@@ -238,7 +382,6 @@
     color: #b7b7b7;
 }
 .m-chengxu .slide{
-    padding-top: 106px;
     margin-top: 60px;
     position: relative;
 }
@@ -247,6 +390,7 @@
     margin: 0 5px;
     overflow: hidden;
     position: relative;
+    padding-top: 106px;
 }
 
 .m-chengxu .item1 .tit{
@@ -271,7 +415,7 @@
 }
 .m-chengxu .item1 .con{
     background-color: #fff;
-    position: relative;
+    /* position: relative; */
 }
 .m-chengxu .item1.slick-center {
     -webkit-transform: scale(1.1);
@@ -292,7 +436,8 @@
     background-color: rgba(0,0,0,.5);
 }
 .m-chengxu .item1.slick-center .con::after{
-    opacity: 0;
+    /* opacity: 0; */
+    display: none;
 }
 
 /* 插件箭头样式 */
@@ -318,6 +463,9 @@
     background-repeat: no-repeat;
     -webkit-background-size: auto 27px;
     background-size: auto 27px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
 }
 
 .m-chengxu .slide .slick-prev {
@@ -330,7 +478,10 @@
     background-image: url('../images/btn2.png');
 
 }
-
+.m-chengxu .slide .slick-prev:hover,
+.m-chengxu .slide .slick-next:hover{
+    background-color: #f0230e;
+}
 
 
 .list3{
@@ -364,6 +515,12 @@
     color: #333333;
     font-weight: normal;
     padding-top: 8px;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+}
+.list3 .txt h4 a:hover{
+    color: #f0230e;
 }
 
 
@@ -387,11 +544,18 @@
     font-size: 16px;
     padding-bottom: 18px;
     border-bottom: 2px  solid transparent;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
 }
+.ul-tab  a:hover,
 .ul-tab .on a{
     border-bottom: 2px  solid #333;
+    color: #333;
 }
-
+.tabbox{
+    overflow: hidden;
+}
 .tab-b1.hide{
     display: none;
 }
@@ -419,6 +583,15 @@
     left: 0;
     width: 100%;
     height: 100%;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+.m-list4 .con2 .pic:hover img{
+    -webkit-transform: scale(1.08);
+    -ms-transform: scale(1.08);
+    -o-transform: scale(1.08);
+    transform: scale(1.08);
 }
 .m-list4 .con2 .txt{
     color: #777777;
@@ -428,7 +601,8 @@
     background-color: #fff;
     overflow: hidden;
 }
-.m-list4 .con2 .txt h5{
+.m-list4 .con2 .txt h5 a{
+    display: block;
     color: #242424;
     font-size: 18px;
     font-weight: normal;
@@ -437,6 +611,12 @@
     overflow: hidden;
     -ms-text-overflow: ellipsis;
     text-overflow: ellipsis;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+}
+.m-list4 .con2 .txt h5 a:hover{
+    color: #f0230e;
 }
 .m-list4 .con2 .txt .open{
     float: right;
@@ -503,8 +683,15 @@
     border: 1px solid #92908e;
     text-align: center;
     color: #c3c3c3;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
 }
-
+.m-adv .pic1 .a1:hover{
+    background-color: #e81320;
+    border-color: #e81320;
+    color: #fff;
+}
 .fd-top{
     background-color: #f6f6f6;
     padding: 58px 0 50px;
@@ -650,8 +837,26 @@
     box-shadow: 0 0 5px #ccc;
     margin-bottom: 10px;
 }
-
-
+.slideRight  a span{
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    visibility: hidden;
+    width: 0;
+    height: 40px;
+    line-height: 40px;
+    right: 40px;
+    top: 0;
+    text-align: center;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    background-color: #000;
+}
+.slideRight  a:hover span{
+    width: 80px;
+    visibility: visible;
+}
 .slideRight  .i1{
     background-image: url(../images/ke1.png);
 }

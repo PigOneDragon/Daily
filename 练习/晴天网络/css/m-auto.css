@@ -1,0 +1,336 @@
+@media only screen and (max-width: 1440px){
+    .m-adv .pic1{
+        width: auto;
+        /* padding: 0 10px; */
+    }
+}
+@media only screen and (max-width: 1199px) {
+    .wp{
+        width: auto;
+        padding: 0 10px;
+    }
+    .header{
+        height: 70px;
+    }
+    .logo{
+        line-height: 70px;
+    }
+    .logo img{
+        width: 60%;
+    }
+    .nav{
+        display: none;
+        position: absolute;
+        top: 70px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 333;
+        background-color: rgba(255,255,255,.8);
+    }
+    .navbar-btn{
+        display: block;
+    }
+    .nav li{
+        float: none;
+        width: auto;
+        text-align: center;
+    }
+
+    .nav li > a{
+        line-height: 35px;
+    }
+
+    .nav li:hover > a::before,
+    .nav .on > a::before{
+        display: none;
+    }
+    
+    .nav dl{
+        position: static;
+        width: auto;
+    }
+    .nav dl dd a{
+        line-height: 30px;
+        font-size: 12px;
+    }
+    .banner .item a{
+        height: 450px;
+    }
+    .banner .slick-dots{
+        bottom: 50px;
+    }
+    .m-news .bd{
+        position: static;
+        margin: 20px 0 ;
+        background-color: #f2f2f2;
+        padding: 0 20px;
+    }
+    .g-tit{
+        padding: 25px 0;
+    }
+    .g-tit h3{
+        font-size: 24px;
+    }
+    .m-chengxu .slide .slick-prev{
+        left: 45%;
+    }
+    .m-chengxu .slide .slick-next{
+        right: 45%;
+    }
+    .m-see{
+        padding-bottom: 50px;
+    }
+    .list5 li h3{
+        margin-bottom: 20px;
+    }
+    .list5 li span{
+        font-size: 50px;
+    }
+    .list5 li em{
+        font-size: 25px;
+    }
+
+    .fd-top .li1{
+        display: block;
+        float: none;
+        width: auto;
+        text-align: center;
+    }
+    .fd-top .li1 span{
+        float: none;
+    }
+    .fd-top .li2{
+        display: block;
+
+    }
+    .fd-top .li3,
+    .fd-bot .link span,
+    .fd-bot .copy span{
+        display: none;
+    }
+    .fd-bot .link,
+    .fd-bot .copy{
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 959px) {
+     .banner .item a{
+        height: 350px;
+    }
+     .banner .slick-dots{
+        bottom: 30px;
+    }
+    .banner .slick-dots li{
+        width: 40px;
+    }
+    .list1 li{
+        width: 50%;
+        margin-bottom: 15px;
+    }
+    .list1 li .con{
+        margin: 0; 
+    }
+    .list2 li{
+        width: 50%;
+    }
+    .m-chengxu .slide .slick-prev{
+        left: 40%;
+    }
+    .m-chengxu .slide .slick-next{
+        right: 40%;
+    }
+    .m-chengxu .item1{
+        margin: 0 10px;
+        padding-top: 50px;
+    }
+    .m-chengxu .item1 .con::after{
+        display: none;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .header{
+        height: 50px;
+    }
+    .logo{
+        line-height: 50px;
+    }
+    .navbar-btn{
+        margin-top: 6px;
+    }
+    .nav{
+        top: 50px;
+    }
+    .banner .item a{
+        height: 200px;
+    }
+     .banner .slick-dots{
+        bottom: 15px;
+    }
+    .banner .slick-dots li{
+        width: 30px;
+    }
+    .m-news .bd{
+        height: 60px;
+        padding: 0 10px;
+    }
+    .m-news .right{
+        display: none;
+    }
+    .m-news li a{
+        font-size: 12px;
+        padding-left: 35px;
+        line-height: 60px;
+    }
+    .g-tit{
+        padding: 20px 0;
+    }
+    .g-tit h3{
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+    .g-tit span{
+        font-size: 14px;
+    }
+    .list1{
+        padding-bottom: 20px;
+        margin: 0;
+    }
+    .list1 li,
+    .list2 li{
+        float: none;
+        width: auto;
+    }
+    .list1 li .pic{
+        margin: 20px 0;
+    }
+    .list1 li .txt{
+        font-size: 14px;
+    }
+    .list1 li .txt h4{
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .list2{
+        margin: 0;
+    }
+    .list2 li .con1{
+        margin: 10px 0;
+    }
+
+    .list2 li .txt{
+        padding: 10px;
+    }
+    .m-case .more{
+        margin: 20px auto;
+        font-size: 14px;
+        height: 35px;
+        line-height: 33px;
+        width: 150px;
+    }
+    .m-chengxu .slide .slick-prev{
+        width: 30px;
+        height: 30px;
+        left: 35%;
+    }
+    .m-chengxu .slide .slick-next{
+        width: 30px;
+        height: 30px;
+        right: 35%;
+    }
+    .m-chengxu .item1{
+        padding-top: 30px;
+    }
+    .m-chengxu .item1 .tit{
+        padding: 15px;
+    }
+    .m-chengxu .item1 .tit h3{
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    .list3{
+        padding: 15px;
+    }
+    .list3 li{
+        margin-top: 10px;
+    }
+    .list3 .txt{
+        font-size: 12px;
+    }
+    .list3 .txt h4 a{
+        font-size: 14px;
+    }
+    .ul-tab{
+        margin-bottom: 20px;
+    }
+    .ul-tab li{
+        margin: 0 5px;
+    }
+    .ul-tab li a{
+        font-size: 14px;
+        padding-bottom: 10px;
+    }
+    .m-see{
+        padding-bottom: 20px;
+    }
+    .m-list4{
+        margin: 0;
+    }
+    .m-list4 li{
+        float: none;
+        width: auto;
+        margin-bottom: 15px;
+    }
+    .m-list4 .con2{
+        margin: 0;
+    }
+    .m-list4 .con2 .txt{
+        padding: 10px;
+    }
+    .m-list4 .con2 .txt h5 a{
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    .list5{
+        margin-bottom: 30px;
+    }
+    .list5 li{
+        font-size: 12px;
+    }
+    .list5 li span{
+        font-size: 24px;
+    }
+    .list5 li em{
+        font-size: 14px;
+    }
+    .m-adv .pic1{
+        padding: 35px 0;
+    }
+    .m-adv .pic1 h3{
+        font-size: 16px;
+    }
+    .m-adv .pic1 p{
+        margin: 20px 0;
+    }
+    .m-adv .pic1 .a1{
+        height: 35px;
+        line-height: 33px;
+    }
+    .fd-top,
+    .fd-bot{
+        padding: 20px 0;
+    }
+    .fd-bot .link{
+        margin-bottom: 0;
+        padding-bottom: 20px;
+    }
+    .fd-bot .link a{
+        border-right: none;
+        font-size: 12px;
+    }
+    .fd-bot .copy{
+        font-size: 12px;
+    }
+    1342
+}
+@media only screen and (max-width: 420px) {}

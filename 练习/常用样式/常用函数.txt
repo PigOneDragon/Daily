@@ -64,7 +64,13 @@ $(window).resize(function(event) {
         }
         return false;
     });
+ $(window).on('resize', function(e) {
+        if ($(window).width() > 1200) {
+            navbarBtn.removeClass('act');
+            nav.css('display', '');
+        }
 
+    });
 
 //导航条的二级菜单贴着主导航不脱离文档流展开
 
@@ -80,3 +86,98 @@ $(window).resize(function(event) {
             return false;
         }
     });
+
+/**********类名TAB_CLICK在选项卡添加，id也在选项卡添加，$(con)获取tabItem***************/
+ // 选项卡 鼠标点击
+    $(".TAB_CLICK li").click(function() {
+        var tab = $(this).parent(".TAB_CLICK");
+        var con = tab.attr("id");
+        var on = tab.find("li").index(this);
+        $(this).addClass('on').siblings(tab.find("li")).removeClass('on');
+        $(con).eq(on).show().siblings(con).hide();
+    });
+//模拟触发点击事件 事件也可以绑定到其他元素上（建议用on自定义事件）
+// $('.TAB_CLICK').each(function(index, el) {
+    //         $(this).children('li').filter(':first').trigger('click');
+    //     });
+
+// 选项卡 鼠标经过切换
+    $(".TAB li").mousemove(function(){
+      var tab=$(this).parent(".TAB");
+      var con=tab.attr("id");
+      var on=tab.find("li").index(this);
+      $(this).addClass('hover').siblings(tab.find("li")).removeClass('hover');
+      $(con).eq(on).show().siblings(con).hide();
+    });
+
+//单选  多选  文本框 html结构用label嵌套，选中/未选中的样式用图片写给label，将input定位定出去left:-99999px;
+
+ // 自定义多选
+        $('[role=checkbox]').each(function(){
+            var input = $(this).find('input[type="checkbox"]');
+     
+                input.each(function(){
+                    if( $(this).attr('checked')){
+                        $(this).parents('label').addClass('checked');
+                        $(this).prop("checked", true)
+                    }
+                })
+     
+                input.change(function(){
+                    $(this).parents('label').toggleClass('checked');
+                });
+        })
+
+
+
+  // 自定义单选
+        $('[role=radio]').each(function(){
+            var input = $(this).find('input[type="radio"]'),
+                label = $(this).find('label');
+
+                input.each(function(){
+                    if( $(this).attr('checked')){
+                        $(this).parents('label').addClass('checked');
+                        $(this).prop("checked", true)
+                    }
+                })
+
+                input.change(function(){
+                    label.removeClass('checked');
+                    $(this).parents('label').addClass('checked');
+                    input.removeAttr('checked');
+                    $(this).prop("checked", true)
+                })
+        })
+
+//全选
+        $(".select-all").click(function(){
+            if( $(this).hasClass('checked') ){
+                $(".ul-imgtxt3-qm label").removeClass('checked').find("input[type='checkbox']").attr("checked",false);
+            }else{
+                $(".ul-imgtxt3-qm label").addClass('checked').find("input[type='checkbox']").attr("checked",true);
+            };
+        });
+        $(".ul-imgtxt3-qm .tit label").click(function(){
+            if( $(this).hasClass('checked') ){
+                $(this).parents("li").find(".con label").removeClass('checked').find("input[type='checkbox']").attr("checked",false);
+            }else{
+                $(this).parents("li").find(".con label").addClass('checked').find("input[type='checkbox']").attr("checked",true);
+            };
+        });
+
+
+//头部滚动加样式
+$(document).on('scroll', function(){
+        var scrollH = $(this).scrollTop();
+        if (scrollH > 70){
+            $('.header').addClass('bg');
+        } else {
+            $('.header').removeClass('bg');
+        }
+    })
+
+
+
+
+

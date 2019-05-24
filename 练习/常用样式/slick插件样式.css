@@ -1,0 +1,72 @@
+/* 插件样式修改 */
+.banner.slick-slider .slick-arrow {
+    font-size: 0;
+    text-indent: 9999px;
+    border: none;
+    z-index: 5;
+    cursor: pointer;
+    outline: 0;
+    width: 35px;
+    height: 63px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+   /*  -webkit-background-size: auto 27px;
+    background-size: auto 27px; */
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+
+.banner.slick-slider .slick-prev {
+    left: 15%;
+    background-image: url('../images/prev.png');
+}
+
+.banner.slick-slider .slick-next {
+    right: 15%;
+    background-image: url('../images/next.png');
+
+}
+.banner.slick-slider .slick-arrow:hover{
+    background-color: #f0230e;
+}
+
+
+.banner.slick-slider .slick-dots {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: 15%;
+    width: 100%;
+    text-align: center;
+}
+.banner.slick-slider .slick-dots li {
+    /* float: left; */
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin: 0 9px;
+    /* background-color: #e5e5e5; */
+    background: url(../images/dot.gif) no-repeat center center;
+    cursor: pointer;
+}
+
+.banner.slick-slider .slick-dots button {
+    display: none;
+}
+
+.banner.slick-slider .slick-dots li.slick-active {
+    /* background-color: #29ccb6; */
+    background-image: url(../images/actdot.gif);
+
+}

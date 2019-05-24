@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>横向时间轴</title>
+    <link rel="stylesheet" href="slick.min.css" />
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    button {
+        border: none;
+        outline: 0;
+    }
+
+    .wp {
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+    .container {
+        margin-top: 100px;
+        position: relative;
+        background-color: #fff;
+    }
+
+    .container::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: #dcdcdc;
+    }
+
+    .ul-timebar {
+        /* overflow: hidden; */
+        margin: 0 -8px;
+        position: relative;
+    }
+
+    .ul-timebar li {
+        /*  float: left;
+            width: 25%; */
+        text-align: center;
+    }
+
+    .ul-timebar .con {
+        margin: 0 8px;
+    }
+
+    .ul-timebar .date h5 {
+        font-size: 20px;
+        line-height: 30px;
+        color: #d72219;
+        padding: 40px 0;
+        position: relative;
+    }
+
+    .ul-timebar .date h5::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        left: 0;
+        display: block;
+        height: 21px;
+        background: url('images/dot.png') no-repeat center;
+    }
+
+    .ul-timebar .txt {
+        font-size: 14px;
+        color: #323232;
+        padding: 22px;
+        border: 1px solid #dcdcdc;
+        margin-bottom: 15px;
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s;
+    }
+    .ul-timebar .txt:hover{
+        background-color: #d72219;
+        color: #fff;
+    }
+    /* 箭头 */
+    /* 主轮播 */
+    .ul-timebar .slick-arrow {
+        font-size: 0;
+        text-indent: 9999px;
+        border: none;
+        z-index: 5;
+        cursor: pointer;
+        outline: 0;
+    }
+
+    .ul-timebar .slick-prev,
+    .ul-timebar .slick-next {
+        width: 42px;
+        height: 42px;
+        position: absolute;
+        top: 86px;
+        margin-top: -28px;
+        z-index: 2;
+        background-color: #d1d1d1;
+        background-position: center center;
+        background-repeat: no-repeat;
+         -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s;
+    }
+
+    .ul-timebar .slick-prev {
+        left: -42px;
+        background-image: url('images/prev.png');
+
+    }
+
+    .ul-timebar .slick-next {
+        right: -42px;
+        background-image: url('images/next.png');
+    }
+    .ul-timebar .slick-prev:hover,
+    .ul-timebar .slick-next:hover {
+        background-color: #d72219;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="wp">
+            <ul class="ul-timebar">
+                <li>
+                    <div class="con">
+                        <div class="date">
+                            <h5>1996年</h5>
+                        </div>
+                        <div class="txt">
+                            <p>金台律师事务所成立于1996年</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="con">
+                        <div class="date">
+                            <h5>1996年</h5>
+                        </div>
+                        <div class="txt">
+                            <p>金台律师事务所成立于1996年</p>
+                        </div>
+                        <div class="txt">
+                            <p>金台律师事务所设立于二十世纪九十年代初期，是北京设立早、规模大、实力强的综合性的合伙制律师事务所，在服务质量、服务领域及客户群体等诸多方面，均居于国内同业的领先地位。 </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="con">
+                        <div class="date">
+                            <h5>1996年</h5>
+                        </div>
+                        <div class="txt">
+                            <p>金台律师事务所成立于1996年</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="con">
+                        <div class="date">
+                            <h5>1996年</h5>
+                        </div>
+                        <div class="txt">
+                            <p>金台律师事务所成立于1996年</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="con">
+                        <div class="date">
+                            <h5>1996年</h5>
+                        </div>
+                        <div class="txt">
+                            <p>金台律师事务所成立于1996年</p>
+                            <p></p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="con">
+                        <div class="date">
+                            <h5>1996年</h5>
+                        </div>
+                        <div class="txt">
+                            <p>金台律师事务所成立于1996年</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="jquery.min.js"></script>
+    <script src="slick.min.js"></script>
+    <script>
+    $('.ul-timebar').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        dots: false,
+        // autoplay: true,
+        autoplaySpeed: 3000,
+        arrows: true,
+        speed: 500,
+        // fade: true,
+        cssEase: 'linear',
+        /* responsive: [{
+             breakpoint: 1200,
+             settings: {
+                 arrows: false,
+                 dots: true
+             }
+         }]*/
+    });
+    </script>
+</body>
+
+</html>
