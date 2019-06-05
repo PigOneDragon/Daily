@@ -1,0 +1,81 @@
+﻿
+var jcrop_api;
+
+function myAvatar() {
+	var boundx,
+		boundy,
+
+	// Grab some information about the preview pane
+	$preview = $('#preview-pane'),
+	$pcnt = $('#preview-pane .preview-container'),
+	$pimg = $('#preview-pane .preview-container img'),
+
+	xsize = $pcnt.width(),
+	ysize = $pcnt.height();
+
+
+	function myPreview() {
+		$('#target').Jcrop({
+			onChange: updatePreview,
+			onSelect: updatePreview,
+			aspectRatio: xsize / ysize
+		},function(){
+			// Use the API to get the real image size
+			var bounds = this.getBounds();
+			boundx = bounds[0];
+			boundy = bounds[1];
+			// Store the API in the jcrop_api variable
+			jcrop_api = this;
+
+			// Move the preview into the jcrop container for css positioning
+			$preview.appendTo(jcrop_api.ui.holder);
+		});
+	}
+
+	function updatePreview(c){
+		if (parseInt(c.w) > 0){
+			var rx = xsize / c.w;
+			var ry = ysize / c.h;
+
+			$pimg.css({
+				width: Math.round(rx * boundx) + 'px',
+				height: Math.round(ry * boundy) + 'px',
+				marginLeft: '-' + Math.round(rx * c.x) + 'px',
+				marginTop: '-' + Math.round(ry * c.y) + 'px'
+			});
+		}
+	};
+
+	myPreview();
+
+};
+
+jQuery(document).ready(function($) {
+
+	myAvatar();
+
+   $('.portraitBox :file').on('change',function(){
+
+       var files = !!this.files ? this.files : [];
+       if (!files.length || !window.FileReader) return;
+       var _src = $('.protraitView img');
+
+       if (/^image/.test( files[0].type)){
+           var reader = new FileReader();
+           reader.readAsDataURL(files[0]);
+
+           reader.onloadend = function(){
+				_src.attr('src', this.result);
+
+				jcrop_api.setOptions({
+					outerImage: this.result
+				});
+				jcrop_api.release();
+
+           }
+       };
+
+   });
+
+	
+});

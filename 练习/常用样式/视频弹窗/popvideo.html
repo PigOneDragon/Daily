@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>pop-video</title>
+    <style>
+    .pop-fixed {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 999
+    }
+
+    .pop-fixed .cont {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%)
+    }
+
+    .pop-fixed .mask {
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+    .pop-fixed .close {
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        width: 40px;
+        height: 40px;
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAB3UlEQVRoQ9Wa7VHDMAyGX08Am8AIjMAIMAHdBDagGzACHYFVmECces5dSGNbkuVEyd+67fNEH9YlTkT0AeANwGtK6YwDXET0COATwCUR0Q+Ah8wdXiLDfwO4Z2YWYJsLgLvoEkv4a9Yw9BEkVuFTOl8FokuU4K8pNK/ZiJGowd8IRItEC35VIIqEBL4osLeEFL4qsJeEBr4psLWEFl4ksJWEBV4sMFrCCq8SGCXRA68W8JYgohcA79NgZpmI/+3E0knaY8fO8DwST5dpEjYJ5Eg8A/iyAHjBm1JoMTtxCqjuoid8t0COhFjCG95FQCoxAt5NoCUxCt5VoCSRa0ZVJ9Ju6C5QkJjzmFplTcjcRms/upIyvNwdfkgEKlE4hkDh7nfttpul0Fq3OUwR11pl+DYqAZSs0bTPaW13F9KAadZKZboELECW7wwp4h6Qnu8uZUwRWAD8AnhKKfFjevHlJaEW8ICfLD0kVAKe8F4SYoER8B4SIoGR8L0STYEt4HskqgJbwlsligJ7wFskVgX2hNdK3AhEgNdILF/yzZ/xmHZY8VYsXNja7OavWcPBSyIxvegOC9+S4KMG4eGrEkREeUGInG+VxrImOAJ83IYPfJy0I3Hrz0Z9niVOfEjlD7tkzwux++iEAAAAAElFTkSuQmCC) center center no-repeat;
+        cursor: pointer;
+        z-index: 10
+    }
+
+    .pop-fixed.video .video {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 2
+    }
+
+    .pop-fixed.video .video iframe {
+        display: block;
+        width: 100%;
+        height: 100%
+    }
+    </style>
+</head>
+
+<body>
+    <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js">
+    </script>
+    <a href="javascript:;" class="btn-play js-video-pop" data-video-src="http://player.youku.com/embed/XMzcyODAyNTg2OA==">
+        播放视频
+    </a>
+    <div class="pop-fixed video">
+        <div class="mask">
+        </div>
+        <div class="cont">
+            <span class="close">
+            </span>
+            <div class="video">
+                <iframe id="videoBox" src="" frameborder=0 allowfullscreen="true">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+$(function() {
+    $('.js-video-pop').click(function() {
+        $('.pop-fixed.video').fadeIn();
+        var sSrc = $(this).attr('data-video-src');
+        $('.pop-fixed.video #videoBox').attr('src', sSrc);
+    });
+
+    $('.pop-fixed.video .close').click(function() {
+        $('.pop-fixed.video').fadeOut();
+        $('.pop-fixed.video #videoBox').attr('src', '');
+    })
+})
+</script>
+
+</html>

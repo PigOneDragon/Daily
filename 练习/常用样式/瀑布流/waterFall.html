@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>瀑布流</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="css/cui.css" />
+    <!-- <link rel="stylesheet" href="css/lib.css" /> -->
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+    <!-- <link rel="stylesheet" href="css/less.css" /> -->
+</head>
+
+<body>
+    <div id="photo-container">
+        <ul class="photo-ul">
+            <li>
+                <div class="con">
+                    <div class="pic"><img src="images/p1.jpg" alt=""></div>
+                    <a href="javascript:void(0);" class="delBtn">删除</a>
+                </div>
+            </li>
+            <li>
+                <div class="con">
+                    <div class="pic"><img src="images/p3.jpg" alt=""></div>
+                    <a href="javascript:void(0);" class="delBtn">删除</a>
+                </div>
+            </li>
+            <li>
+                <div class="con">
+                    <div class="pic"><img src="images/p4.jpg" alt=""></div>
+                    <a href="javascript:void(0);" class="delBtn">删除</a>
+                </div>
+            </li>
+            <li>
+                <div class="con">
+                    <div class="pic"><img src="images/p5.jpg" alt=""></div>
+                    <a href="javascript:void(0);" class="delBtn">删除</a>
+                </div>
+            </li>
+            <li>
+                <div class="con">
+                    <div class="pic"><img src="images/p6.jpg" alt=""></div>
+                    <a href="javascript:void(0);" class="delBtn">删除</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/blocksit.js"></script>
+    
+    <script type="text/javascript">
+    function myWaterfall() {
+        $('#photo-container ul').stop().animate({ 'opacity': 0 }, 200);
+        var _numOfCol;
+        var _winw = $(window).width();
+        if (_winw > 900) {
+            _numOfCol = 3;
+        } else {
+            _numOfCol = 1;
+        }
+        $('#photo-container ul').BlocksIt({
+            numOfCol: _numOfCol,
+            offsetX: 5,
+            offsetY: 5,
+            blockElement: 'li'
+        });
+        $('#photo-container ul').stop().animate({ 'opacity': 1 }, 500);
+    }
+    $(window).load(function() {
+        myWaterfall();
+    });
+    jQuery(document).ready(function($) {
+        $('#photo-container ul').css('opacity', 0);
+        $(window).resize(function() {
+            myWaterfall();
+        });
+
+        $('.photo-ul li').hover(function() {
+            $(this).find('.delBtn').stop().slideToggle();
+        });
+        $('.photo-ul .delBtn').click(function() {
+            $(this).parents('li').remove();
+            myWaterfall();
+        });
+
+    });
+    </script>
+</body>
+
+</html>

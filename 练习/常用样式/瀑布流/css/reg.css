@@ -1,0 +1,109 @@
+﻿
+
+
+/*-----------------[初始化]--------------*/
+body,html{min-height: 100%;}
+body{color: #474747;line-height: 1.5;background: #f4f4f4;font-family:"微软雅黑","Microsoft Yahei";}
+a{color: #474747;}
+a:hover{color: #f7536b;}
+
+input,select,textarea{color: #474747;font-family:"微软雅黑","Microsoft Yahei";border: 1px solid #ddd;outline: 0;}
+input[type='submit'],input[type='reset'],select{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+select{
+	border: 1px solid #ddd;
+	background: url(../images/a1.png) no-repeat right center;
+}
+
+.center{text-align: center;}
+.pink{color: #e17c8b !important;}
+.red{color: #f7536b !important;}
+.blue{color: #08abd4 !important;}
+.grey{color: #a7a7a7 !important;}
+
+/*自定义单选按钮*/
+.label-radio{display: inline-block;padding-right: 20px;margin-right: 20px;
+	background: url(../images/radio-bg.png) no-repeat right 14px;}
+.label-radio input{display: none;}
+.checked{background-position: right -86px;}
+
+/*******************************
+	-------[=注册窗口]-------
+********************************/
+.reg-bg{background: url(../images/bg-reg.jpg) no-repeat center bottom;
+	-o-background-size: 100% auto;
+	-ms-background-size: 100% auto;
+	-moz-background-size: 100% auto;
+	-webkit-background-size: 100% auto;
+	background-size: 100% auto;
+	background-attachment: fixed;
+}
+.regBox{width: 455px;position: absolute;top: 50%;right: 50%;margin-right: -455px;margin-top: -250px;
+	background: rgba(129,129,129,0.3);
+	background: url(../images/grey-alpha.png) repeat left top \9;}
+.regBox a:hover{text-decoration: underline;}
+
+.regBox .title{height: 65px;line-height: 65px;padding: 0 15px;border-bottom: 1px solid #fff;
+	background: url(../images/logo2.png) no-repeat center 20px;font-size: 14px;}
+.regBox .title h3{font-size: 20px;}
+.regBox .title a{color: #808080;}
+.regBox .title a:hover{color: #08abd4;}
+
+.regBox .con{padding: 20px 30px;}
+
+.reg-table{width: 100%;font-size: 14px;}
+.reg-table th,.reg-table td{padding: 5px;}
+.reg-table th{text-align: right;width: 5em;vertical-align: top;line-height: 45px;}
+.reg-table input[type='text'],.reg-table input[type='tel'],.reg-table input[type='email'],.reg-table input[type='password']{height: 45px;line-height: 45px \9;border: 1px solid #ff4e63;
+	border-radius: 7px;padding: 0 20px;width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.reg-table input[type='submit']{width: 180px;height: 45px;background: #ff4e63;
+	color: #fff;font-size: 16px;border-radius: 7px;cursor: pointer;border: 0;outline: 0;}
+.reg-table input[type='submit']:hover{color: #fff;background: #eb415a;}
+
+.reg-table .inp-tips{color: #ff4e63;padding: 0 20px;display: none;}
+
+.reg-table .label-radio{padding-left: 20px;margin-right: 20px;padding-right: 0;
+	background: url(../images/radio-bg2.png) no-repeat left 4px;}
+.reg-table .checked{background-position: left -96px;}
+
+.a-sina2,.a-qq{display: inline-block;width: 24px;height: 24px;vertical-align: middle;margin: 0 5px;}
+.a-sina2{background: url(../images/i-sina2.png) no-repeat center center;}
+.a-qq{background: url(../images/i-qq.png) no-repeat center center;}
+
+
+@media only screen and (max-width: 980px) {
+
+	/*注册窗口*/
+	.reg-bg{
+		-o-background-size: contain;
+		-ms-background-size: contain;
+		-moz-background-size: contain;
+		-webkit-background-size: contain;
+		background-size: contain;
+	}
+	.regBox{right: auto;width: 90%;margin: -200px 5% 10px;}
+
+}
+
+@media only screen and (max-width: 700px) {
+
+	.regBox{right: auto;width: 90%;top: 10%;margin: 10px 5%;}
+
+}
+
+@media only screen and (max-width: 479px) {
+
+	/*注册窗口*/
+	.regBox{right: auto;width: 98%;margin: 10px 1%;}
+	.regBox .con{padding: 20px 15px;}
+	.reg-table .label-radio{margin-right: 5px;}
+
+}

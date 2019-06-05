@@ -9,47 +9,64 @@
     <link rel="stylesheet" href="css/slick.css" />
     <link rel="stylesheet" href="css/m-cui.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <!-- <link rel="stylesheet" href="css/m-auto.css" /> -->
+    <link rel="stylesheet" href="css/m-auto.css" />
 </head>
 
 <body>
     <div class="header">
         <div class="wp">
-            <div class="logo"><a href=""><img src="images/logo.png" alt=""></a></div>
+            <div class="logo logo1">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="">
+                </a>
+            </div>
+            <div class="logo logo2 backTop">
+                <a href="">
+                    <img src="images/logo-1.png" alt="">
+                </a>
+            </div>
+            <div class="logo logo3">
+                <a href="">
+                    <img src="images/logo-2.png" alt="">
+                </a>
+            </div>
             <div class="hdr">
                 <div class="navbar-btn">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </div>
-                <ul class="nav">
-                    <li><a href="" class="v1">首页</a></li>
-                    <li><a href="" class="v1">服务</a></li>
-                    <li><a href="" class="v1">团队</a></li>
-                    <li><a href="" class="v1">关于</a></li>
-                </ul>
+                <div class="nav">
+                    <ul>
+                        <li><a href="" class="v1">首页</a></li>
+                        <li class="on"><a href="" class="v1">服务</a></li>
+                        <li><a href="" class="v1">团队</a></li>
+                        <li><a href="" class="v1">关于</a></li>
+                    </ul>
+                    <div class="lang">
+                        <dl>
+                            <dt>
+                                <em style="background-image: url(images/en.png)"></em>
+                            </dt>
+                            <dd>
+                                <a href="javascript:void(0);">
+                                    <em style="background-image: url(images/ch.png)"></em>
+                                    <span>中文</span>
+                                </a>
+                                <a href="javascript:void(0);">
+                                    <em style="background-image: url(images/en.png)"></em>
+                                    <span>英文</span>
+                                </a>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
                 <div class="so" style="background-image: url(images/so.png);">
                     <form action="">
-                        <input type="text" class="inp" />
-                        <input type="submit" class="btn" />
+                        <input type="text" class="inp" placeholder="请输入" />
+                        <input type="submit" class="btn" value="搜索" />
                     </form>
-                </div>
-                <div class="lang">
-                    <dl>
-                        <dt>
-                            <em style="background-image: url(images/en.png)"></em>
-                        </dt>
-                        <dd>
-                            <a href="javascript:void(0);">
-                                <em style="background-image: url(images/en.png)"></em>
-                                <span>中文</span>
-                            </a>
-                            <a href="javascript:void(0);">
-                                <em style="background-image: url(images/en.png)"></em>
-                                <span>英文</span>
-                            </a>
-                        </dd>
-                    </dl>
+                    <div class="mask"></div>
                 </div>
             </div>
         </div>
@@ -157,7 +174,6 @@
                     </div>
                     <a href="" class="g-go"></a>
                 </li>
-                
             </ul>
         </div>
     </div>
@@ -179,7 +195,6 @@
                         </div>
                     </div>
                     <a href="" class="g-go"></a>
-
                 </div>
                 <div class="item">
                     <div class="con">
@@ -208,9 +223,58 @@
                         </div>
                     </div>
                     <a href="" class="g-go"></a>
-
                 </div>
             </div>
+            <ul class="m-doc1">
+                <li>
+                    <div class="con">
+                        <div class="txt">
+                            <h4>许政敏</h4>
+                            <span>眼耳鼻喉科</span>
+                            <p>主任医师</p>
+                        </div>
+                        <div class="pic">
+                            <img src="images/y-1.png" alt="">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="con">
+                        <div class="txt">
+                            <h4>许政敏</h4>
+                            <span>眼耳鼻喉科</span>
+                            <p>主任医师</p>
+                        </div>
+                        <div class="pic">
+                            <img src="images/y-1.png" alt="">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="con">
+                        <div class="txt">
+                            <h4>许政敏</h4>
+                            <span>眼耳鼻喉科</span>
+                            <p>主任医师</p>
+                        </div>
+                        <div class="pic">
+                            <img src="images/y-1.png" alt="">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="con">
+                        <div class="txt">
+                            <h4>许政敏</h4>
+                            <span>眼耳鼻喉科</span>
+                            <p>主任医师</p>
+                        </div>
+                        <div class="pic">
+                            <img src="images/y-1.png" alt="">
+                        </div>
+                    </div>
+                </li>
+            </ul>
             <a href="" class="g-more">查看更多</a>
         </div>
     </div>
@@ -269,17 +333,30 @@
                     <p>除了提供高质量的诊疗服务，还致力为患者带来优质贴心的专科医疗服务体验。</p>
                 </div>
                 <div class="see">
-                    <a href="">
+                    <a href="javascript:;" class="btn-play js-video-pop" data-video-src="http://player.youku.com/embed/XMzcyODAyNTg2OA==">
                         <span>观看视频</span>
                     </a>
                     <a href="">查看更多</a>
                 </div>
             </div>
         </div>
+        <!-- video -->
+        <div class="pop-fixed video">
+            <div class="mask">
+            </div>
+            <div class="cont">
+                <span class="close">
+                </span>
+                <div class="video">
+                    <iframe id="videoBox" src="" frameborder=0 allowfullscreen="true">
+                    </iframe>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- 保险 -->
     <div class="row-a6">
-        <div class="wp"> 
+        <div class="wp">
             <h3 class="g-tit">商业保险</h3>
             <div class="m-bao">
                 <div class="tit">
@@ -288,43 +365,118 @@
                 </div>
                 <p>我们提供便捷、高效的直接结算及相关的预付费服务.不同的医疗保险公司有不同的政策和计划。为了确保我们的服务质量和有效的直接保险付款和索赔，我们鼓励您仔细阅读您的保险计划或联系我们的保险部门确认您的保险福利。请务必向我们提供您的保险证书和身份证(身份证、护照、驾照等)。</p>
             </div>
+            <!-- <div class="m-pic"> -->
             <ul class="ul-img">
-                <li>
+                <li class="li1">
                     <div class="pic">
                         <a href="">
-                            <img src="" alt="">
+                            <img src="images/h-1.png" alt="">
+                        </a>
+                    </div>
+                </li>
+                <li class="li2">
+                    <div class="pic">
+                        <a href="">
+                            <img src="images/h-1.png" alt="">
+                        </a>
+                    </div>
+                </li>
+                <li class="li3">
+                    <div class="pic">
+                        <a href="">
+                            <img src="images/h-1.png" alt="">
+                        </a>
+                    </div>
+                </li>
+                <li class="li4">
+                    <div class="pic">
+                        <a href="">
+                            <img src="images/h-1.png" alt="">
+                        </a>
+                    </div>
+                </li>
+                <li class="li5">
+                    <div class="pic">
+                        <a href="">
+                            <img src="images/h-2.png" alt="">
+                        </a>
+                    </div>
+                </li>
+                <li class="li6">
+                    <div class="pic">
+                        <a href="">
+                            <img src="images/h-2.png" alt="">
+                        </a>
+                    </div>
+                </li>
+                <li class="li7">
+                    <div class="pic">
+                        <a href="">
+                            <img src="images/h-2.png" alt="">
+                        </a>
+                    </div>
+                </li>
+                <li class="li8">
+                    <div class="pic">
+                        <a href="">
+                            <img src="images/h-2.png" alt="">
                         </a>
                     </div>
                 </li>
             </ul>
-            <a href="" class="g-more"></a>
+            <!-- </div> -->
+            <a href="" class="g-more">查看更多</a>
         </div>
     </div>
     <!-- 页脚 -->
     <div class="footer">
+        <div class="fd-line"></div>
         <div class="fd-top">
             <div class="wp">
                 <div class="fd-tel">
-                    <a href=""></a>
+                    <div class="flogo backTop">
+                        <img src="images/fd-logo.png" alt="">
+                    </div>
                     400-685-8537
                 </div>
                 <div class="fd-link">
-                    <dl>
-                        <dt></dt>
-                        <dd>
-                            <a href=""></a>
-                        </dd>
-                    </dl>
+                    <div class="box">
+                        <h4>服务</h4>
+                        <a href="">耳鼻喉科</a>
+                        <a href="">眼 科</a>
+                        <a href="">名医工作室</a>
+                    </div>
+                    <div class="box">
+                        <a href="">日间手术中心</a>
+                        <a href="">健康管理</a>
+                        <h4>团队</h4>
+                        <a href="">医疗团队</a>
+                    </div>
+                    <div class="box">
+                        <h4>关于</h4>
+                        <a href="">仁树简介</a>
+                        <a href="">仁树资讯</a>
+                        <a href="">商业保险</a>
+                    </div>
+                    <div class="box">
+                        <a href="">诚聘英才</a>
+                        <a href="">服务网点</a>
+                        <a href="">大事记</a>
+                        <a href="">联系我们</a>
+                    </div>
                 </div>
                 <div class="fd-qr">
                     <div class="pic">
-                        <img src="" alt="">
+                        <img src="images/qr.png" alt="">
                     </div>
                 </div>
             </div>
         </div>
         <div class="fd-copy">
             <p>© 2017 All rights Reserved. TreeENT 沪ICP备17008893号 Designed by MHD°妙合</p>
+        </div>
+        <div class="fd-telm">
+            <i></i><span>：400-685-8537</span>
         </div>
     </div>
     <script src="js/jquery.min.js"></script>
