@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <title>第一套page</title>
+    <link href="css/m-cui.css" rel="stylesheet" type="text/css" />
+    <link href="css/font.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/message.css" rel="stylesheet" type="text/css" />
+    <link href="css/less.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="open">
+    <div class="header">
+        <div class="wp">
+            <div class="logo wow" data-wow-duration="1s">
+                <a href="">
+                    <img src="images/logo.png" alt="">
+                </a>
+            </div>
+            <span class="menuBtn">
+            </span>
+            <ul class="nav fix">
+                <li>
+                    <a class="v1" href="index.html">首页</a>
+                </li>
+                <li class=""><a class="v1" href="javascript:void(0);">关于我们<span></span> </a>
+                    <ul class="sub">
+                        <li><a href="">发展历史</a></li>
+                        <li><a href="">企业文化</a></li>
+                        <li><a href="">技术优势</a></li>
+                        <li><a href="">品牌理念</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="v1" href="javascript:void(0);">产品展示<span></span>
+                    </a>
+                    <ul class="sub">
+                        <li><a href="">智能手表</a></li>
+                        <li><a href="">智能眼镜</a></li>
+                        <li><a href="">机器人</a></li>
+                        <li><a href="">体感机</a></li>
+                    </ul>
+                </li>
+                <li><a class="v1" href="javascript:void(0);">新闻资讯<span></span> </a>
+                    <ul class="sub">
+                        <li><a href="">公司动态</a></li>
+                        <li><a href="">行业新闻</a></li>
+                    </ul>
+                </li>
+                <li><a class="v1" href="">在线留言 </a> </li>
+                <li><a class="v1" href="">联系我们 </a> </li>
+            </ul>
+        </div>
+    </div>
+    <div class="m-top">
+        <div class="pic">
+            <img src="images/page1.png" alt="">
+        </div>
+        <div class="txt">
+            <h3>某某某某列表</h3>
+            <span>栏目介绍文字输出</span>
+        </div>
+    </div>
+    <!-- 当前位置 -->
+    <div class="cur">
+        <div class="wp">
+            当前位置：<a href="">网站首页</a>&gt;<a href="">某某列表</a>&gt;<a href="">栏目名称</a>&gt;<span>某某分类</span>
+        </div>
+    </div>
+    <!-- 关于我们 -->
+    <div class="main">
+        <div class="m-list_b">
+            <div class="wp">
+                <div class="col-l">
+                    <dl class="ul-txt">
+                        <dt>某某列表</dt>
+                        <dd class="on">
+                            <a href="">
+                                <span></span>
+                                栏目名称
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="">
+                                <span></span>
+                                栏目名称
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="">
+                                <span></span>
+                                栏目名称
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="">
+                                <span></span>
+                                栏目名称
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="">
+                                <span></span>
+                                栏目名称
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="">
+                                <span></span>
+                                栏目名称
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="">
+                                <span></span>
+                                栏目名称
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="">
+                                <span></span>
+                                栏目名称
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="">
+                                <span></span>
+                                栏目名称
+                            </a>
+                        </dd>
+                    </dl>
+                    <!-- 客服电话 -->
+                    <div class="m-kftel">
+                        <div class="pic">
+                            <img src="images/kefu.png" alt="">
+                        </div>
+                        <div class="txt">
+                            <span><i style="background-image: url(images/tel_1.png)"></i>全国服务热线</span>
+                            <p>13388888888</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-r">
+                    <h3 class="g-tit_b">在线留言</h3>
+                    <div class="m-form">
+                        <form>
+                            <div class="group">
+                                <span>姓名</span>
+                                <p>
+                                    <input type="text" />
+                                </p>
+                            </div>
+                            <div class="group l">
+                                <span>电话</span>
+                                <p>
+                                    <input type="number" />
+                                </p>
+                                
+                            </div>
+                            <div class="group ">
+                                <span>邮箱</span>
+                                <p>
+                                    <input type="email" />
+                                </p>
+                            </div>
+                            <div class="group">
+                                <span>内容</span>
+                                <p>
+                                    <textarea name="" id=""></textarea>
+                                </p>
+                            </div>
+                            <div class="group group1">
+                                <span>验证码</span>
+                                <p>
+                                   <input type="text" />
+                                   <em>TSJ5</em>
+                                </p>
+                            </div>
+                            <div class="group">
+                                <span> </span>
+                                <p>
+                                   <input type="submit" value="提交" class="submit" />
+                                   
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 页脚 -->
+    <div class="footer">
+        <div class="wp">
+            <div class="fd-top">
+                <div class="fd-link">
+                    <dl>
+                        <dt><a href="">关于我们</a></dt>
+                        <dd>
+                            <a href="">发展历史</a>
+                            <a href="">企业文化</a>
+                            <a href="">技术优势</a>
+                            <a href="">品牌理念</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="">产品展示</a></dt>
+                        <dd>
+                            <a href="">智能手表</a>
+                            <a href="">智能眼镜</a>
+                            <a href="">机器人</a>
+                            <a href="">体感机</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="">新闻资讯</a></dt>
+                        <dd>
+                            <a href="">公司动态</a>
+                            <a href="">行业新闻</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="">在线留言</a></dt>
+                    </dl>
+                </div>
+                <div class="fd-tel">
+                    <p>0898-08980898</p>
+                    <span>周一至周五 08:30~17:30</span>
+                </div>
+            </div>
+        </div>
+        <div class="copy">
+            <p>Copyright © 2012-2028 某某网络 版权所有 </p>
+        </div>
+    </div>
+    <!-- 手机端底部 -->
+    <div class="m-tabBar">
+        <ul>
+            <li>
+                <a href="">
+                    <span class="icon-home"></span>
+                    首页
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span class="icon-phone"></span>
+                    电话
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span class="icon-envelope-o"></span>
+                    短信
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span class="icon-user"></span>
+                    联系
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="backTop"></div>
+    <script src="js/jquery.min.js"></script>
+    <link href="css/animate.min.css" rel="stylesheet" type="text/css" />
+    <script src="js/wow.min.js"></script>
+    <script src="js/lib.js"></script>
+    <script>
+    // 初始化wow.js
+    var wow = new WOW({
+        boxClass: 'wow',
+        animateClass: 'animated',
+        offset: 0,
+        mobile: false,
+        live: true
+    });
+    if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
+        wow.init();
+    };
+
+    // logo动画
+    $('.logo').hover(function() {
+            $(this).addClass('tada');
+        },
+        function() {
+            $(this).removeClass('tada');
+        });
+    </script>
+</body>
+
+</html>

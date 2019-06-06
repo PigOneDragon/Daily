@@ -1,0 +1,356 @@
+/* banner */
+.banner {
+    position: relative;
+}
+
+.banner .item a {
+    display: block;
+    padding-top: 48%;
+    height: 0;
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.row-a1 {
+    padding: 70px 0;
+
+}
+
+/* ******公用标题1******* */
+.g-tit {
+    text-align: center;
+}
+
+.g-tit h3 {
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 1;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.g-tit em {
+    display: block;
+    color: #5e7387;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.ul-imgtxt {
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+.ul-imgtxt li {
+    float: left;
+    width: 25%;
+    padding: 0 17px;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.ul-imgtxt .con {
+    display: block;
+}
+
+.ul-imgtxt .con .pic {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+
+}
+
+.ul-imgtxt .con .pic:hover {
+    background-position: 0 -120px;
+}
+
+.ul-imgtxt .con .txt {
+    color: #5e7387;
+    font-weight: 300;
+    margin: 0 auto;
+    width: 90%;
+    line-height: 170%;
+    font-size: 13px;
+    overflow: hidden;
+}
+
+.ul-imgtxt .con .txt h5 {
+    display: block;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    color: #2a333c;
+}
+
+
+/* 产品展示 */
+.row-a2 {
+    background-color: #f5f5f5;
+    padding: 70px 0;
+}
+
+.ul-tab_b {
+    text-align: center;
+    margin: 30px 0 20px;
+}
+
+.ul-tab_b li {
+    display: inline-block;
+}
+
+.ul-tab_b li a {
+    display: block;
+    font-size: 14px;
+    background: #fff;
+    color: #76838f;
+    padding: 8px 30px;
+    margin: 0 2px;
+    transition: all 0.25s ease 0s;
+}
+
+.ul-tab_b li a:hover,
+.ul-tab_b .on a {
+    background: #62a8ea;
+    color: #fff;
+}
+
+.ul-list1 {
+    overflow: hidden;
+    margin: -5px;
+}
+
+.ul-list1 li {
+    float: left;
+    width: 25%;
+
+}
+
+.ul-list1 li>a {
+    display: block;
+    margin: 5px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.ul-list1 .pic {
+    position: relative;
+    height: 0;
+    padding-top: 100%;
+    overflow: hidden;
+}
+
+.ul-list1 .pic img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.ul-list1 .txt h3 {
+    color: #2a333c;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px 0;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+}
+
+
+.ul-list1 .txt h3:hover {
+    color: #62a8ea;
+    text-decoration: underline;
+}
+
+/* 新闻资讯 */
+.row-a3 {
+    padding: 70px 0 40px;
+    background-color: #fff;
+}
+
+.ul-list2 {
+    overflow: hidden;
+    margin-top: 45px;
+}
+
+.ul-list2 li {
+    float: left;
+    width: 50%;
+}
+
+.ul-list2 .con {
+    overflow: hidden;
+    padding: 0 17px 30px 17px;
+}
+
+.ul-list2 .pic {
+    float: left;
+    width: 175px;
+    height: 120px;
+    margin-right: 25px;
+}
+
+.ul-list2 .pic img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.ul-list2 .txt {
+    overflow: hidden;
+    color: #76838f;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.ul-list2 .txt h5 a {
+    display: block;
+    color: #2a333c;
+    font-size: 18px;
+    font-weight: 400;
+    /*  overflow: hidden;
+        -ms-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        white-space: nowrap; */
+}
+
+.ul-list2 .txt h5 a:hover {
+    color: #62a8ea;
+}
+
+.ul-list2 .txt p {
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 5px 0;
+}
+
+.ul-list2 .txt .time {
+    color: #76838f;
+}
+
+/* 关于我们 */
+.row-a4 {
+    background-color: #f5f5f5;
+    padding: 70px 0 40px;
+}
+
+.m-about {
+    margin-top: 45px;
+    overflow: hidden;
+}
+
+.m-about .txt {
+    font-size: 14px;
+    line-height: 2;
+    color: #5e7387;
+    padding-left: 17px;
+}
+
+.m-about .txt h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 18px;
+}
+
+.m-about .pic {
+    float: right;
+    width: 360px;
+    height: 360px;
+    padding: 10px 17px 0 34px;
+}
+
+.m-about .pic img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.m-about .txt .more {
+    display: inline-block;
+    line-height: 34px;
+    margin-top: 18px;
+    text-align: center;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    background-color: #eeeeee;
+    color: #666;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 0 15px;
+}
+
+.m-about .txt .more:hover {
+    color: #62a8ea;
+}
+
+/* 右侧手机按钮 */
+.rightIcon {
+    position: fixed;
+    right: 0;
+    bottom: 200px;
+    z-index: 999;
+    width: 47px;
+    height: 60px;
+    cursor: pointer;
+    display: block;
+    background: url(../images/phoneTip_right.png) no-repeat center;
+}
+
+/* 二维码 */
+.m-qr {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    width: 297px;
+    height: 420px;
+    right: 0;
+    bottom: 20px;
+    padding: 32px 6px 32px 9px;
+    background-image: url("../images/small_phone.png");
+    text-align: center;
+    font-size: 15px;
+    font-family: "微软雅黑 Light";
+    color: #ff0000;
+    line-height: 36px;
+}
+
+.m-qr .close {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid silver;
+    position: absolute;
+    right: 20px;
+    top: 8px;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.m-qr .pic {
+    width: 290px;
+    height: 200px;
+    background: #f7f7f7;
+    padding: 100px 0;
+}
+.m-qr .pic img{
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+}

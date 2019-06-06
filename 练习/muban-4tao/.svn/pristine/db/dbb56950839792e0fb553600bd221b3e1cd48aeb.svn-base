@@ -1,0 +1,168 @@
+$(document).ready(function($) {
+
+  
+    //pc站下拉菜单
+    $('.nav > li').hover(function() {
+        if ($(window).width() <= 1200) return;
+        // $(this).find('.sub').slideDown(200);
+        $(this).find('.sub').show().addClass('ani');
+
+    }, function() {
+        if ($(window).width() <= 1200) return;
+        $('.sub').removeClass('ani').stop();
+    });
+
+
+
+    var _winw = $(window).width();
+    var _winh = $(window).height();
+    // 手机导航
+    $('.menuBtn').append('<b></b><b></b><b></b>');
+    $('.menuBtn').click(function(event) {
+        $(this).toggleClass('open');
+        
+        if( $(this).hasClass('open') ){
+            if( _winw<=767 ){
+                $('.nav').slideDown();
+            }
+        }else{
+            if( _winw<=767 ){ 
+                $('.nav').slideUp();
+            }
+        }
+    });
+    // 二级菜单
+    var sub =$('.nav .sub');
+   
+
+    $('.nav .v1').click(function(){
+        sub.stop().slideUp("fast");
+        // 捕获当前对象判断其下的二级是否隐藏
+        if($(this).siblings('.sub').css('display') == 'none'){
+            $(this).siblings('.sub').stop().slideDown("fast");
+      
+        }else{
+            $(this).siblings('.sub').stop().slideUp("fast");      
+        }
+        return false;
+    });
+
+    $(window).on('resize', function (e) {
+        if(_winw > 1200) {
+            $('.menuBtn').removeClass('open');
+            $('.nav').css('display', 'block');
+            sub.css('display', 'none');
+        }
+    });
+
+    // if(_winw < 1200){
+    //     if ($(".nav li").find('dl').length) {
+    //         $(".nav li").find("dl").siblings("a").attr("href","javascript:;")
+    //     } ;
+    // }
+
+    // 首页banner轮播
+    $('.banner').slick({
+        slidesToShow: 1,
+        // autoplay: true,
+        autoplaySpeed: 3000,
+        arrows: true,
+        dots: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
+        // responsive: [{
+        //     breakpoint: 960,
+        //     settings: {
+        //         arrows: false,
+        //         dots: true
+        //     }
+        // }]
+    });
+    // logo动画
+    $('.logo').hover(function(){
+        $(this).addClass('tada');
+    },
+    function(){
+        $(this).removeClass('tada');
+    });
+
+    // 选项卡 鼠标点击
+    
+    $(".TAB_CLICK-a li").click(function(){
+      var tab=$(this).parent(".TAB_CLICK-a");
+      var con=tab.attr("id");
+      var on=tab.find("li").index(this);
+      $(this).addClass('on').siblings(tab.find("li")).removeClass('on');
+      $(con).eq(on).show().siblings(con).hide();
+    });
+    
+    $('.TAB_CLICK-a').each(function(index, el) {
+        $(this).children('li').filter(':first').trigger('click');
+    });
+
+
+    // 滚动大于页面一半显示返回顶部按钮
+    var $backTop = $('.backTop');
+    var nowSh = $(document).scrollTop();
+    var docH = $(document).height();
+    // 返回顶部的闲事隐藏
+    function backTopShow(nowSh,docH) {
+        if (nowSh > docH / 2) {
+            $backTop.show();
+        } else {
+            $backTop.hide();
+        }
+    }
+    // 刷新时判断
+    backTopShow(nowSh,docH);
+    
+    $(window).scroll(function(event) {
+
+        var _sTop = $(window).scrollTop();
+        var header = $('.header');
+        backTopShow(_sTop,docH);
+        if(_sTop > 50){
+           header.addClass('fixed'); 
+        }else{
+            header.removeClass('fixed');
+        }
+        // 导航条脱离文档流
+        if( _winw<=767 ){
+            if(_sTop > 50){
+                header.css('position','fixed');
+                $('.nav').addClass('fixed');
+            }else{
+                header.css('position','static');
+                $('.nav').removeClass('fixed');
+            }
+        }
+
+    });
+    // 点击侧边显示二维码
+    var qr = $('.m-qr'),
+        closeBtn =$('.close'),
+        rightIcon = $('.rightIcon');
+
+    if( _winw > 767){
+        qr.show();
+    }
+    rightIcon.on('click',function(){
+        qr.slideDown();
+        $(this).hide();
+        return false;
+    });
+    closeBtn.on('click',function(){
+        qr.slideUp();
+        rightIcon.show();
+        return false;
+
+    });
+     // 返回顶部
+    $('.backTop').click(function() {
+        $('body,html').stop().animate({
+            scrollTop: '0'
+        }, 500);
+        return false;
+    });
+})

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/slick.css" />
+    <style>
+    .slider-nav .item {
+        height: 300px;
+        overflow: hidden;
+    }
+
+    .slider-nav .item img {
+        display: block;
+        width: 100%;
+    }
+
+    .slider-for .txt {
+        text-align: center;
+        background-color: #ff0;
+        font-size: 22px;
+        color: #000;
+        line-height: 60px;
+    }
+
+    .slider-for1 .txt {
+        text-align: center;
+        background-color: #ff0;
+        font-size: 22px;
+        color: #00f;
+        line-height: 60px;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- 轮播1 -->
+    <div class="slider-nav">
+        <div class="item">
+            <img src="images/ban-1.png" alt="">
+            一
+        </div>
+        <div class="item">
+            <img src="images/ban-1.png" alt="">
+            二
+        </div>
+    </div>
+    <!-- 轮播2 -->
+    <div class="slider-for">
+        <div class="txt">
+            第一
+        </div>
+        <div class="txt">
+            第二
+        </div>
+    </div>
+    <!-- 轮播3 -->
+    <div class="slider-for1">
+        <div class="txt">
+            第三个轮播 1
+        </div>
+        <div class="txt">
+            第三个轮播 2
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script>
+    $('.slider-nav').slick({
+        autoplay: false,
+        autoplaySpeed: 2000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: false,
+        asNavFor: '.slider-for'
+    });
+    $('.slider-for').slick({
+        autoplay: false,
+        autoplaySpeed: 2000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: false,
+        asNavFor: '.slider-nav'
+    });
+    $('.slider-for1').slick({
+        autoplay: false,
+        autoplaySpeed: 2000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: false,
+        asNavFor: '.slider-nav'
+    });
+    // setTimeout(function(){
+    //    $('.slider-nav').slickNext();
+    // }, 1000);
+    </script>
+</body>
+
+</html>

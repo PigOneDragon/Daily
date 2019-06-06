@@ -1,0 +1,16 @@
+.m-info{
+    font-size: 14px;
+    color: #000000;
+    line-height: 2.14em;
+    text-indent: 2em;
+}
+
+/* main增加id=“full”时，左侧隐藏，右侧全屏 */
+.main#full .m-list_b .col-l{
+    display: none;
+} 
+
+
+
+
+

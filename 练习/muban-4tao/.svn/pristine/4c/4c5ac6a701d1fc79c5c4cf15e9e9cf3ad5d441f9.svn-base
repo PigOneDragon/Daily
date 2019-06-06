@@ -1,0 +1,60 @@
+.m-zpinfo{
+    margin: 20px 0 40px;
+}
+.m-zpinfo li h3{
+    line-height: 57px;
+    padding: 0 20px;
+    border: 1px solid #eeeeee;
+    font-size: 16px;
+    color: #333333;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    cursor: pointer;
+}
+.m-zpinfo li h3 i{
+    float: right;
+    margin-top: 21px;
+    width: 13px;
+    height: 13px;
+    background: url('../images/jia.png') 0 -13px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+.m-zpinfo .on h3{
+    color: #fff;
+    background-color: #62a8ea;
+}
+.m-zpinfo .on h3 i{
+    background-position: 0 0;
+}
+.m-zpinfo .con{
+    display: none;
+    background-color: #f2f2f2;
+    padding: 19px 40px 40px;
+}
+.m-zpinfo .con .txt{
+    font-size: 14px;
+    /* line-height: 1.7; */
+    color: #333333;
+}
+.m-zpinfo .con .txt h5{
+    font-size: 16px;
+    /* line-height: 1.7; */
+    margin-top: 15px;
+}
+.m-zpinfo .con .more{
+    display: inline-block;
+    padding: 0 20px;
+    border: 1px solid #62a8ea;
+    border-radius: 2px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    color: #62a8ea;
+    margin-top: 15px;
+}
+
+
+
