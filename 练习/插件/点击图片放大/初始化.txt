@@ -1,0 +1,17 @@
+//a链接添加js中对应的类'fancybox' 添加data属性
+<a href="images/pcilist-1.png" class="fancybox" data-fancybox-group="gallery">
+	<img src="images/pcilist-1.png" alt="">
+</a>
+
+
+// 点击图片放大
+
+    $(".fancybox").fancybox({
+        helpers: {
+            title : {
+                type : 'outside'
+            },
+            overlay : {
+                speedOut : 0
+            }
+        }

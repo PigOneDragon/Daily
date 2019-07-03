@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="renderer" content="webkit">
+    <title>jQuery水平方向菜单导航条 滑块伴随鼠标移动(原创)</title>
+    <style type="text/css">
+        /*通用样式*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #eee;
+        }
+
+        .clearFix:after {
+            content: "";
+            visibility: hidden;
+            height: 0;
+            display: block;
+            clear: both;
+        }
+
+        .clearFix {
+            display: inline-block;
+            zoom: 1;
+        }
+
+        .clearFix {
+            display: block
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .yunu-nav {
+            height: 60px;
+            line-height: 60px;
+            background-color: rgb(218, 0, 0);
+            position: relative;
+        }
+
+        .yunu-nav li {
+            width: 12.5%;
+            float: left;
+            position: relative;
+        }
+
+        .yunu-nav li a {
+            height: 60px;
+            display: block;
+            color: #fff;
+            text-align: center;
+            position: relative;
+            transition: 0.3s;
+            z-index: 999;
+        }
+
+        .yunu-nav li.on a,
+        .yunu-nav li.first a {
+            line-height: 46px;
+            background: #262626;
+        }
+
+        .yunu-nav li.on a::after,
+        .yunu-nav li.first a::after {
+            content: '';
+            display: block;
+            width: 20px;
+            height: 2px;
+            background-color: #fff;
+            position: absolute;
+            left: 50%;
+            top: 44px;
+            transform: translateX(-50%);
+        }
+
+        /*滑块*/
+        .yunu-nav .sliding-block {
+            background-color: #409EFF;
+        }
+
+        .yunu-nav .sliding-block-1 {
+            background-color: #262626;
+        }
+
+        #nav_0 .sliding-block {
+            background-color: #262626;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="yunu-nav">
+        <ul>
+            <li><a href="">首页</a></li>
+            <li><a href="">消防栓箱</a></li>
+            <li><a href="">消防阀</a></li>
+            <li><a href="">产品中心</a></li>
+            <li><a href="">成功案例</a></li>
+            <li><a href="">新闻资讯</a></li>
+            <li><a href="">关于我们</a></li>
+            <li><a href="">联系我们</a></li>
+        </ul>
+
+    </div>
+    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <script src="js/jquery.SlidingBlock.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.yunu-nav').SlidingBlock({
+                cur_idx: 0,
+                cur_class: 'current',
+                cur_show: true,
+                slider_btm: '0',
+                slider_h: '120%',
+                before_show: false,
+                slider_class: 'sliding-block-1'
+            });
+        });
+
+        
+    </script>
+
+</body>
+
+</html>

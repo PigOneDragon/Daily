@@ -1,0 +1,56 @@
+<div class="m-case" style="position: relative;">
+                    <a href="images/pic-s01.jpg" class="img-pc jqzoom" style="outline-style: none; text-decoration: none; cursor: crosshair; display: block; position: relative; height: 525px; width: 594px;" title=""><img src="images/pic-s01.jpg" alt="" style="position: absolute; top: 0px; left: 0px;" title=""></a>
+                    <div class="sliderFor slick-initialized slick-slider">
+                        <div aria-live="polite" class="slick-list draggable"><div class="slick-track" role="listbox" style="opacity: 1; width: 765px; left: 0px;"><div class="item slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide00" style="width: 153px;">
+                            <div class="pic">
+                                <img src="images/pic-s01.jpg" alt="">
+                            </div>
+                        </div><div class="item slick-slide slick-active" data-slick-index="1" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide01" style="width: 153px;">
+                            <div class="pic">
+                                <img src="images/q-pic2.jpg" alt="">
+                            </div>
+                        </div><div class="item slick-slide slick-active" data-slick-index="2" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide02" style="width: 153px;">
+                            <div class="pic">
+                                <img src="images/q-pic3.jpg" alt="">
+                            </div>
+                        </div><div class="item slick-slide slick-active" data-slick-index="3" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide03" style="width: 153px;">
+                            <div class="pic">
+                                <img src="images/pic-s01.jpg" alt="">
+                            </div>
+                        </div><div class="item slick-slide" data-slick-index="4" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide04" style="width: 153px;">
+                            <div class="pic">
+                                <img src="images/q-pic2.jpg" alt="">
+                            </div>
+                        </div></div></div>
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
+
+
+
+        var jq = jQuery.noConflict();
+        $(function() {
+            // Ð¡Í¼
+            jq('.m-case .sliderFor').slick({
+                dots: false,
+                arrows: false,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                focusOnSelect: true,
+                infinite: false
+            });
+
+            // ·Å´ó
+            var src = jq('.m-case .sliderFor img').filter(':first').attr('src');
+            jq('.m-case .img-pc').attr('href', src).find('img').attr('src', src);
+
+            jq('.m-case .sliderFor .pic img').click(function(event) {
+                /* Act on the event */
+                var src = jq(this).attr('src');
+                jq('.m-case .img-pc').attr('href', src).find('img').attr('src', src);
+            });
+        });
+    

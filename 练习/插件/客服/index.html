@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>客服</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/cui.css" />
+    <link rel="stylesheet" href="css/m-nm.css" />
+
+</head>
+
+<body style="height: 8000px;">
+    <!-- 客服 -->
+    <div class="kf">
+        <ul>
+            <li>
+                <div class="icon"></div>
+                <div class="message">
+                    <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+                    <script>
+                    window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "32" }, "share": {} };
+                    with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+                    </script>
+                </div>
+            </li>
+            <li>
+                <div class="icon"></div>
+                <div class="service">
+                    <dl>
+                        <dt></dt>
+                        <dd>
+                            <a href=""><i><img src="images/kf/msn.jpg"></i>woboss</a>
+                            <a href=""><i><img src="images/kf/msn.jpg"></i>woboss2</a>
+                            <a href=""><i><img src="images/kf/skype.gif"></i>skype</a>
+                            <a href=""><i><img src="images/kf/skype.gif"></i>skype</a>
+                            <a href=""><i><img src="images/kf/offline.gif"></i>offline</a>
+                        </dd>
+                        <span></span>
+                    </dl>
+                </div>
+            </li>
+            <li>
+                <div class="icon"></div>
+                <div class="qrcode">
+                    <div class="tit">Scan the qr code <span></span></div>
+                    <div class="qr"><img src="images/kf/qr.jpg" alt=""></div>
+                    </div>
+            </li>
+            <li class="backTop" title="Top">
+                <div class="icon"></div>
+            </li>
+        </ul>
+    </div>
+    <!-- 客服END -->
+    <script type="text/javascript">
+    $(function() {
+        // 客服
+        $('.kf ul li').mouseenter(function() {
+            $(this).children().not('.icon').addClass('on').animate({ right: "50px", opacity: 1 }, "slow");
+        });
+        $('.kf ul li').mouseleave(function() {
+            $(this).children().not('.icon').removeClass('on').animate({ right: "0", opacity: 0 }, "slow");
+        });
+        $('.qrcode .tit span').click(function() {
+            //$('.qrcode').remove();
+            $(this).closest('.qrcode').animate({ right: "0", opacity: 0 }, "slow");;
+        });
+        //返回顶部
+        $('.kf ul li.backTop').click(function() {
+            $("html,body").stop().animate({ scrollTop: '0' }, 500);
+        });
+
+    });
+    </script>
+</body>
+
+</html>
