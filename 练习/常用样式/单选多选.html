@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 合作 */
+        .m-hezuo {
+            padding-top: 72px;
+        }
+
+        .m-hezuo .info {
+            overflow: hidden;
+            margin-top: 32px;
+        }
+
+        .m-hezuo .info li {
+            float: left;
+            width: 20%;
+            text-align: center;
+            font-size: 16px;
+            color: #999999;
+        }
+
+        .m-hezuo .info li em {
+            display: inline-block;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 34px;
+            background-color: #cccccc;
+            margin-bottom: 6px;
+            color: #fff;
+        }
+
+        .m-hezuo .info li.on em {
+            background-color: #cc0201;
+        }
+
+        .m-hezuo .info li:last-child em {
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .m-hezuo .info li span {
+            display: block;
+            text-align: center;
+        }
+
+        .m-hezuo .tab-b {
+            border: 1px solid #d9d9d9;
+            background-color: #fff;
+            text-align: center;
+            font-size: 16px;
+            color: #666666;
+            /* line-height: 2em; */
+            margin: 30px 0 100px;
+        }
+
+        .m-hezuo .tab-b h4 {
+            padding-left: 30px;
+            line-height: 49px;
+            background-color: #f3f3f3;
+            color: #666666;
+            font-size: 16px;
+            text-align: left;
+            font-weight: normal;
+        }
+
+        .m-hezuo .form form {
+            display: inline-block;
+        }
+
+        .m-hezuo .tit p {
+            margin: 38px 0 35px;
+            padding: 0 10px;
+        }
+
+        .m-hezuo .tit p span {
+            color: #999999;
+        }
+
+        .m-hezuo .group {
+            overflow: hidden;
+            margin-bottom: 16px;
+        }
+
+        .m-hezuo .group>span {
+            float: left;
+            width: 160px;
+            line-height: 40px;
+            text-align: right;
+            margin-right: 22px;
+        }
+
+        .m-hezuo .group>span em {
+            display: inline-block;
+            vertical-align: middle;
+            overflow: hidden;
+            width: 25px;
+            height: 40px;
+            background: url(../images/zz6.png) no-repeat center center;
+            margin-top: -2px;
+        }
+
+        .m-hezuo .group label span {
+            float: right;
+            line-height: 40px;
+        }
+
+        .m-hezuo .group input {
+            width: 256px;
+            height: 40px;
+            padding: 0 5px;
+            line-height: 40px;
+            border: 1px solid #d9d9d9;
+            overflow: hidden;
+        }
+
+        .m-hezuo .group .right label {
+            display: block;
+            line-height: 40px;
+            float: left;
+            padding-left: 30px;
+            background: url(images/zz-ico1.png) no-repeat left center;
+            position: relative;
+            margin-right: 17px;
+            cursor: pointer;
+        }
+
+        .m-hezuo .group .right label input {
+            position: absolute;
+            left: -99999px;
+        }
+
+        .m-hezuo .group .right label span {
+            color: #999;
+            font-size: 16px;
+        }
+
+        .m-hezuo .group .right label.checked {
+            background-image: url(images/zz-ico2.png);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="m-hezuo">
+        <div class="form tab-b">
+            <div class="tit">
+                <h4>联系方式</h4>
+                <p>卖家入驻联系人信息　<span>用于入驻过程中接收平台官方反馈的入驻通知，请务必填写正确</span></p>
+            </div>
+            <form action="">
+                <div class="group">
+                    <span>
+                        <em></em>
+                        联系人姓名：
+                    </span>
+
+                    <input type="text" />
+                </div>
+                <div class="group">
+                    <span> <em></em>联系人手机：</span>
+                    <input type="number" />
+                </div>
+                <div class="group">
+                    <span><em></em>联系人电子邮箱：</span>
+                    <input type="email" />
+                </div>
+                <div class="group">
+                    <span><em></em>申请类型：</span>
+                    <div class="right" role="radio">
+                        <label>
+                            <input type="radio" name="type"  checked />
+                            <span>个人入驻</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="type"  />
+                            <span>企业入驻</span>
+                        </label>
+
+                    </div>
+
+                </div>
+                <div class="group tr">
+                    <input type="submit" class="btn" value="下一步，填写店铺信息" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function () {
+            //自定义多选
+            $('[role=checkbox]').each(function () {
+                var input = $(this).find('input[type="checkbox"]');
+                input.each(function () {
+                    if ($(this).attr('checked')) {
+                        $(this).parents('label').addClass('checked');
+                        $(this).prop("checked", true);
+                    }
+                });
+                input.change(function () {
+                    $(this).parents('label').toggleClass('checked');
+                });
+            });
+            // 自定义单选
+            $('[role=radio]').each(function () {
+                var input = $(this).find('input[type="radio"]'),
+                    label = $(this).find('label');
+
+                input.each(function () {
+                    if ($(this).attr('checked')) {
+                        $(this).parents('label').addClass('checked');
+                        $(this).prop("checked", true)
+                    }
+                })
+
+                input.change(function () {
+                    label.removeClass('checked');
+                    $(this).parents('label').addClass('checked');
+                    input.removeAttr('checked');
+                    $(this).prop("checked", true)
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>

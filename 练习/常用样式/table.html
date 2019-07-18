@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>table表格</title>
+    <style>
+        .m-kpi tr:first-child .t1,
+        .m-kpi tr:first-child .t2,
+        .m-kpi tr:first-child .t3 {
+        font-size: 22px;
+        color: #fff;
+        background-color: #ff763a;
+        line-height: 53px;
+        text-align: center;
+        padding: 0;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        }
+
+        .m-kpi table .t2,
+        .m-kpi table .t3 {
+        width: 400px;
+        }
+
+        .m-kpi table .t1 {
+        width: 200px;
+        font-size: 16px;
+        line-height: 39px;
+        text-align: left;
+        padding-left: 55px;
+        background-color: #ff763a;
+        color: #fff;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        font-weight: normal;
+        }
+
+        .m-kpi table .t2,
+        .m-kpi table .t3 {
+        background-color: #fff;
+        font-size: 16px;
+        line-height: 39px;
+        color: #565656;
+        text-align: left;
+        padding-left: 95px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        font-weight: normal;
+        }
+
+        .m-kpi table {
+        width: 100%;
+        height: 100%;
+        margin-top: 17px;
+        border-collapse: collapse;
+        table-layout: fixed;
+        }
+
+        .m-kpi table,
+        .m-kpi table tr th,
+        .m-kpi table tr td {
+        border: 1px solid #f5f5f5;
+        }
+
+        .m-kpi .rowspan {
+        width: 200px;
+        /* background-color: #fff;
+        text-align: center;
+        vertical-align: middle; */
+        background: #fff url(../images/sy-vs.png) no-repeat center center;
+        }
+
+    </style>
+</head>
+<body>
+     <div class="m-kpi">
+         <div class="g-tit_b2">
+             <h3>ZKEDUO<i style="background-image: url(images/tit_dot1.png)"></i>定制VS模板</h3>
+         </div>
+         <h3 class="g-tit_b2"></h3>
+         <table>
+             <tbody>
+                 <tr>
+                     <th class="t1">参数指标</th>
+                     <th class="t2">定制</th>
+                     <th rowspan="17" class="rowspan"></th>
+                     <th class="t3">模板</th>
+                 </tr>
+                 <tr>
+                     <th class="t1">开发周期</th>
+                     <td class="t2">慢</td>
+                     <td class="t3">快</td>
+                 </tr>
+                 <tr>
+                     <th class="t1">源码</th>
+                     <td class="t2">有</td>
+                     <td class="t3">基本没有，拿来就能用</td>
+                 </tr>
+                 <tr>
+                     <th class="t1">可扩展性</th>
+                     <td class="t2">较好</td>
+                     <td class="t3">较差</td>
+                 </tr>
+                 <tr>
+                     <th class="t1">运算、加载</th>
+                     <td class="t2">想怎么调就怎么调</td>
+                     <td class="t3">人家啥水平你就啥水平</td>
+                 </tr>
+                 <tr>
+                     <th class="t1">调优</th>
+                     <td class="t2">不好了随时优化</td>
+                     <td class="t3">做不了</td>
+                 </tr>
+                 <tr>
+                     <th class="t1">增删模板</th>
+                     <td class="t2">想怎么折腾就怎么折腾</td>
+                     <td class="t3">不好操作</td>
+                 </tr>
+                 <tr>
+                     <th class="t1">可否个性设计</th>
+                     <td class="t2">DIY个性设计</td>
+                     <td class="t3">不可以，模板有啥你就用啥</td>
+                 </tr>
+                 <tr>
+                     <th class="t1">适宜场景</th>
+                     <td class="t2">独特创业商业模式</td>
+                     <td class="t3">大众常规类商业模式</td>
+                 </tr>
+                 <tr>
+                     <th class="t1">适宜企业</th>
+                     <td class="t2">当做事业来做</td>
+                     <td class="t3">普通开店、微商、渠道</td>
+                 </tr>
+                 <tr>
+                     <th class="t1">费用</th>
+                     <td class="t2">较高</td>
+                     <td class="t3">较低</td>
+                 </tr>
+                 <tr>
+                     <th class="t1">对企业的要求</th>
+                     <td class="t2">有一定技术知识</td>
+                     <td class="t3">懂不懂无所谓，做好拿来用</td>
+                 </tr>
+                 <tr>
+                     <th class="t1">网站备案</th>
+                     <td class="t2">基本都要</td>
+                     <td class="t3">大多不要</td>
+                 </tr>
+                 <tr>
+                     <th class="t1">售后服务</th>
+                     <td class="t2">相对固定</td>
+                     <td class="t3">变换频繁</td>
+                 </tr>
+                 <tr>
+                     <th class="t1">系统知识产权</th>
+                     <td class="t2">有</td>
+                     <td class="t3">无</td>
+                 </tr>
+                 <tr>
+                     <th class="t1">服务器配置</th>
+                     <td class="t2">想怎么配就怎么配</td>
+                     <td class="t3">基本够用，万一大流量卡顿，无解</td>
+                 </tr>
+                 <tr>
+                     <th class="t1">样式</th>
+                     <td class="t2">精雕细琢彰显品牌个性</td>
+                     <td class="t3">平庸、大众脸</td>
+                 </tr>
+             </tbody>
+         </table>
+     </div>
+</body>
+</html>

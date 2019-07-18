@@ -73,27 +73,36 @@ button {
     margin: 6px auto;
     background-color: #fff;
     -webkit-transition: all .5s;
-    -o-transition: all .5s;
+    -moz-transition: all .5s;
     transition: all .5s;
     /* position: absolute; */
 }
 
 .act .icon-bar:nth-child(1) {
     position: absolute;
-    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+       -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
     top: -100%;
 }
 
 .act .icon-bar:nth-child(2) {
     position: absolute;
     top: 20px;
-    transform: rotate(37deg);
+    -webkit-transform: rotate(37deg);
+       -moz-transform: rotate(37deg);
+        -ms-transform: rotate(37deg);
+            transform: rotate(37deg);
 }
 
 .act .icon-bar:nth-child(3) {
     position: absolute;
     top: 20px;
-    transform: rotate(-37deg);
+    -webkit-transform: rotate(-37deg);
+       -moz-transform: rotate(-37deg);
+        -ms-transform: rotate(-37deg);
+            transform: rotate(-37deg);
 }
 
 .nav {
@@ -244,7 +253,8 @@ button {
     float: right;
     line-height: 30px;
     background-color: #ddd;
-    border-radius: 30px;
+    -moz-border-radius: 30px;
+         border-radius: 30px;
     margin-top: 25px;
     position: relative;
 }
@@ -293,7 +303,8 @@ button {
     height: 40px;
     border: 1px solid #dcdcdc;
     background-color: rgba(0, 0, 0, .6);
-    border-radius: 20px;
+    -moz-border-radius: 20px;
+         border-radius: 20px;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
@@ -345,8 +356,8 @@ button {
     left: 50%;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+         transform: translateX(-50%);
     bottom: 28px;
 }
 
@@ -365,7 +376,8 @@ button {
     width: 8px;
     height: 8px;
     margin: 0 3px;
-    border-radius: 50%;
+    -moz-border-radius: 50%;
+         border-radius: 50%;
     background-color: transparent;
     border: 2px solid #d5d5d5;
     cursor: pointer;
@@ -431,8 +443,8 @@ button {
     text-indent: 7px;
     margin: 45px auto 15px;
     background: url('../images/tit_bg.png') center no-repeat;
-    -webkit-background-size: 100% 100%;
-    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+         background-size: 100% 100%;
     overflow: hidden;
     -ms-text-overflow: ellipsis;
     text-overflow: ellipsis;
@@ -554,8 +566,8 @@ button {
 .row-2 .g-tit h5 {
     background: url('../images/tit-w_bg.png') center no-repeat;
     color: #000;
-    -webkit-background-size: 100% 100%;
-    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+         background-size: 100% 100%;
 }
 
 .row-2 .ul-pic .pic {
@@ -706,8 +718,8 @@ button {
     top: 50%;
     -webkit-transform: translate(40px, -50%);
     -ms-transform: translate(40px, -50%);
-    -o-transform: translate(40px, -50%);
-    transform: translate(40px, -50%);
+    -moz-transform: translate(40px, -50%);
+         transform: translate(40px, -50%);
 }
 
 .m-local h4 {
@@ -737,8 +749,8 @@ button {
 /* 二维码 */
 .row-5 {
     background: url('../images/qr_bg.png');
-    -webkit-background-size: cover;
-    background-size: cover;
+    -moz-background-size: cover;
+         background-size: cover;
     /* height: 588px; */
 }
 
@@ -778,8 +790,8 @@ button {
 
 .row-5 .g-tit {
     background: url('../images/Shape 2.png');
-    -webkit-background-size: 100% 100%;
-    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+         background-size: 100% 100%;
     color: #46a1f3;
     font-size: 20px;
     line-height: 2em;
@@ -876,7 +888,8 @@ button {
     margin: 60px auto 0;
     background-color: transparent;
     border: 1px solid #fff;
-    border-radius: 8px;
+    -moz-border-radius: 8px;
+         border-radius: 8px;
     color: #fff;
     font-size: 18px;
 }
@@ -924,7 +937,7 @@ button {
     top: 0;
     left: 0;
     -webkit-transition: all .5s;
-    -o-transition: all .5s;
+    -moz-transition: all .5s;
     transition: all .5s;
     display: block;
 }
@@ -932,7 +945,8 @@ button {
 .m-slidebarR li .icon {
     width: 60px;
     height: 60px;
-    border-radius: 8px;
+    -moz-border-radius: 8px;
+         border-radius: 8px;
     background-color: #ed384e;
     overflow: hidden;
     position: relative;
@@ -977,7 +991,8 @@ button {
     width: 0;
     height: 60px;
     background-color: #ed384e;
-    border-radius: 10px;
+    -moz-border-radius: 10px;
+         border-radius: 10px;
     text-align: center;
     color: #fff;
     font-size: 14px;
@@ -988,7 +1003,7 @@ button {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     -webkit-transition: all .5s;
-    -o-transition: all .5s;
+    -moz-transition: all .5s;
     transition: all .5s;
     opacity: 0;
 }
@@ -1006,7 +1021,10 @@ button {
     position: absolute;
     top: 50%;
     right: -14px;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+       -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
     border: 7px solid;
     border-color: transparent transparent transparent #ed384e;
 }
